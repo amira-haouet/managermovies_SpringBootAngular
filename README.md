@@ -20,9 +20,9 @@ Objectif
 ## 🎓 &nbsp;Follow this steps
 
 <ol>
-  <li> First app : initiation to django </li>
+ 
   
-    How to get Django:
+    How to get angulal & create app:
   <!---install django-->
       npm uninstall -g @angular/cli
       npm cache clean

@@ -1,4 +1,16 @@
 # managermovies_springAngular
+
+
+Objectif
+
+1.Création d’un premier projetAngular
+2.Installation de Bootstrap
+3.Création d’un menu Navbar
+4.Création du Web Component Produits
+5.Création du Web Component add-produit
+6.Ajout d’un composant web par défaut
+7.Utiliser le «Data Binding » pour afficher la liste des produits
+
 ## 🛠 &nbsp;Tech Stack 
 
 <div>

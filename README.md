@@ -19,19 +19,28 @@ Objectif
 
 ## 🎓 &nbsp;Follow this steps
 
-<ol>
+
  
-  
+  <div>
+ 
     How to get angulal & create app:
   <!---install django-->
       npm uninstall -g @angular/cli
       npm cache clean
       ng new MesFilms
+    
+ </div>
 
 
-
-  </ol>
   
+   
+     
+     To test    
+     http://localhost :4200
+  
+     
+     
+      
 ## 🛠 &nbsp;Tech Stack 
 
 <div>

@@ -35,8 +35,10 @@ Objectif
   
    
      
-     To test    
+     To excute and test 
+     ng serve
      http://localhost :4200
+    
   
      
      

@@ -19,6 +19,19 @@ Objectif
 
 ## 🎓 &nbsp;Follow this steps
 
+<ol>
+  <li> First app : initiation to django </li>
+  
+    How to get Django:
+  <!---install django-->
+      npm uninstall -g @angular/cli
+      npm cache clean
+      ng new MesFilms
+
+
+
+  </ol>
+  
 ## 🛠 &nbsp;Tech Stack 
 
 <div>

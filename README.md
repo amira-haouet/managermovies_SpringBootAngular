@@ -3,12 +3,18 @@
 
 Objectif
 
-1.Création d’un premier projetAngular
+1.Création d’un premier projetAngular 
+<br>
 2.Installation de Bootstrap
+<br>
 3.Création d’un menu Navbar
+<br>
 4.Création du Web Component Produits
+<br>
 5.Création du Web Component add-produit
+<br>
 6.Ajout d’un composant web par défaut
+<br>
 7.Utiliser le «Data Binding » pour afficher la liste des produits
 
 ## 🛠 &nbsp;Tech Stack 

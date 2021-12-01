@@ -17,6 +17,8 @@ Objectif
 <br>
 7.&nbsp;Utiliser le «Data Binding » pour afficher la liste des produits
 
+## 🎓 &nbsp;Follow this steps
+
 ## 🛠 &nbsp;Tech Stack 
 
 <div>

@@ -8,6 +8,7 @@ import { Film } from '../film.model';
 })
 export class FilmsComponent implements OnInit {
   films : Film[]; //un tableau de chînes de caractères
+  FilmService: any;
 
   constructor() {
     this.films = [
@@ -19,5 +20,10 @@ export class FilmsComponent implements OnInit {
   ngOnInit(): void {
    // throw new Error('Method not implemented.');
   }
+  supprimerFilm(f: Film)
+  {
+  //console.log(f);
+  this.FilmService.supprimerFilm(f);
 
+  }
 }

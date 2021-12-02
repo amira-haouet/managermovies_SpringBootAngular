@@ -5,9 +5,9 @@ import { Film } from '../film.model';
 providedIn: 'root'
 })
 export class FilmService {
-Films : Film[]; //un tableau de Film
+films : Film[]; //un tableau de Film
 constructor(private FilmService: FilmService ) {
-this.Films = FilmService.listeFilms();
+this.films = FilmService.listeFilms();
 }
 
 
@@ -19,9 +19,15 @@ this.Films = [
 ];
 }*/
 listeFilms():Film[] {
-  return this.Films
+  return this.films
 }
-ajouterFilm( prod: Film){
-this.Films.push(prod);
+ajouterFilm( film: Film){
+this.films.push(film);
 }
+
+supprimerFilm( film: Film){
+  //supprimer le Film prod du tableau Films
+  const index = this.films.indexOf(film, 0);
+  if (index > -1) {
+  }}
 }

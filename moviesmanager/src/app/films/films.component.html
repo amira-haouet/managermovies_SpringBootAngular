@@ -9,7 +9,8 @@
   <td>{{film.nomFilm}}</td>
   <td>{{film.prixFilm}}</td>
   <td>{{film.dateCreation | date:'dd/MM/yyyy'}}</td>
-  </tr>
+  <td><a class="btn btn-danger" (click)="supprimerFilm(film)">Supprimer</a></td>
+</tr>
   </tbody>
   </table>
   </div>

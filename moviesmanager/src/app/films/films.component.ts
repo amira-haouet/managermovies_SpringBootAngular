@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Film } from '../film.model';
 
 @Component({
   selector: 'app-films',
@@ -6,13 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./films.component.css']
 })
 export class FilmsComponent implements OnInit {
-  films : string[]; //un tableau de chînes de caractères
+  films : Film[]; //un tableau de chînes de caractères
 
   constructor() {
-    this.films = ["Dora", "vivo", "mulan"];
-   }
-
+    this.films = [
+    {idFilm : 1, nomFilm : "PC Asus", prixFilm : 3000.600, dateCreation : new Date("01/14/2011")},
+    {idFilm : 2, nomFilm : "Imprimante Epson", prixFilm : 450, dateCreation : new Date("12/17/2010")},
+    {idFilm : 3, nomFilm :"Tablette Samsung", prixFilm : 900.123, dateCreation : new Date("02/20/2020")}
+     ];
+    }
   ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
 }

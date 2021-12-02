@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Film } from '../film.model';
+import { FilmService } from '../services/film.service';
 
 @Component({
   selector: 'app-add-films',
@@ -10,12 +11,13 @@ export class AddFilmsComponent implements OnInit {
 
   newFilm = new Film();
 
-  constructor() { }
+  constructor( private filmService: FilmService) { }
 
   ngOnInit(): void {
   }
   addFilm(){
-    console.log(this.newFilm);
+  //  console.log(this.newFilm);
+  this.filmService.ajouterFilm(this.newFilm);
     }
     
 }

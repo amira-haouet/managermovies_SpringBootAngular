@@ -10,6 +10,8 @@
   <td>{{film.prixFilm}}</td>
   <td>{{film.dateCreation | date:'dd/MM/yyyy'}}</td>
   <td><a class="btn btn-danger" (click)="supprimerFilm(film)">Supprimer</a></td>
+  <td><a class="btn btn-success" [routerLink]="['/updateFilm',film.idFilm]">Update</a></td>
+
 </tr>
   </tbody>
   </table>

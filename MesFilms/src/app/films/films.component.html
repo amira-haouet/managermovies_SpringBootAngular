@@ -1,1 +1,20 @@
-<p>films works!</p>
+<h2 style="text-align:center;"> Here the movies !</h2>
+
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table >
+    <thead>
+    <tr>
+    <th>Liste de Films</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let film of films">
+    <tr >
+    <td>{{film}}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>

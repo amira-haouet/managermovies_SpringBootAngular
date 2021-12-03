@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Film } from '../models/film.models';
 
 @Component({
   selector: 'app-add-film',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddFilmComponent implements OnInit {
 
+  newFilm = new Film();
   constructor() { }
 
   ngOnInit(): void {

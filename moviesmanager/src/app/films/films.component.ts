@@ -2,8 +2,10 @@ import { OnInit } from "@angular/core";
 import { Film } from "../model/film.model";
 import { FilmService } from "../services/film.service";
 
+
 export class FilmsComponent implements OnInit {
-films : Film[]; //un tableau de Produit
+
+films : Film[]; //un tableau de Film
 /*constructor() {
   this.films = [
   {idFilm : 1, titre : "PC Asus", prixticket : 3000.600, dateSortie : new Date("01/14/2011")},
@@ -16,8 +18,9 @@ films : Film[]; //un tableau de Produit
 constructor(private filmService: FilmService ) {
 this.films = filmService.listeFilms();
 }
-
   ngOnInit(): void {
-  //  throw new Error("Method not implemented.");
+    throw new Error("Method not implemented.");
   }
+ 
+ 
 }

@@ -13,9 +13,10 @@ export class AddFilmComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  constructor(private filmService: FilmService) { }
   addProduit(){
-    console.log(this.newFilm);
+    // console.log(this.newProduit);
+    this.filmService.ajouterFilm(this.newFilm);
     }
     
  

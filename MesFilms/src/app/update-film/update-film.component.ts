@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Film } from '../models/film.models';
 import { FilmService } from '../services/film.service';
 
@@ -12,6 +12,8 @@ import { FilmService } from '../services/film.service';
 export class UpdateFilmComponent implements OnInit {
   currentFilm = new Film()
   constructor(private filmService: FilmService
+    ,private router: Router
+
     , private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -21,6 +23,7 @@ export class UpdateFilmComponent implements OnInit {
   }
   updateFilm() { //console.log(this.currentProduit);
     this.filmService.updateFilm(this.currentFilm);
+    this.router.navigate(['films']);
   }
 
 }

@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Film } from '../models/film.models';
 import { FilmService } from '../services/film.service';
-
+import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 @Component({
   selector: 'app-films',
   templateUrl: './films.component.html',
@@ -32,6 +36,6 @@ export class FilmsComponent implements OnInit {
     let conf = confirm("Etes-vous sûr ?");
     if (conf)
 
-    this.filmService.supprimerFilm(f);
+      this.filmService.supprimerFilm(f);
   }
 }

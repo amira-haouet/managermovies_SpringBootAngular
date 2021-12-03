@@ -7,6 +7,7 @@ import { FilmsComponent } from './films/films.component';
 import { AddFilmComponent } from './add-film/add-film.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateFilmComponent } from './update-film/update-film.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UpdateFilmComponent } from './update-film/update-film.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

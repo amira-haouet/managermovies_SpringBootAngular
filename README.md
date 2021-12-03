@@ -24,7 +24,7 @@ Objectif
   <div>
  
     How to get angulal & create app:
-  <!---install django-->
+  <!---install angular-->
       npm uninstall -g @angular/cli
       npm cache clean
       ng new MesFilms
@@ -40,7 +40,11 @@ Objectif
      http://localhost :4200
     
   
-     
+   
+  Install Bootstrap:
+  
+      npm install bootstrap@4.5.3 
+
      
       
 ## 🛠 &nbsp;Tech Stack 

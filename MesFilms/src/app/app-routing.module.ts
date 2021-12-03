@@ -4,7 +4,7 @@ import { AddFilmComponent } from './add-film/add-film.component';
 import { FilmsComponent } from './films/films.component';
 const routes: Routes = [
   { path: "films", component: FilmsComponent },
-  {path: "add-produit", component : AddFilmComponent},
+  { path: "add-produit", component: AddFilmComponent },
   { path: "", redirectTo: "films", pathMatch: "full" }
 ];
 

@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./films.component.css']
 })
 export class FilmsComponent implements OnInit {
- films :string[];
+  films: string[];
   constructor() {
 
     this.films = ["Dora", "dark", "stars"];
-   }
+  }
 
   ngOnInit(): void {
   }

@@ -44,7 +44,12 @@ export class FilmService {
 
   }
   consulterFilm(id: number): Film {
-    this.film!= this.films.find(f => f.idFilm == id);
+    this.film != this.films.find(f => f.idFilm == id);
     return this.film;
+  }
+  updateFilm(p: Film) {
+    // console.log(p);
+    this.supprimerFilm(p);
+    this.ajouterFilm(p);
   }
 }

@@ -1,23 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Film } from '../models/film.models';
-import { Observable, of } from 'rxjs';
-
+import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 @Injectable({
   providedIn: 'root'
 })
 export class FilmService {
+  apiURL: string = 'http://localhost:4000/films/api';
 
-  films: Film[]; //un tableau de film 
-  film = new Film();
+   films!: Film[]; //un tableau de film 
+   film = new Film();
 
-  constructor() {
-    this.films = [
-      { idFilm: 1, titre: "Dora", prixticket: 3000.600, dateSortie: new Date("01/14/2011") },
-      { idFilm: 2, titre: "dark", prixticket: 450, dateSortie: new Date("12/17/2010") },
-      {
-        idFilm: 3, titre: "stars", prixticket: 900.123, dateSortie: new Date("02/20/2020")
-      }
-    ];
+  constructor(private http: HttpClient) {
+    /*  this.films = [
+        { idFilm: 1, titre: "Dora", prixticket: 3000.600, dateSortie: new Date("01/14/2011") },
+        { idFilm: 2, titre: "dark", prixticket: 450, dateSortie: new Date("12/17/2010") },
+        {
+          idFilm: 3, titre: "stars", prixticket: 900.123, dateSortie: new Date("02/20/2020")
+        }
+      ];*/
   }
   listeFilms(): Film[] {
 
@@ -70,4 +74,8 @@ export class FilmService {
     this.ajouterFilm(f);
     this.trierProduits();
   }
+
+  listeFilm(): Observable<Film[]>{
+    return this.http.get<Film[]>(this.apiURL);
+    }
 }

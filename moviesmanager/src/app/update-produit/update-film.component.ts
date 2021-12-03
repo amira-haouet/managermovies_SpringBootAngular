@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Film } from '../models/film.model';
+import { Film } from '../model/film.model';
+import { ActivatedRoute,Router } from '@angular/router';
 import { FilmService } from '../services/film.service';
+
 @Component({
   selector: 'app-update-film',
   templateUrl: './update-film.component.html',
@@ -10,15 +11,17 @@ import { FilmService } from '../services/film.service';
 })
 export class UpdateFilmComponent implements OnInit {
   currentFilm = new Film();
+  
   constructor(private activatedRoute: ActivatedRoute,
-    private filmService: FilmService) { }
+              private router :Router,
+              private filmService: FilmService) { }
 
   ngOnInit(): void {
+   // this.filmService.consulterFilm(this.activatedRoute.snapshot.params['id']).
+  //  subscribe( prod =>{ this.currentFilm = prod; });
+  }
 
-  //  this.currentFilm=this.filmService.currentFilm((this.activatedRoute.snapshot.params.id);
-  }
-  updateProduit()
-  { //console.log(this.currentProduit);
-  this.filmService.updateProduit(this.currentFilm);
-  }
+ 
+  
+
 }

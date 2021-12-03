@@ -28,6 +28,10 @@ export class FilmsComponent implements OnInit {
   ngOnInit(): void {
   }
   supprimerFilm(f: Film) {
-    console.log(f);
+    //console.log(f);
+    let conf = confirm("Etes-vous sûr ?");
+    if (conf)
+
+    this.filmService.supprimerFilm(f);
   }
 }

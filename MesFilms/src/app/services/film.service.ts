@@ -23,4 +23,19 @@ export class FilmService {
   ajouterFilm(prod: Film) {
     this.films.push(prod);
   }
+
+
+  supprimerFilm(prod: Film) {
+    //supprimer le film prod du tableau films
+    const index = this.films.indexOf(prod, 0);
+    if (index > -1) {
+      this.films.splice(index, 1);
+    }
+    //or
+    /* this.films.forEach((cur, index) => {
+    if(prod.idFilm === cur.idFilm) {
+    this.films.splice(index, 1);
+    }
+    }); */
+  }
 }

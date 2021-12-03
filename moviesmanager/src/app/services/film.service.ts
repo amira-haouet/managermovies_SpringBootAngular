@@ -15,7 +15,7 @@ constructor()  {
 listeFilms():Film[] {
   return this.films;
 }
-ajouterProduit( prod: Film){
+ajouterFilm( prod: Film){
 this.films.push(prod);
 }
 }

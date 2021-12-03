@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FilmsComponent } from './films/films.component';
 import { AddFilmComponent } from './add-film/add-film.component';
 import { FormsModule } from '@angular/forms';
+import { UpdateFilmComponent } from './update-film/update-film.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmsComponent,
-    AddFilmComponent
+    AddFilmComponent,
+    UpdateFilmComponent
   ],
   imports: [
     BrowserModule,

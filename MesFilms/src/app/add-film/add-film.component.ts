@@ -13,5 +13,8 @@ export class AddFilmComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  addFilm() {
+    console.log(this.newFilm);
+  }
 
 }

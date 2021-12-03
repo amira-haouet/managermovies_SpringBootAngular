@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Film } from '../models/film.models';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FilmService {
 
-  films: Film[]; //un tableau de Produit
+  films: Film[]; //un tableau de film 
+  film = new Film();
+
   constructor() {
     this.films = [
       { idFilm: 1, titre: "Dora", prixticket: 3000.600, dateSortie: new Date("01/14/2011") },
@@ -37,5 +40,11 @@ export class FilmService {
     this.films.splice(index, 1);
     }
     }); */
+
+
+  }
+  consulterFilm(id: number): Film {
+    this.film!= this.films.find(f => f.idFilm == id);
+    return this.film;
   }
 }

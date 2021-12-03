@@ -11,8 +11,8 @@ const httpOptions = {
 export class FilmService {
   apiURL: string = 'http://localhost:4000/films/api';
 
-   films!: Film[]; //un tableau de film 
-   film = new Film();
+  films!: Film[]; //un tableau de film 
+  film = new Film();
 
   constructor(private http: HttpClient) {
     /*  this.films = [
@@ -22,6 +22,10 @@ export class FilmService {
           idFilm: 3, titre: "stars", prixticket: 900.123, dateSortie: new Date("02/20/2020")
         }
       ];*/
+  }
+
+  listeFilm(): Observable<Film[]> {
+    return this.http.get<Film[]>(this.apiURL);
   }
   listeFilms(): Film[] {
 
@@ -75,7 +79,5 @@ export class FilmService {
     this.trierProduits();
   }
 
-  listeFilm(): Observable<Film[]>{
-    return this.http.get<Film[]>(this.apiURL);
-    }
+ 
 }

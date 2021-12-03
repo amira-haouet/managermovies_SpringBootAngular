@@ -16,6 +16,8 @@
                         <td>{{film.titre}}</td>
                         <td>{{film.prixticket}}</td>
                         <td>{{film.dateSortie | date:'dd/MM/yyyy'}}</td>
+                        <td><a class="btn btn-danger" (click)="supprimerFilm(film)">Supprimer</a></td>
+
                     </tr>
                 </tbody>
             </table>

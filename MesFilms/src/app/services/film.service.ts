@@ -52,4 +52,22 @@ export class FilmService {
     this.supprimerFilm(p);
     this.ajouterFilm(p);
   }
+
+  trierProduits() {
+    this.films = this.films.sort((n1, n2) => {
+      if (n1.idFilm > n2.idFilm) {
+        return 1;
+      }
+      if (n1.idFilm < n2.idFilm) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+  updateProduit(f: Film) {
+    // console.log(p);
+    this.supprimerFilm(f);
+    this.ajouterFilm(f);
+    this.trierProduits();
+  }
 }

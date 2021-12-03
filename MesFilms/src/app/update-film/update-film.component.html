@@ -1,23 +1,23 @@
 <h2 style="text-align:center;">update-film works!</h2>
 <div class="container">
     <div>
-        <h2>Modifier un Produit :</h2>
+        <h2>Modifier un Film :</h2>
     </div>
     <form>
-        <div class="col-sm-2 col-md-2 col-lg-2">
-            <label>ID Produit</label>
-            <input type="text" [(ngModel)]="currentFilm.idFilm" name="idFilm" class="form-control">
+        <div hidden class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Film</label>
+            <input readonly type="text" [(ngModel)]="currentFilm.idFilm" name="idFilm" class="form-control">
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4">
-            <label>Nom Produit</label>
+            <label>titre Film</label>
             <input type="text" [(ngModel)]="currentFilm.titre" name="titre" class="form-control">
         </div>
         <div class="col-sm-2 col-md-2 col-lg-2">
-            <label>Prix Produit</label>
+            <label>Prix Film</label>
             <input type="number" [(ngModel)]="currentFilm.prixticket" name="prixticket" class="form-control">
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4">
-            <label>Date création</label>
+            <label>Date sortie</label>
             <input type="date" [ngModel]="currentFilm.dateSortie    | date: 'yyyy-MM-dd'" (ngModelChange)=" currentFilm.dateSortie= $event" name="dateSortie"
                 class="form-control">
         </div>

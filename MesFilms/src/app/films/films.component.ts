@@ -40,15 +40,32 @@ export class FilmsComponent implements OnInit {
        this.filmService.supprimerFilm(f);
    }
  */
-
-  supprimerFilm(f: Film) {
+  /*
+    supprimerFilm(f: Film) {
+      let conf = confirm("Etes-vous sûr ?");
+      if (conf)
+        this.filmService.supprimerFilm(f.idFilm).subscribe(() => {
+          console.log("film supprimé");
+        });
+      this.router.navigate(['films']).then(() => {
+        window.location.reload();
+      });
+    }
+  */
+  supprimerFilm(p: Film) {
     let conf = confirm("Etes-vous sûr ?");
     if (conf)
-      this.filmService.supprimerFilm(f.idFilm).subscribe(() => {
+      this.filmService.supprimerFilm(p.idFilm).subscribe(() => {
         console.log("film supprimé");
+        this.SuprimerfilmDuTableau(p);
       });
-    this.router.navigate(['films']).then(() => {
-      window.location.reload();
+  }
+
+  SuprimerfilmDuTableau(prod: Film) {
+    this.films.forEach((cur, index) => {
+      if (prod.idFilm === cur.idFilm) {
+        this.films.splice(index, 1);
+      }
     });
   }
 }

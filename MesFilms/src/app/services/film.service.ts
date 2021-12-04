@@ -58,16 +58,24 @@ export class FilmService {
     const url = `${this.apiURL}/${id}`;
     return this.http.delete(url, httpOptions);
   }
-  consulterFilm(id: number): Film {
+  /*consulterFilm(id: number): Film {
     this.film != this.films.find(f => f.idFilm == id);
     return this.film;
+  }*/
+
+  consulterFilm(id: number): Observable<Film> {
+    const url = `${this.apiURL}/${id}`;
+    return this.http.get<Film>(url);
   }
-  updateFilm(f: Film) {
+
+  /*updateFilm(f: Film) {
     // console.log(p);
     this.supprimerFilm(f.idFilm);
     this.ajouterFilm(f);
+  }*/
+  updateFilm(prod: Film): Observable<Film> {
+    return this.http.put<Film>(this.apiURL, prod, httpOptions);
   }
-
   trierProduits() {
     this.films = this.films.sort((n1, n2) => {
       if (n1.idFilm > n2.idFilm) {

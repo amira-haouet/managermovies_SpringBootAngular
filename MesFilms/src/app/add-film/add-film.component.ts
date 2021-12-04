@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Film } from '../models/film.models';
 import { FilmService } from '../services/film.service';
 
@@ -13,7 +13,7 @@ export class AddFilmComponent implements OnInit {
   newFilm = new Film();
   message!: string;
   constructor(private filmService: FilmService,
-    private router: Router) { }
+    private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
   }

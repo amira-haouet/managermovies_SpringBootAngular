@@ -3,11 +3,12 @@ package com.spring.films;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
 import com.spring.films.repos.FilmRepository;
 import com.spring.films.service.FilmService;
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
 
-@SpringBootApplication
 public class FilmsScenaristeApplication {
 
 	@Autowired

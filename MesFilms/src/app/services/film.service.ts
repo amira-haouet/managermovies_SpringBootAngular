@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Film } from '../models/film.models';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -31,34 +32,40 @@ export class FilmService {
 
     return this.films;
   }
-  ajouterFilm(prod: Film) {
+  /*ajouterFilm(prod: Film) {
     this.films.push(prod);
+  }*/
+  ajouterFilm(f: Film): Observable<Film> {
+    return this.http.post<Film>(this.apiURL, f, httpOptions);
   }
-
-
-  supprimerFilm(prod: Film) {
-    //supprimer le film prod du tableau films
-    const index = this.films.indexOf(prod, 0);
-    if (index > -1) {
+  /*
+    supprimerFilm(prod: Film) {
+      //supprimer le film prod du tableau films
+      const index = this.films.indexOf(prod, 0);
+      if (index > -1) {
+        this.films.splice(index, 1);
+      }
+      //or
+      /* this.films.forEach((cur, index) => {
+      if(prod.idFilm === cur.idFilm) {
       this.films.splice(index, 1);
-    }
-    //or
-    /* this.films.forEach((cur, index) => {
-    if(prod.idFilm === cur.idFilm) {
-    this.films.splice(index, 1);
-    }
-    }); */
-
-
+      }
+      }); 
+  
+  
+    }*/
+  supprimerFilm(id: number) {
+    const url = `${this.apiURL}/${id}`;
+    return this.http.delete(url, httpOptions);
   }
   consulterFilm(id: number): Film {
     this.film != this.films.find(f => f.idFilm == id);
     return this.film;
   }
-  updateFilm(p: Film) {
+  updateFilm(f: Film) {
     // console.log(p);
-    this.supprimerFilm(p);
-    this.ajouterFilm(p);
+    this.supprimerFilm(f.idFilm);
+    this.ajouterFilm(f);
   }
 
   trierProduits() {
@@ -72,12 +79,12 @@ export class FilmService {
       return 0;
     });
   }
-  updateProduit(f: Film) {
-    // console.log(p);
-    this.supprimerFilm(f);
-    this.ajouterFilm(f);
-    this.trierProduits();
-  }
+  /* updateProduit(f: Film) {
+     // console.log(p);
+     this.supprimerFilm(f);
+     this.ajouterFilm(f);
+     this.trierFilm();
+   }*/
 
- 
+
 }

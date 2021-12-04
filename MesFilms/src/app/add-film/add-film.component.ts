@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Film } from '../models/film.models';
 import { FilmService } from '../services/film.service';
 
@@ -10,13 +11,24 @@ import { FilmService } from '../services/film.service';
 export class AddFilmComponent implements OnInit {
 
   newFilm = new Film();
-  constructor(private filmService: FilmService) { }
+  message!: string;
+  constructor(private filmService: FilmService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
+  /* addFilm() {
+     //console.log(this.newFilm);
+     this.filmService.ajouterFilm(this.newFilm);
+   }*/
   addFilm() {
-    //console.log(this.newFilm);
-    this.filmService.ajouterFilm(this.newFilm);
-  }
+    this.filmService.ajouterFilm(this.newFilm).subscribe(f => {
 
+      console.log(f);
+    });
+    this.router.navigate(['films']).then(() => {
+
+      window.location.reload();
+    });
+  }
 }

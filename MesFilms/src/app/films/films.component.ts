@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Film } from '../models/film.models';
 import { FilmService } from '../services/film.service';
 
@@ -11,7 +12,7 @@ export class FilmsComponent implements OnInit {
   //  films: string[];
   //tableau de film
   films: Film[];
-  constructor(private filmService: FilmService) {
+  constructor(private filmService: FilmService, private router: Router) {
 
     // this.films = ["Dora", "dark", "stars"];
     /*this.films = [
@@ -31,11 +32,23 @@ export class FilmsComponent implements OnInit {
       this.films = f;
     });
   }
+  /* supprimerFilm(f: Film) {
+     //console.log(f);
+     let conf = confirm("Etes-vous sûr ?");
+     if (conf)
+ 
+       this.filmService.supprimerFilm(f);
+   }
+ */
+
   supprimerFilm(f: Film) {
-    //console.log(f);
     let conf = confirm("Etes-vous sûr ?");
     if (conf)
-
-      this.filmService.supprimerFilm(f);
+      this.filmService.supprimerFilm(f.idFilm).subscribe(() => {
+        console.log("film supprimé");
+      });
+    this.router.navigate(['films']).then(() => {
+      window.location.reload();
+    });
   }
 }

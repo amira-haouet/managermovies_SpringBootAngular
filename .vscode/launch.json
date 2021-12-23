@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FilmsScenaristeApplication<Films_Scenariste>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.spring.films.FilmsScenaristeApplication",
+            "projectName": "Films_Scenariste",
+            "args": ""
+        }
+    ]
+}

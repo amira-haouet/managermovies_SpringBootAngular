@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ScenaristeComponent } from './scenariste/scenariste.component';
 import { AddScenaristeComponent } from './add-scenariste/add-scenariste.component';
 import { ProduitDetailsComponent } from './produit-details/produit-details.component';
+import { FilmDetailsComponent } from './film-details/film-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProduitDetailsComponent } from './produit-details/produit-details.compo
     UpdateFilmComponent,
     ScenaristeComponent,
     AddScenaristeComponent,
-    ProduitDetailsComponent
+    ProduitDetailsComponent,
+    FilmDetailsComponent
   ],
   imports: [
     BrowserModule,

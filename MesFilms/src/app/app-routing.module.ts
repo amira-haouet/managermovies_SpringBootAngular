@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddFilmComponent } from './add-film/add-film.component';
 import { FilmsComponent } from './films/films.component';
-import { ScenaristeComponent } from './scenariste/scenariste.component';
+import { ScenaristesComponent } from './scenaristes/scenaristes.component';
 import { UpdateFilmComponent } from './update-film/update-film.component';
 //import {FilmDetailsComponent} from './film-details/film-details.component';
 const routes: Routes = [
@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: "add-film", component: AddFilmComponent },
   { path: "", redirectTo: "films", pathMatch: "full" },
   { path: "updateFilm/:id", component: UpdateFilmComponent },
-  { path: "scenariste", component: ScenaristeComponent },
+  { path: "scenaristes", component: ScenaristesComponent },
  // { path: "film-details", component: FilmDetailsComponent },
 ];
 

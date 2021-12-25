@@ -61,7 +61,7 @@ public class ScenaristeServiceImpl implements ScenaristeService {
 	}
 
 	@Override
-	public List<Scenariste> findByTitre(String titre) {
+	public List<Scenariste> findByNom(String nom) {
 		// TODO Auto-generated method stub
 		return null;
 	}

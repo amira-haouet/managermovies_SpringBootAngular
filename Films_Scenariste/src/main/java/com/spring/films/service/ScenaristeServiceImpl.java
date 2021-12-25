@@ -54,7 +54,7 @@ public class ScenaristeServiceImpl implements ScenaristeService {
 		return sr.findAll();
 	}
 
-	@Override
+/*	@Override
 	public Page<Scenariste> getAllScenaristesParPage(int page, int size) {
 		// TODO Auto-generated method stub
 		return sr.findAll(PageRequest.of(page, size));
@@ -70,6 +70,6 @@ public class ScenaristeServiceImpl implements ScenaristeService {
 	public List<Scenariste> listAll(String key) {
 		// TODO Auto-generated method stub
 		return null;
-	}
+	}*/
 
 }

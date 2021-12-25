@@ -26,10 +26,12 @@ public interface ScenaristeService {
 	 * getAllScenaristesParPageandbytitre(int page, int size, String titre);
 	 * Page<Scenariste> listAllbyPage(String key, int page, int size);
 	 */
-	Page<Scenariste> getAllScenaristesParPage(int page, int size);
+	// Page<Scenariste> getAllScenaristesParPage(int page, int size);
 
-	@Query("select s from scenariste s where s.nom = ?1")
-	List<Scenariste> findByNom(String nom);
-
-	List<Scenariste> listAll(String key);
+	/*
+	 * @Query("select s from scenariste s where s.nom = ?1") List<Scenariste>
+	 * findByNom(String nom);
+	 * 
+	 * List<Scenariste> listAll(String key);
+	 */
 }

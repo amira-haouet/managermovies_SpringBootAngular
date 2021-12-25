@@ -15,6 +15,7 @@ public class Film {
 	private String titre;
 	private Double prixticket;
 	private Date dateSortie;
+	
 	@ManyToOne
 	private Scenariste scenariste;
 

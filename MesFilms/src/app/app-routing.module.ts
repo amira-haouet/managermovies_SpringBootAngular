@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddFilmComponent } from './add-film/add-film.component';
+import { AddScenaristeComponent } from './add-scenariste/add-scenariste.component';
 import { FilmsComponent } from './films/films.component';
 import { ScenaristesComponent } from './scenaristes/scenaristes.component';
 import { UpdateFilmComponent } from './update-film/update-film.component';
@@ -8,6 +9,8 @@ import { UpdateFilmComponent } from './update-film/update-film.component';
 const routes: Routes = [
   { path: "films", component: FilmsComponent },
   { path: "add-film", component: AddFilmComponent },
+  { path: "add-scenariste", component: AddScenaristeComponent },
+
   { path: "", redirectTo: "films", pathMatch: "full" },
   { path: "updateFilm/:id", component: UpdateFilmComponent },
   { path: "scenaristes", component: ScenaristesComponent },

@@ -1,4 +1,4 @@
- package com.spring.films.entities;
+package com.spring.films.entities;
 
 import java.util.List;
 import javax.persistence.Entity;
@@ -23,55 +23,38 @@ public class Scenariste {
 	private Long idSc;
 	private String nom;
 	private String prenom;
-	
+
 	@JsonIgnore
 	@OneToMany(mappedBy = "scenariste")
 	private List<Film> films;
-	
-/*
-	public Scenariste(String nom, String prenom, List<Film> films) {
-		super();
-		this.nom = nom;
-		this.prenom = prenom;
-		this.films = films;
-	}*/
-	
-/*
-	public Scenariste() {
-		super();
+
+	public void SetIdSc(long l) {
+		this.idSc = l;
 	}
 
-	public Long getIdSc() {
-		return idSc;
-	}
+	/*
+	 * public Scenariste(String nom, String prenom, List<Film> films) { super();
+	 * this.nom = nom; this.prenom = prenom; this.films = films; }
+	 */
 
-	public void setIdSc(Long idSc) {
-		this.idSc = idSc;
-	}
-
-	public String getNom() {
-		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-	public String getPrenom() {
-		return prenom;
-	}
-
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
-
-	public List<Film> getFilms() {
-		return films;
-	}
-
-	public void setFilms(List<Film> films) {
-		this.films = films;
-	}
-	
-	*/
+	/*
+	 * public Scenariste() { super(); }
+	 * 
+	 * public Long getIdSc() { return idSc; }
+	 * 
+	 * public void setIdSc(Long idSc) { this.idSc = idSc; }
+	 * 
+	 * public String getNom() { return nom; }
+	 * 
+	 * public void setNom(String nom) { this.nom = nom; }
+	 * 
+	 * public String getPrenom() { return prenom; }
+	 * 
+	 * public void setPrenom(String prenom) { this.prenom = prenom; }
+	 * 
+	 * public List<Film> getFilms() { return films; }
+	 * 
+	 * public void setFilms(List<Film> films) { this.films = films; }
+	 * 
+	 */
 }

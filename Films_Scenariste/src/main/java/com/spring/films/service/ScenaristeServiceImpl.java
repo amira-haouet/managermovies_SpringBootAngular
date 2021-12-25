@@ -9,6 +9,7 @@ import org.springframework.data.domain.PageRequest;
 import com.spring.films.entities.Scenariste;
 import com.spring.films.repos.ScenaristeRepository;
 
+@Service
 public class ScenaristeServiceImpl implements ScenaristeService {
 
 	@Autowired

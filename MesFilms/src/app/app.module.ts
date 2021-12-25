@@ -10,8 +10,7 @@ import { UpdateFilmComponent } from './update-film/update-film.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ScenaristeComponent } from './scenariste/scenariste.component';
 import { AddScenaristeComponent } from './add-scenariste/add-scenariste.component';
-import { ProduitDetailsComponent } from './produit-details/produit-details.component';
-import { FilmDetailsComponent } from './film-details/film-details.component';
+//import { FilmDetailsComponent } from './film-details/film-details.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,8 @@ import { FilmDetailsComponent } from './film-details/film-details.component';
     UpdateFilmComponent,
     ScenaristeComponent,
     AddScenaristeComponent,
-    ProduitDetailsComponent,
-    FilmDetailsComponent
+   // ProduitDetailsComponent,
+   // FilmDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -33,4 +32,7 @@ import { FilmDetailsComponent } from './film-details/film-details.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+
+}

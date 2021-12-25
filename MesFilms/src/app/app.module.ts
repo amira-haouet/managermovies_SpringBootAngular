@@ -8,7 +8,7 @@ import { AddFilmComponent } from './add-film/add-film.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateFilmComponent } from './update-film/update-film.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ScenaristeComponent } from './scenariste/scenariste.component';
+//import { ScenaristesComponent } from './scenaristes/scenaristes.component';
 import { AddScenaristeComponent } from './add-scenariste/add-scenariste.component';
 import { ScenaristesComponent } from './scenaristes/scenaristes.component';
 //import { FilmDetailsComponent } from './film-details/film-details.component';
@@ -19,7 +19,7 @@ import { ScenaristesComponent } from './scenaristes/scenaristes.component';
     FilmsComponent,
     AddFilmComponent,
     UpdateFilmComponent,
-    ScenaristeComponent,
+    ScenaristesComponent,
     AddScenaristeComponent,
     ScenaristesComponent,
    // ProduitDetailsComponent,

@@ -87,6 +87,8 @@ export class FilmService {
       return 0;
     });
   }
+
+  
   /* updateProduit(f: Film) {
      // console.log(p);
      this.supprimerFilm(f);

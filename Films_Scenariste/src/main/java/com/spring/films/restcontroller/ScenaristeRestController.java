@@ -1,32 +1,32 @@
-package com.spring.films.restcontroller;
+/*package com.spring.films.restcontroller;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.spring.films.entities.Film;
-import com.spring.films.service.FilmService;
+import com.spring.films.entities.Scenariste;
 import com.spring.films.service.ScenaristeService;
-@RestController
-@RequestMapping("/api")
-@CrossOrigin
-public class FilmRESTController {
-	@Autowired
-	FilmService filmService;
-	ScenaristeService  ScenaristeService;
-    
-	@RequestMapping(method = RequestMethod.GET)
-	public List<Film> getAllFilms() {
 
-		return filmService.getAllFilms();
+@RestController
+@RequestMapping("/apisc")
+@CrossOrigin
+public class ScenaristeRestController {
+
+	@Autowired
+	
+	ScenaristeService scenaristeService;
+
+	@RequestMapping(method = RequestMethod.GET)
+	public List<Scenariste> getAllScenaristes() {
+
+		return scenaristeService.getAllScenaristes();
 	}
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+/*	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public Film getFilmById(@PathVariable("id") Long id) {
 		return filmService.getFilm(id);
 	}
@@ -49,6 +49,6 @@ public class FilmRESTController {
 	@RequestMapping(path = "all", method = RequestMethod.GET)
 	public List<Film> getAllFilms1() {
 		return filmService.getAllFilms();
-	}
+	}*/
 
-}
+

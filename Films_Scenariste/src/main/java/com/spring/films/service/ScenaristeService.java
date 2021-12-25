@@ -28,7 +28,7 @@ public interface ScenaristeService {
 	 */
 	Page<Scenariste> getAllScenaristesParPage(int page, int size);
 
-	@Query("select s from Scenariste s where s.nom = ?1")
+	@Query("select s from scenariste s where s.nom = ?1")
 	List<Scenariste> findByNom(String nom);
 
 	List<Scenariste> listAll(String key);

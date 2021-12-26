@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Scenariste } from '../models/scenariste.models';
+import { ScenaristeService } from '../services/scenariste.service';
 
 @Component({
   selector: 'app-scenaristes',
@@ -7,7 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScenaristesComponent implements OnInit {
 
-  constructor() { }
+scenaristes :Scenariste[];
+
+  constructor(private scenaristeservice: ScenaristeService,private router: Router) {
+this.
+
+   }
 
   ngOnInit(): void {
   }

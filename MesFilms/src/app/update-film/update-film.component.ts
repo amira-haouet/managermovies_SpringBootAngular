@@ -26,7 +26,7 @@ export class UpdateFilmComponent implements OnInit {
     // this.currentFilm = this.filmService.consulterFilm(this.activatedRoute.snapshot.params['id']);
     //console.log(this.currentFilm)
     //
-    this.scenaristes = this.filmService.listeScenaristes();
+  //  this.scenaristes = this.filmService.listeScenaristes();
    // this.currentFilm = this.filmService.consulterFilm(this.activatedRoute.snapshot.params['id']);
 
     //

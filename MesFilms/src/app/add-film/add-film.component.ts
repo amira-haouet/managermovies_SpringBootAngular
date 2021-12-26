@@ -12,9 +12,9 @@ import { FilmService } from '../services/film.service';
 export class AddFilmComponent implements OnInit {
 
   //26122021 add catego(sc)
-  scenaristes! : Scenariste[];
-  newIdSc! : number;
-  newScenariste! : Scenariste;
+  //scenaristes! : Scenariste[];
+  //newIdSc! : number;
+ // newScenariste! : Scenariste;
   //
 
   newFilm = new Film();
@@ -25,7 +25,7 @@ export class AddFilmComponent implements OnInit {
   ngOnInit(): void {
 
   //26122021 add catego(sc)
-    this.scenaristes = this.filmService.listeScenaristes();
+   // this.scenaristes = this.filmService.listeScenaristes();
 //
   }
   /* addFilm() {
@@ -34,8 +34,8 @@ export class AddFilmComponent implements OnInit {
    }*/
   addFilm() {
 
-    this.newScenariste = this.filmService.consulterScenariste(this.newIdSc);
-    this.newFilm.scenariste = this.newScenariste;
+   // this.newScenariste = this.filmService.consulterScenariste(this.newIdSc);
+   // this.newFilm.scenariste = this.newScenariste;
     this.filmService.ajouterFilm(this.newFilm).subscribe(f => {
 
       console.log(f);

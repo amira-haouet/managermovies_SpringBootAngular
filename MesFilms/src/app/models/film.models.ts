@@ -5,5 +5,5 @@ export class Film {
     titre!: string;
     prixticket!: number;
     dateSortie!: Date;
-    scenariste!: Scenariste;
+  //  scenariste!: Scenariste;
 }

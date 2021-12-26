@@ -1,1 +1,28 @@
-<p>scenaristes works!</p>
+<p>scenaristes home</p>
+<h2 style="text-align:center;"> Here the movies !</h2>
+
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                  
+
+                </tr>
+                <tbody *ngFor="let scenariste of scenaristes">
+                    <tr>
+                        <td>{{scenariste.idSc}}</td>
+                        <td>{{scenariste.nom}}</td>
+                        <td>{{scenariste.prenom}}</td>
+                       <!-- <td>{{film.scenariste.nom}}</td>-->
+
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

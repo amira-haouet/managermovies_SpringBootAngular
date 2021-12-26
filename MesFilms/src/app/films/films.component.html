@@ -18,7 +18,7 @@
                         <td>{{film.titre}}</td>
                         <td>{{film.prixticket}}</td>
                         <td>{{film.dateSortie | date:'dd/MM/yyyy'}}</td>
-                        <td>{{film.scenariste.nom}}</td>
+                       <!-- <td>{{film.scenariste.nom}}</td>-->
 
                         <td><a class="btn btn-danger" (click)="supprimerFilm(film)">Supprimer</a></td>
                         <td><a class="btn btn-success" [routerLink]="['/updateFilm',film.idFilm]">Update</a></td>

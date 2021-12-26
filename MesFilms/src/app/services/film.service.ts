@@ -16,8 +16,8 @@ export class FilmService {
 
   films!: Film[]; //un tableau de film 
   film = new Film();
-  scenariste = new Scenariste();
-  scenaristes!: Scenariste[];
+ // scenariste = new Scenariste();
+  //scenaristes!: Scenariste[];
 
 
   constructor(private http: HttpClient) {
@@ -113,7 +113,7 @@ export class FilmService {
    }*/
 
 
-  listeScenaristes(): Scenariste[] {
+  /*listeScenaristes(): Scenariste[] {
     return this.scenaristes;
   }
 
@@ -122,5 +122,5 @@ export class FilmService {
     this.scenariste = this.scenaristes.find(sc => sc.idSc == id)!;
     return this.scenariste;
   }
-
+*/
 }

@@ -15,9 +15,13 @@ export class FilmService {
 
   films!: Film[]; //un tableau de film 
   film = new Film();
+  scenariste = new Scenariste();
   scenaristes!: Scenariste[];
+
+
   constructor(private http: HttpClient) {
     this.scenaristes = [{ idSc: 5, nom: "amira", prenom: "haouet" },
+    { idSc: 6, nom: "test", prenom: "test" }
     ];
 
     this.films = [
@@ -101,12 +105,11 @@ export class FilmService {
    }*/
 
 
-   scenariste = new Scenariste();
   listeScenaristes(): Scenariste[] {
     return this.scenaristes;
   }
   consulterScenariste(id: number): Scenariste {
-    //this.scenariste = this.scenariste.find(sc => sc.idSc == id);
+    this.scenariste = this.scenaristes.find(sc => sc.idSc == id)!;
     return this.scenariste;
   }
 

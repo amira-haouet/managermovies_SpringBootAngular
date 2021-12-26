@@ -22,5 +22,20 @@ this.scenaristes=scenaristeservice.listeScenaristes();
       this.scenaristes = s;
     });
   }
+  supprimerScenariste(s: Scenariste) {
+    let conf = confirm("Etes-vous sûr ?");
+    if (conf)
+      this.scenaristeservice.supprimerScenariste(s.idSc).subscribe(() => {
+        console.log("film supprimé");
+        this.SuprimerfilmDuTableau(s);
+      });
+  }
 
+  SuprimerfilmDuTableau(sc: Scenariste) {
+    this.scenaristes.forEach((cur, index) => {
+      if (sc.idSc === cur.idSc) {
+        this.scenaristes.splice(index, 1);
+      }
+    });
+  }
 }

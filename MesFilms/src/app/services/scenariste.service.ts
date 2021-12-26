@@ -33,8 +33,13 @@ export class ScenaristeService {
     return this.http.post<Scenariste>(this.apiURL, f, httpOptions);
   }
 
-  supprimerFilm(id: number) {
+  supprimerScenariste(id: number) {
     const url = `${this.apiURL}/${id}`;
     return this.http.delete(url, httpOptions);
+  }
+
+  consulterFilm(id: number): Observable<Film> {
+    const url = `${this.apiURL}/${id}`;
+    return this.http.get<Film>(url);
   }
 }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Film } from '../models/film.models';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Scenariste } from '../models/scenariste.models';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -14,15 +15,15 @@ export class FilmService {
 
   films!: Film[]; //un tableau de film 
   film = new Film();
-
+  scenaristes!: Scenariste[];
   constructor(private http: HttpClient) {
-    /*  this.films = [
-        { idFilm: 1, titre: "Dora", prixticket: 3000.600, dateSortie: new Date("01/14/2011") },
-        { idFilm: 2, titre: "dark", prixticket: 450, dateSortie: new Date("12/17/2010") },
+    this.films = [
+        { idFilm: 1, titre: "Dora", prixticket: 3000.600, dateSortie: new Date("01/14/2011"),scenariste:{idSc:5,nom:"amira",prenom:"haouet"} },
+        { idFilm: 2, titre: "dark", prixticket: 450, dateSortie: new Date("12/17/2010") ,scenariste:{idSc:5,nom:"amira",prenom:"haouet"}},
         {
-          idFilm: 3, titre: "stars", prixticket: 900.123, dateSortie: new Date("02/20/2020")
+          idFilm: 3, titre: "stars", prixticket: 900.123, dateSortie: new Date("02/20/2020"),scenariste:{idSc:5,nom:"amira",prenom:"haouet"}
         }
-      ];*/
+      ];
   }
 
   listeFilm(): Observable<Film[]> {

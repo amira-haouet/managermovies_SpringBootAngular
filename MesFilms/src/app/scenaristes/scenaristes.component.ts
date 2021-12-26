@@ -13,11 +13,14 @@ export class ScenaristesComponent implements OnInit {
 scenaristes :Scenariste[];
 
   constructor(private scenaristeservice: ScenaristeService,private router: Router) {
-this.
-
+this.scenaristes=scenaristeservice.listeScenaristes();
    }
 
   ngOnInit(): void {
+    this.scenaristeservice.listeScenariste().subscribe(s => {
+      console.log(s);
+      this.scenaristes = s;
+    });
   }
 
 }

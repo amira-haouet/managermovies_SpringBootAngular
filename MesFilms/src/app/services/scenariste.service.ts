@@ -29,8 +29,8 @@ export class ScenaristeService {
   }
 
 
-  ajouterScenariste(f: Scenariste): Observable<Scenariste> {
-    return this.http.post<Scenariste>(this.apiURL, f, httpOptions);
+  ajouterScenariste(s: Scenariste): Observable<Scenariste> {
+    return this.http.post<Scenariste>(this.apiURL, s, httpOptions);
   }
 
   supprimerScenariste(id: number) {

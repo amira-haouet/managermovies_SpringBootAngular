@@ -36,9 +36,7 @@ export class FilmService {
 
 
   
-  listeScenariste(): Observable<Scenariste[]> {
-    return this.http.get<Scenariste[]>(this.apiURLs);
-  }
+ 
 
 
   listeFilm(): Observable<Film[]> {

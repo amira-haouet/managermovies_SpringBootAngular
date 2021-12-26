@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 //import { ScenaristesComponent } from './scenaristes/scenaristes.component';
 import { AddScenaristeComponent } from './add-scenariste/add-scenariste.component';
 import { ScenaristesComponent } from './scenaristes/scenaristes.component';
+import { SearchWithScriptwriterComponent } from './search-with-scriptwriter/search-with-scriptwriter.component';
 //import { FilmDetailsComponent } from './film-details/film-details.component';
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ScenaristesComponent } from './scenaristes/scenaristes.component';
     ScenaristesComponent,
     AddScenaristeComponent,
     ScenaristesComponent,
+    SearchWithScriptwriterComponent,
    // ProduitDetailsComponent,
    // FilmDetailsComponent
   ],

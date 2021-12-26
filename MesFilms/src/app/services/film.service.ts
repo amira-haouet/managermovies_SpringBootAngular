@@ -108,6 +108,8 @@ export class FilmService {
   listeScenaristes(): Scenariste[] {
     return this.scenaristes;
   }
+
+  
   consulterScenariste(id: number): Scenariste {
     this.scenariste = this.scenaristes.find(sc => sc.idSc == id)!;
     return this.scenariste;

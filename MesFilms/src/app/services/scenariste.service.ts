@@ -19,4 +19,12 @@ export class ScenaristeService {
 
 
   }
+
+  listeScenariste(): Observable<Scenariste[]> {
+    return this.http.get<Scenariste[]>(this.apiURL);
+  }
+  listeScenaristes(): Scenariste[] {
+
+    return this.scenaristes;
+  }
 }

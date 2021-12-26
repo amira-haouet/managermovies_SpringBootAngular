@@ -25,15 +25,14 @@ public class ScenaristeServiceImpl implements ScenaristeService {
 	}
 
 	@Override
-	public Scenariste updateScenariste(Scenariste f) {
+	public Scenariste updateScenariste(Scenariste s) {
 		// TODO Auto-generated method stub
-		return sr.save(f);
+		return sr.save(s);
 	}
 
 	@Override
-	public void deleteScenariste(Scenariste f) {
-		// TODO Auto-generated method stub
-		sr.delete(f);
+	public void deleteScenariste(Scenariste s) {
+		sr.delete(s);
 	}
 
 	@Override
@@ -54,22 +53,16 @@ public class ScenaristeServiceImpl implements ScenaristeService {
 		return sr.findAll();
 	}
 
-/*	@Override
-	public Page<Scenariste> getAllScenaristesParPage(int page, int size) {
-		// TODO Auto-generated method stub
-		return sr.findAll(PageRequest.of(page, size));
-	}
-
-	@Override
-	public List<Scenariste> findByNom(String nom) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Scenariste> listAll(String key) {
-		// TODO Auto-generated method stub
-		return null;
-	}*/
+	/*
+	 * @Override public Page<Scenariste> getAllScenaristesParPage(int page, int
+	 * size) { // TODO Auto-generated method stub return
+	 * sr.findAll(PageRequest.of(page, size)); }
+	 * 
+	 * @Override public List<Scenariste> findByNom(String nom) { // TODO
+	 * Auto-generated method stub return null; }
+	 * 
+	 * @Override public List<Scenariste> listAll(String key) { // TODO
+	 * Auto-generated method stub return null; }
+	 */
 
 }

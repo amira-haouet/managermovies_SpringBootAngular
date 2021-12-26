@@ -9,11 +9,11 @@ import com.spring.films.entities.Scenariste;
 
 public interface ScenaristeService {
 
-	Scenariste saveScenariste(Scenariste f);
+	Scenariste saveScenariste(Scenariste scenariste);
 
-	Scenariste updateScenariste(Scenariste f);
+	Scenariste updateScenariste(Scenariste scenariste);
 
-	void deleteScenariste(Scenariste f);
+	void deleteScenariste(Scenariste s);
 
 	void deleteScenaristeById(Long id);
 

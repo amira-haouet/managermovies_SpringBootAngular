@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,30 +28,30 @@ public class ScenaristeRestController {
 		return scenaristeService.getAllScenaristes();
 	}
 
-}
 
-	@RequestMapping(value="/{id}",method=RequestMethod.GET)public Film
-
-	getFilmById(@PathVariable("id") Long id) { return filmService.getFilm(id); }
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	public Scenariste getScenaristeById(@PathVariable("id") Long id) {
+		return scenaristeService.getScenariste(id);
+	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public Film createFilm(@RequestBody Film film) {
-		return filmService.saveFilm(film);
+	public Scenariste createFilm(@RequestBody Scenariste scenariste) {
+		return scenaristeService.saveScenariste(scenariste);
 	}
 
 	@RequestMapping(method = RequestMethod.PUT)
-	public Film updateProduit(@RequestBody Film film) {
-		return filmService.updateFilm(film);
+	public Scenariste updateProduit(@RequestBody Scenariste scenariste) {
+		return scenaristeService.updateScenariste(scenariste);
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public void deleteFilm(@PathVariable("id") Long id) {
-		filmService.deleteFilmById(id);
+		scenaristeService.deleteScenaristeById(id);
 	}
 
 	@RequestMapping(path = "all", method = RequestMethod.GET)
-	public List<Film> getAllFilms1() {
-		return filmService.getAllFilms();
+	public List<Scenariste> getAllFilms1() {
+		return scenaristeService.getAllScenaristes();
 	}
 
 }

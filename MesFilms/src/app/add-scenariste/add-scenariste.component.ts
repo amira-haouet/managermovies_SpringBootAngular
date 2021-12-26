@@ -17,9 +17,9 @@ export class AddScenaristeComponent implements OnInit {
 
   ngOnInit(): void {
 
-  //26122021 add catego(sc)
-   // this.scenaristes = this.filmService.listeScenaristes();
-//
+    //26122021 add catego(sc)
+    // this.scenaristes = this.filmService.listeScenaristes();
+    //
 
 
 
@@ -30,13 +30,13 @@ export class AddScenaristeComponent implements OnInit {
 
     // this.newScenariste = this.filmService.consulterScenariste(this.newIdSc);
     // this.newFilm.scenariste = this.newScenariste;
-     this.scenaristeService.ajouterScenariste(this.newScenariste).subscribe(f => {
- 
-       console.log(f);
-     });
-     this.router.navigate(['scenaristes']).then(() => {
- 
-       window.location.reload();
-     });
-   }
+    this.scenaristeService.ajouterScenariste(this.newScenariste).subscribe(f => {
+
+      console.log(f);
+    });
+    this.router.navigate(['scenaristes']).then(() => {
+
+      window.location.reload();
+    });
+  }
 }

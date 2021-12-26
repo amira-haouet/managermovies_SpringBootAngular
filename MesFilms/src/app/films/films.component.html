@@ -9,7 +9,7 @@
                     <th>Nom</th>
                     <th>Prix</th>
                     <th>Date Sortie</th>
-                    <th>scenariste</th> 
+                    <th>scenariste</th>
 
                 </tr>
                 <tbody *ngFor="let film of films">
@@ -18,11 +18,12 @@
                         <td>{{film.titre}}</td>
                         <td>{{film.prixticket}}</td>
                         <td>{{film.dateSortie | date:'dd/MM/yyyy'}}</td>
-                       <!-- <td>{{film.scenariste.nom}}</td>-->
+                        <!-- <td>{{film.scenariste.nom}}</td>-->
 
                         <td><a class="btn btn-danger" (click)="supprimerFilm(film)">Supprimer</a></td>
                         <td><a class="btn btn-success" [routerLink]="['/updateFilm',film.idFilm]">Update</a></td>
-                        <td><a class="btn btn-warning" [routerLink]="['/consulterFilm',film.idFilm]">consulter Film</a></td>
+                        <td><a class="btn btn-warning" [routerLink]="['/consulterFilm',film.idFilm]">consulter Film</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>

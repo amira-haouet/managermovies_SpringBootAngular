@@ -15,7 +15,7 @@ export class AddFilmComponent implements OnInit {
   scenaristes! : Scenariste[];
   newIdSc! : number;
   newScenariste! : Scenariste;
-  
+  //
 
   newFilm = new Film();
   message!: string;
@@ -26,13 +26,16 @@ export class AddFilmComponent implements OnInit {
 
   //26122021 add catego(sc)
     this.scenaristes = this.filmService.listeScenaristes();
-
+//
   }
   /* addFilm() {
      //console.log(this.newFilm);
      this.filmService.ajouterFilm(this.newFilm);
    }*/
   addFilm() {
+
+    this.newScenariste = this.filmService.consulterScenariste(this.newIdSc);
+    this.newFilm.scenariste = this.newScenariste;
     this.filmService.ajouterFilm(this.newFilm).subscribe(f => {
 
       console.log(f);

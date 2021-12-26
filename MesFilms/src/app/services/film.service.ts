@@ -12,6 +12,7 @@ const httpOptions = {
 })
 export class FilmService {
   apiURL: string = 'http://localhost:4000/films/api';
+  apiURLs: string = 'http://localhost:4000/films/apisc';
 
   films!: Film[]; //un tableau de film 
   film = new Film();
@@ -20,7 +21,7 @@ export class FilmService {
 
 
   constructor(private http: HttpClient) {
-    this.scenaristes = [{ idSc: 5, nom: "amira", prenom: "haouet" },
+  /*  this.scenaristes = [{ idSc: 5, nom: "amira", prenom: "haouet" },
     { idSc: 6, nom: "test", prenom: "test" }
     ];
 
@@ -30,8 +31,15 @@ export class FilmService {
       {
         idFilm: 3, titre: "stars", prixticket: 900.123, dateSortie: new Date("02/20/2020"), scenariste: { idSc: 5, nom: "amira", prenom: "haouet" }
       }
-    ];
+    ];*/
   }
+
+
+  
+  listeScenariste(): Observable<Scenariste[]> {
+    return this.http.get<Scenariste[]>(this.apiURLs);
+  }
+
 
   listeFilm(): Observable<Film[]> {
     return this.http.get<Film[]>(this.apiURL);
@@ -109,7 +117,7 @@ export class FilmService {
     return this.scenaristes;
   }
 
-  
+
   consulterScenariste(id: number): Scenariste {
     this.scenariste = this.scenaristes.find(sc => sc.idSc == id)!;
     return this.scenariste;

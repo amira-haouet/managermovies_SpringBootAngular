@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Film } from '../models/film.models';
+import { Scenariste } from '../models/scenariste.models';
 import { FilmService } from '../services/film.service';
+import { ScenaristeService } from '../services/scenariste.service';
 
 @Component({
   selector: 'app-films',
@@ -12,7 +14,8 @@ export class FilmsComponent implements OnInit {
   //  films: string[];
   //tableau de film
   films: Film[];
-  constructor(private filmService: FilmService, private router: Router) {
+  scenaristes: Scenariste[];
+  constructor(private filmService: FilmService, private scenaristeService: ScenaristeService,private router: Router) {
 
     // this.films = ["Dora", "dark", "stars"];
     /*this.films = [
@@ -23,6 +26,7 @@ export class FilmsComponent implements OnInit {
         idFilm: 3, titre: "stars", prixticket: 900.123, dateSortie: new Date("02/20/2020")      }
     ];
     */
+   this.scenaristes=filmService.listeScenaristes();
     this.films = filmService.listeFilms();
   }
 
@@ -31,6 +35,11 @@ export class FilmsComponent implements OnInit {
       console.log(f);
       this.films = f;
     });
+
+    this.filmService.listeScenariste().subscribe(s=> {
+
+      this.scenaristes = s
+    } );
   }
   /* supprimerFilm(f: Film) {
      //console.log(f);

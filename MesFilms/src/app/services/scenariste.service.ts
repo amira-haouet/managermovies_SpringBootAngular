@@ -27,4 +27,14 @@ export class ScenaristeService {
 
     return this.scenaristes;
   }
+
+
+  ajouterScenariste(f: Scenariste): Observable<Scenariste> {
+    return this.http.post<Scenariste>(this.apiURL, f, httpOptions);
+  }
+
+  supprimerFilm(id: number) {
+    const url = `${this.apiURL}/${id}`;
+    return this.http.delete(url, httpOptions);
+  }
 }

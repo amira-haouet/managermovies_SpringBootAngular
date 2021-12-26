@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Film } from '../models/film.models';
+import { Scenariste } from '../models/scenariste.models';
 import { FilmService } from '../services/film.service';
 
 @Component({
@@ -11,6 +12,10 @@ import { FilmService } from '../services/film.service';
 })
 export class UpdateFilmComponent implements OnInit {
   currentFilm = new Film()
+
+  scenaristes!: Scenariste[];
+  updatedScenariste!: Scenariste;
+
   constructor(private filmService: FilmService
     , private router: Router
 
@@ -18,11 +23,15 @@ export class UpdateFilmComponent implements OnInit {
 
   ngOnInit(): void {
 
-   // this.currentFilm = this.filmService.consulterFilm(this.activatedRoute.snapshot.params['id']);
+    // this.currentFilm = this.filmService.consulterFilm(this.activatedRoute.snapshot.params['id']);
     //console.log(this.currentFilm)
+    //
+    this.scenaristes = this.filmService.listeScenaristes();
+   // this.currentFilm = this.filmService.consulterFilm(this.activatedRoute.snapshot.params['id']);
 
+    //
     this.filmService.consulterFilm(this.activatedRoute.snapshot.params['id']).
-      subscribe(prod => { this.currentFilm = prod; });
+      subscribe(f => { this.currentFilm = f; });
   }
   /*updateFilm() { //console.log(this.currentProduit);
     this.filmService.updateFilm(this.currentFilm);
@@ -30,10 +39,10 @@ export class UpdateFilmComponent implements OnInit {
   }
 
 */
-updateFilm() {
+  updateFilm() {
     this.filmService.updateFilm(this.currentFilm).subscribe(prod => {
-    this.router.navigate(['films']);
-    },(error) => { alert("Problème lors de la modification !"); }
+      this.router.navigate(['films']);
+    }, (error) => { alert("Problème lors de la modification !"); }
     );
-    }
+  }
 }

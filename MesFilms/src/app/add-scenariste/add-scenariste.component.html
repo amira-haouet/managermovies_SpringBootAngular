@@ -1,1 +1,51 @@
-<p>add-scenariste works!</p>
+<h2 style="text-align: center">add-scenariste  </h2>
+<br>
+<div class="container">
+    <form >
+        <table>
+<tr>
+<td hidden class="col-sm-2 col-md-2 col-lg-2">
+    <label>ID scenariste</label>
+    <input type="text" [(ngModel)]="newScenariste.idSc" name="idSc" class="form-control"></td>
+
+
+    <td class="col-sm-2 col-md-2 col-lg-2">
+        <label>Nom scenariste</label>
+        <input type="text" [(ngModel)]="newScenariste.nom" name="nom" class="form-control">
+        </td>
+
+        <td class="col-sm-2 col-md-2 col-lg-2">
+            <label>prenom scenariste</label>
+            <input type="text" [(ngModel)]="newScenariste.prenom" name="prenom" class="form-control"></td>
+</tr>
+<tr>
+  
+    <td >
+<div class="mt-2" >
+    <button type="submit" (click)="addScenariste()" class="btn btnsuccess" class="btn btn-success">Ajouter</button>
+
+    <div>
+        <h3>{{ message }}</h3>
+    </div>
+</div>
+</td>
+</tr>
+        </table>
+
+
+
+     <!--   <div hidden class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID scenariste</label>
+            <input type="text" [(ngModel)]="newScenariste.idSc" name="idSc" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom scenariste</label>
+            <input type="text" [(ngModel)]="newScenariste.nom" name="nom" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>prenom scenariste</label>
+            <input type="number" [(ngModel)]="newScenariste.prenom" name="prenom" class="form-control">
+        </div>
+    -->
+        
+    </form>

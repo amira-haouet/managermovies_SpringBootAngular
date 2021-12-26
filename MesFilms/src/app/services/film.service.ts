@@ -17,16 +17,16 @@ export class FilmService {
   film = new Film();
   scenaristes!: Scenariste[];
   constructor(private http: HttpClient) {
-    this.scenaristes = [ {idSc : 5, nom:"amira",prenom:"haouet"},
-  ];
+    this.scenaristes = [{ idSc: 5, nom: "amira", prenom: "haouet" },
+    ];
 
     this.films = [
-        { idFilm: 1, titre: "Dora", prixticket: 3000.600, dateSortie: new Date("01/14/2011"),scenariste:{idSc:5,nom:"amira",prenom:"haouet"} },
-        { idFilm: 2, titre: "dark", prixticket: 450, dateSortie: new Date("12/17/2010") ,scenariste:{idSc:5,nom:"amira",prenom:"haouet"}},
-        {
-          idFilm: 3, titre: "stars", prixticket: 900.123, dateSortie: new Date("02/20/2020"),scenariste:{idSc:5,nom:"amira",prenom:"haouet"}
-        }
-      ];
+      { idFilm: 1, titre: "Dora", prixticket: 3000.600, dateSortie: new Date("01/14/2011"), scenariste: { idSc: 5, nom: "amira", prenom: "haouet" } },
+      { idFilm: 2, titre: "dark", prixticket: 450, dateSortie: new Date("12/17/2010"), scenariste: { idSc: 5, nom: "amira", prenom: "haouet" } },
+      {
+        idFilm: 3, titre: "stars", prixticket: 900.123, dateSortie: new Date("02/20/2020"), scenariste: { idSc: 5, nom: "amira", prenom: "haouet" }
+      }
+    ];
   }
 
   listeFilm(): Observable<Film[]> {
@@ -92,7 +92,7 @@ export class FilmService {
     });
   }
 
-  
+
   /* updateProduit(f: Film) {
      // console.log(p);
      this.supprimerFilm(f);
@@ -100,5 +100,14 @@ export class FilmService {
      this.trierFilm();
    }*/
 
+
+   scenariste = new Scenariste();
+  listeScenaristes(): Scenariste[] {
+    return this.scenaristes;
+  }
+  consulterScenariste(id: number): Scenariste {
+    //this.scenariste = this.scenariste.find(sc => sc.idSc == id);
+    return this.scenariste;
+  }
 
 }

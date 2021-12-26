@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Film } from '../models/film.models';
+import { Scenariste } from '../models/scenariste.models';
 import { FilmService } from '../services/film.service';
 
 @Component({
@@ -10,12 +11,22 @@ import { FilmService } from '../services/film.service';
 })
 export class AddFilmComponent implements OnInit {
 
+  //26122021 add catego(sc)
+  scenaristes! : Scenariste[];
+  newIdSc! : number;
+  newScenariste! : Scenariste;
+  
+
   newFilm = new Film();
   message!: string;
   constructor(private filmService: FilmService,
     private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+  //26122021 add catego(sc)
+    this.scenaristes = this.filmService.listeScenaristes();
+
   }
   /* addFilm() {
      //console.log(this.newFilm);

@@ -18,7 +18,6 @@ public class ScenaristeServiceImpl implements ScenaristeService {
 
 	@Override
 	public Scenariste saveScenariste(Scenariste s) {
-		// TODO Auto-generated method stub
 
 		return sr.save(s);
 
@@ -26,7 +25,6 @@ public class ScenaristeServiceImpl implements ScenaristeService {
 
 	@Override
 	public Scenariste updateScenariste(Scenariste s) {
-		// TODO Auto-generated method stub
 		return sr.save(s);
 	}
 
@@ -37,19 +35,16 @@ public class ScenaristeServiceImpl implements ScenaristeService {
 
 	@Override
 	public void deleteScenaristeById(Long id) {
-		// TODO Auto-generated method stub
 		sr.deleteById(id);
 	}
 
 	@Override
 	public Scenariste getScenariste(Long id) {
-		// TODO Auto-generated method stub
 		return sr.findById(id).get();
 	}
 
 	@Override
 	public List<Scenariste> getAllScenaristes() {
-		// TODO Auto-generated method stub
 		return sr.findAll();
 	}
 

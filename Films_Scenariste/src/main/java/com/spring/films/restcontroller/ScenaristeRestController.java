@@ -19,7 +19,6 @@ import com.spring.films.service.ScenaristeService;
 public class ScenaristeRestController {
 
 	@Autowired
-
 	ScenaristeService scenaristeService;
 
 	@RequestMapping(method = RequestMethod.GET)

@@ -12,14 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 import com.spring.films.entities.Film;
 import com.spring.films.service.FilmService;
 import com.spring.films.service.ScenaristeService;
+
 @RestController
 @RequestMapping("/api")
 @CrossOrigin
 public class FilmRESTController {
+
 	@Autowired
 	FilmService filmService;
-	ScenaristeService  ScenaristeService;
-    
+
 	@RequestMapping(method = RequestMethod.GET)
 	public List<Film> getAllFilms() {
 

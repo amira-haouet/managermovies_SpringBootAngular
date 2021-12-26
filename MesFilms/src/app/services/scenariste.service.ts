@@ -10,7 +10,12 @@ const httpOptions = {
 })
 export class ScenaristeService {
 
-  constructor(  ) {
+  apiURL: string = 'http://localhost:4000/films/apisc';
+
+  scenaristes!: Scenariste[]; //un tableau de film 
+  scenariste = new Scenariste();
+
+  constructor(private http: HttpClient) {
 
 
   }

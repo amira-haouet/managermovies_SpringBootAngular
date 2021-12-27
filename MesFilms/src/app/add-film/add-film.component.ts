@@ -35,7 +35,7 @@ export class AddFilmComponent implements OnInit {
    }*/
   addFilm() {
 
-   // this.newScenariste = this.scenaristeservice.consulterScenariste(this.newIdSc);
+    // this.newScenariste = this.scenaristeservice.consulterScenariste(this.newIdSc);
     this.newFilm.scenariste = this.newScenariste;
     this.filmService.ajouterFilm(this.newFilm).subscribe(f => {
 

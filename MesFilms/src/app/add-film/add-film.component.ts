@@ -13,24 +13,24 @@ import { ScenaristeService } from '../services/scenariste.service';
 })
 export class AddFilmComponent implements OnInit {
 
-  addForm : FormGroup ;
+  addForm!: FormGroup;
   //26122021 add catego(sc)
   scenaristes!: Scenariste[];
   newIdSc!: number;
   newScenariste!: Scenariste;
- scenaristeService!: ScenaristeService;
+  scenaristeService!: ScenaristeService;
 
 
   newFilm = new Film();
   message!: string;
   constructor(private filmService: FilmService, private scenaristeservice: ScenaristeService,
     private router: Router, private activatedRoute: ActivatedRoute) { }
-    scenariste!:Array<any>;
+  scenariste!: Array<any>;
 
   ngOnInit(): void {
 
     //26122021 add catego(sc)
-  // this.scenaristes = this.scenaristeservice.listeScenaristes();
+    // this.scenaristes = this.scenaristeservice.listeScenaristes();
     //
 
     this.listeScenaristes();
@@ -39,46 +39,49 @@ export class AddFilmComponent implements OnInit {
   }
 
 
-  listeScenaristes()
-  {
-    
+  listeScenaristes() {
+
     this.scenaristeService.listeScenariste().subscribe(
-      data=>{
-          console.log(data)
-          this.scenariste=data;
-        
+      data => {
+        console.log(data)
+        this.scenariste = data;
+
       }
     )
-   }
+  }
   /* addFilm() {
      //console.log(this.newFilm);
      this.filmService.ajouterFilm(this.newFilm);
    }*/
   addFilm() {
- var data=this.addForm.value;
- var sc={
+    var data = this.addForm.value;
+    var sc = {
 
-  idSc:data.nom
- }
+      idSc: data.nom
+    }
 
 
- console.log(data.date)
- var m ={
-  titre : data.titre , 
-  prixticket : data.prixticket ,
-  dateSortie: data.dateSortie,
-  sexe : data.sexe , 
-  scenariste :sc
- }
-   // this.newScenariste = this.scenaristeservice.consulterScenariste(this.newIdSc);
-  //  this.newFilm.scenariste = this.newScenariste;
-   // this.filmService.ajouterFilm(this.newFilm).subscribe(f => {
+    console.log(data.date)
+    var m = {
+      titre: data.titre,
+      prixticket: data.prixticket,
+      dateSortie: data.dateSortie,
+      scenariste: sc
+    }
+    // this.newScenariste = this.scenaristeservice.consulterScenariste(this.newIdSc);
+    //  this.newFilm.scenariste = this.newScenariste;
+    // this.filmService.ajouterFilm(this.newFilm).subscribe(f => {
 
-     //26122021 console.log(f);
-    });
-    this.router.navigate(['films']).then(() => {
+    //26122021 console.log(f);
+    // });
 
-      window.location.reload();
-    });
+    this.filmService.ajouterFilm(m).subscribe(
+      () => {
+        this.router.navigate(['films']).then(() => {
+
+          window.location.reload();
+        });
+      })
   }
 }
+

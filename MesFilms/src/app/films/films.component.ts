@@ -14,8 +14,10 @@ export class FilmsComponent implements OnInit {
   //  films: string[];
   //tableau de film
   films: Film[];
+  scenaristes :Scenariste[];
+
  // scenaristes: Scenariste[];
-  constructor(private filmService: FilmService,private router: Router) {
+  constructor(private filmService: FilmService,private scenaristeservice: ScenaristeService,private router: Router) {
 
     // this.films = ["Dora", "dark", "stars"];
     /*this.films = [
@@ -26,7 +28,7 @@ export class FilmsComponent implements OnInit {
         idFilm: 3, titre: "stars", prixticket: 900.123, dateSortie: new Date("02/20/2020")      }
     ];
     */
-  // this.scenaristes=filmService.listeScenaristes();
+  this.scenaristes=scenaristeservice.listeScenaristes();
     this.films = filmService.listeFilms();
   }
 
@@ -34,6 +36,10 @@ export class FilmsComponent implements OnInit {
     this.filmService.listeFilm().subscribe(f => {
       console.log(f);
       this.films = f;
+    });
+    this.scenaristeservice.listeScenariste().subscribe(s => {
+      console.log(s);
+      this.scenaristes = s;
     });
 
    /* this.filmService.listeScenariste().subscribe(s=> {

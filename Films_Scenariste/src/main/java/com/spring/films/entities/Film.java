@@ -15,8 +15,7 @@ public class Film {
 	private String titre;
 	private Double prixticket;
 	private Date dateSortie;
-	
-	@ManyToOne
+		@ManyToOne
 	private Scenariste scenariste;
 
 	public Film() {
@@ -75,7 +74,7 @@ public class Film {
 	@Override
 	public String toString() {
 		return "Film [idFilm=" + idFilm + ", titre=" + titre + ", prixticket=" + prixticket + ", dateSortie="
-				+ dateSortie + "]";
+				+ dateSortie + ", scenariste=" + scenariste + "]";
 	}
 
 	public Scenariste getScenariste() {
@@ -85,5 +84,7 @@ public class Film {
 	public void setScenariste(Scenariste scenariste) {
 		this.scenariste = scenariste;
 	}
+	
+	
 
 }

@@ -10,11 +10,11 @@ import { ScenaristeService } from '../services/scenariste.service';
 })
 export class ScenaristesComponent implements OnInit {
 
-scenaristes :Scenariste[];
+  scenaristes: Scenariste[];
 
-  constructor(private scenaristeservice: ScenaristeService,private router: Router) {
-this.scenaristes=scenaristeservice.listeScenaristes();
-   }
+  constructor(private scenaristeservice: ScenaristeService, private router: Router) {
+    this.scenaristes = scenaristeservice.listeScenaristes();
+  }
 
   ngOnInit(): void {
     this.scenaristeservice.listeScenariste().subscribe(s => {

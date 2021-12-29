@@ -8,7 +8,7 @@
                     <th>Id</th>
                     <th>Nom</th>
                     <th>Prenom</th>
-                  
+
 
                 </tr>
                 <tbody *ngFor="let scenariste of scenaristes">
@@ -16,10 +16,10 @@
                         <td>{{scenariste.idSc}}</td>
                         <td>{{scenariste.nom}}</td>
                         <td>{{scenariste.prenom}}</td>
-                       <!-- <td>{{film.scenariste.nom}}</td>-->
-                       <td><a class="btn btn-danger" (click)="supprimerScenariste(scenariste)">Supprimer</a></td>
+                        <!-- <td>{{film.scenariste.nom}}</td>-->
+                        <td><a class="btn btn-danger" (click)="supprimerScenariste(scenariste)">Supprimer</a></td>
 
-                        
+
                     </tr>
                 </tbody>
             </table>

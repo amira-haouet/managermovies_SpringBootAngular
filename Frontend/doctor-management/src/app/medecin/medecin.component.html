@@ -1,0 +1,76 @@
+<navbar></navbar>
+<section>
+  <div class="container mt-5">
+    <div class="card ">
+      <div class="card-body">
+        <div class="d-flex flex-row">
+          <div class="p-2">
+            <h1 class="card-title">Medecins</h1>
+          </div>
+        </div>
+        <div class="p-2"><button type="button" class="btn btn-warning" routerLink="/medecin/add">Ajouter</button></div>
+        <div class="p-2">
+        <form [formGroup]="seachForm" (submit)="search()" class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" formControlName="spec" type="search" placeholder="Recherche par spécialite"
+            aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
+        </form>
+      </div>
+        <div *ngIf="medecins.length > 0 ; else pasVide  ">
+          <table class="table table-stripped">
+            <thead>
+              <th>#</th>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Spécialité</th>
+              <th>Date de naissance</th>
+              <th>Sexe</th>
+              <th>Modifier</th>
+              <th>Supprimer</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let m of medecins">
+                <td>{{m.idMedecin}}</td>
+                <td>{{m.nomMedecin}}</td>
+                <td>{{m.prenomMedecin}}</td>
+                <td *ngIf="m.specialite!= null;else noSpec">{{m.specialite.nomSpec}}</td>
+                <ng-template #noSpec><td>N/A</td> </ng-template>
+                <td>{{m.dateNaiss}}</td>
+                <td>{{m.sexe}}</td>
+                <td><button type="button" class="btn btn-info" [routerLink]="['edit']"
+                    [queryParams]="{ id:m.idMedecin}">Modifier</button></td>
+                <td><button type="button" (click)="delete(m.idMedecin)" class="btn btn-danger">Supprimer</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <hr>
+
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li *ngFor="let p of pages ; let i = index" class="page-item">
+                <a class="page-link" href="" (click)="setPage(i,$event)">{{i+1}}</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <ng-template #pasVide>
+          <div class="alert alert-warning" role="alert">
+            Pas de medecins 
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</section>

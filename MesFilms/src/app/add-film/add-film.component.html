@@ -1,26 +1,26 @@
 <h2 style="text-align: center">add-film works! </h2>
 <div class="container">
-    <form>
+    <form [formGroup]="addForm" (click)="addFilm()" >
         <div hidden class="col-sm-2 col-md-2 col-lg-2">
             <label>ID Film</label>
-            <input type="text" [(ngModel)]="newFilm.idFilm" name="idFilm" class="form-control">
+            <input type="text" [(ngModel)]="newFilm.idFilm" name="idFilm" formControlName="idFilm" class="form-control">
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4">
             <label>Nom Film</label>
-            <input type="text" [(ngModel)]="newFilm.titre" name="titre" class="form-control">
+            <input type="text" [(ngModel)]="newFilm.titre" formControlName="titre" name="titre" class="form-control">
         </div>
         <div class="col-sm-2 col-md-2 col-lg-2">
             <label>Prix Film</label>
-            <input type="number" [(ngModel)]="newFilm.prixticket" name="prixticket" class="form-control">
+            <input type="number" [(ngModel)]="newFilm.prixticket" name="prixticket"  formControlName="prixticket" class="form-control">
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4">
             <label>Date création</label>
-            <input type="date" [(ngModel)]="newFilm.dateSortie" name="dateSortie" class="form-control">
+            <input type="date" [(ngModel)]="newFilm.dateSortie" name="dateSortie"  formControlName="dateSortie" class="form-control">
         </div>
         <!-- liste deroulante  -->
         <div class="col-sm-4 col-md-4 col-lg-4">
             <label>SC</label>
-            <select class="form-control form-control-lg" id="idSc" name="idSc" [(ngModel)]="newIdSc">
+            <select formControlName^="sc" class="form-control form-control-lg" id="idSc" name="idSc" [(ngModel)]="newIdSc">
                 <option *ngFor="let sc of scenaristes" [value]="sc.idSc">
                     {{sc.nom}}
                 </option>
@@ -28,7 +28,7 @@
         </div>
 
         <div class="mt-2">
-            <button type="submit" (click)="addFilm()" class="btn btnsuccess" class="btn btn-success">Ajouter</button>
+            <button  type="submit" (click)="addFilm()" class="btn btnsuccess" class="btn btn-success">Ajouter</button>
 
             <div>
                 <h3>{{ message }}</h3>

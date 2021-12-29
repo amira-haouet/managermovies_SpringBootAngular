@@ -1,5 +1,6 @@
 package com.spring.films.restcontroller;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class ScenaristeRestController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public List<Scenariste> getAllScenaristes() {
-
+    System.out.print(scenaristeService.getAllScenaristes().size());
 		return scenaristeService.getAllScenaristes();
 	}
 

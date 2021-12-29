@@ -26,7 +26,7 @@ export class AddFilmComponent implements OnInit {
   ngOnInit(): void {
 
     //26122021 add catego(sc)
-    this.scenaristes = this.scenaristeservice.listeScenaristes();
+  //  this.scenaristes = this.scenaristeservice.listeScenaristes();
     //
   }
   /* addFilm() {
@@ -36,7 +36,7 @@ export class AddFilmComponent implements OnInit {
   addFilm() {
 
     // this.newScenariste = this.scenaristeservice.consulterScenariste(this.newIdSc);
-    this.newFilm.scenariste = this.newScenariste;
+  //  this.newFilm.scenariste = this.newScenariste;
     this.filmService.ajouterFilm(this.newFilm).subscribe(f => {
 
       console.log(f);

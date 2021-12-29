@@ -30,6 +30,15 @@ public class Film {
 		this.prixticket = prixticket;
 		this.dateSortie = dateSortie;
 	}
+	
+	public Film(String titre, Double prixticket, Date dateSortie,Scenariste scenariste) {
+		super();
+
+		this.titre = titre;
+		this.prixticket = prixticket;
+		this.dateSortie = dateSortie;
+		this.scenariste= scenariste;
+	}
 
 	public Long getIdFilm() {
 		return idFilm;

@@ -17,8 +17,8 @@ public class FilmsScenaristeApplication {
 
 	@Autowired
 	FilmService filmService;
-	//@Autowired
-	//ScenaristeService scenaristeService;
+	@Autowired
+	ScenaristeService scenaristeService;
 
 	
 	//@Autowired

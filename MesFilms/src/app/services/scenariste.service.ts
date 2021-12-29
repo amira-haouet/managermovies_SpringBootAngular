@@ -43,7 +43,7 @@ export class ScenaristeService {
     return this.http.get<Scenariste>(url);
   }
 
-  updateScenariste(prod: Scenariste): Observable<Scenariste> {
-    return this.http.put<Scenariste>(this.apiURL, prod, httpOptions);
+  updateScenariste(s: Scenariste): Observable<Scenariste> {
+    return this.http.put<Scenariste>(this.apiURL, s, httpOptions);
   }
 }

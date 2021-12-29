@@ -26,8 +26,8 @@ import { HomeComponent } from './home/home.component';
     ScenaristesComponent,
     SearchWithScriptwriterComponent,
     HomeComponent,
-   // ProduitDetailsComponent,
-   // FilmDetailsComponent
+    // ProduitDetailsComponent,
+    // FilmDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +39,7 @@ import { HomeComponent } from './home/home.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
 
 
 }

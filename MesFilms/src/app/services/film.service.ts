@@ -55,7 +55,7 @@ export class FilmService {
 
     return this.films;
   }
-  ajouterFilm(f:any): Observable<any> {
+  ajouterFilm(f: any): Observable<any> {
     return this.http.post<any>(this.apiURL, f, httpOptions);
   }
 }

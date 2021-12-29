@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: "add-film", component: AddFilmComponent },
   { path: "add-scenariste", component: AddScenaristeComponent },
   { path: "home", component: HomeComponent },
-  { path: "", redirectTo: "films", pathMatch: "full" },
+  { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "updateFilm/:id", component: UpdateFilmComponent },
   { path: "scenaristes", component: ScenaristesComponent },
   // { path: "film-details", component: FilmDetailsComponent },

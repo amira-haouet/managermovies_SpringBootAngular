@@ -33,7 +33,9 @@ export class ScenaristeComponent implements OnInit {
     )
   }
   delete(id: number) {
-    console.log(id)
+    let conf = confirm("Etes-vous sûr ?");
+    if (conf)
+      console.log(id)
     this._apiService.deleteSpecialite(id).subscribe(
       data => {
         console.log(data);

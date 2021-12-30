@@ -77,23 +77,26 @@ public class Movie {
 		this.genre = genre;
 	}
 
-	public Scenariste getSpecialite() {
-		return specialite;
-	}
-
-	public void setSpecialite(Scenariste specialite) {
-		this.specialite = specialite;
-	}
-
-	public Movie(Long idMovie, String titre, Integer prixTicket, Date dateSortie, String genre, Scenariste specialite) {
+	public Movie(Long idMovie, String titre, Integer prixTicket, Date dateSortie, String genre, Scenariste scenariste) {
 		super();
 		this.idMovie = idMovie;
 		this.titre = titre;
 		this.prixTicket = prixTicket;
 		this.dateSortie = dateSortie;
 		this.genre = genre;
-		this.specialite = specialite;
+		this.scenariste = scenariste;
 	}
+
+	public Scenariste getScenariste() {
+		return scenariste;
+	}
+
+	public void setScenariste(Scenariste scenariste) {
+		this.scenariste = scenariste;
+	}
+
+
+
 
 
 }

@@ -10,16 +10,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.example.demo.entities.Movie;
 import com.example.demo.entities.Scenariste;
-import com.example.demo.repos.MedecinRepository;
-import com.example.demo.repos.SpecialiteRepository;
+import com.example.demo.repos.MovieRepository;
+import com.example.demo.repos.ScenaristeRepository;
 
 @SpringBootTest
 class MoviesManagementApplicationTests {
 
 	@Autowired
-	private MedecinRepository medecinRepository;
+	private MovieRepository medecinRepository;
 	@Autowired
-	private SpecialiteRepository specialiteRepository;
+	private ScenaristeRepository specialiteRepository;
 
 	@Test
 	void contextLoads() {
@@ -30,7 +30,7 @@ class MoviesManagementApplicationTests {
 	 * void testAddMedecin() { Medecin m = new Medecin("nom2", "prenom2", new
 	 * Date()); medecinRepository.save(m); }
 	 */
-
+/*
 	@Test
 	void testFindMedecin() {
 		Movie m = medecinRepository.findById(1L).get();
@@ -66,5 +66,5 @@ class MoviesManagementApplicationTests {
 			System.out.println(m);
 		}
 	}
-
+*/
 }

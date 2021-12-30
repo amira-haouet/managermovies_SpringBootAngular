@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { FormGroup, FormControl,Validators, FormBuilder } from '@angular/forms'
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,13 +13,13 @@ export class AddSpecComponent implements OnInit {
   constructor(private _apiService: ApiService, private formBuilder: FormBuilder, private router: Router) {
     this.addForm = formBuilder.group(
       {
-        nom: new FormControl(null,[
+        nom: new FormControl(null, [
           Validators.required,
           Validators.minLength(2)]),
-        desc: new FormControl(null,[
+        desc: new FormControl(null, [
           Validators.required,
           Validators.minLength(10)]),
-        
+
       })
   }
 
@@ -29,11 +29,11 @@ export class AddSpecComponent implements OnInit {
   add() {
 
     var data = this.addForm.value;
-    
+
     var s = {
       nomSpec: data.nom,
       description: data.desc,
-     
+
     }
     this._apiService.addSpecialite(s).subscribe(
       () => {

@@ -5,7 +5,7 @@
       <h1>Ajouter</h1>
       <label for="exampleInputEmail1">titre</label>
       <input type="text" class="form-control" formControlName="titre" ng-required="required">
-      <small *ngIf='addForm.get("titre").touched && addForm.get("titre").hasError("required")'>titre est
+      <small *ngIf='addForm.get("titre").touched && addForm.get("titre").hasError("required")'>Titre est
         obligatoire</small>
       <small *ngIf='addForm.get("titre").touched && addForm.get("titre").hasError("pattern")'>titre ne doit pas contenir
         des caractére speciaux </small>

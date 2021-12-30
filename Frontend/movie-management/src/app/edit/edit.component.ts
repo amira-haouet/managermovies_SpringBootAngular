@@ -13,23 +13,23 @@ export class EditComponent implements OnInit {
   constructor(private _apiService: ApiService, private formBuilder: FormBuilder, private router: Router, private Aroute: ActivatedRoute) {
     this.editForm = formBuilder.group(
       {
-        nom: new FormControl(null, [
+        titre: new FormControl(null, [
           Validators.required,
           Validators.minLength(2),
           Validators.pattern('^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.-]+$')
         ]),
-        prenom: new FormControl(null, [
+        prixTicket: new FormControl(null, [
           Validators.required,
           Validators.minLength(2),
           Validators.pattern('^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.-]+$')
         ]),
-        date: new FormControl(null, [
+        dateSortie: new FormControl(null, [
           Validators.required,
         ]),
-        sexe: new FormControl(null, [
+        genre: new FormControl(null, [
           Validators.required,
         ]),
-        spec: new FormControl(null, [
+        sc: new FormControl(null, [
           Validators.required,
         ])
       })
@@ -77,17 +77,17 @@ export class EditComponent implements OnInit {
     }
     console.log(data)
     var m = {
-      idMedecin: this.id,
-      nomMedecin: data.nom,
-      prenomMedecin: data.prenom,
-      dateNaiss: data.date,
-      sexe: data.sexe,
-      specialite: spec
+      idMovie: this.id,
+      titre: data.nom,
+      prixTicket: data.prenom,
+      dateSortie: data.date,
+      genre: data.genre,
+      scenariste: spec
     }
     this._apiService.updateMedecin(m).subscribe(
       () => {
 
-        this.router.navigate(['medecin']);
+        this.router.navigate(['movie']);
       }
     )
 

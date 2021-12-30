@@ -38,7 +38,10 @@ export class AddSpecComponent implements OnInit {
     this._apiService.addSpecialite(s).subscribe(
       () => {
 
-        this.router.navigate(['scenariste']);
+        this.router.navigate(['scenariste']).then(() => {
+
+          window.location.reload();
+        });
       }
     )
 

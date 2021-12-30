@@ -41,6 +41,8 @@ export class EditComponent implements OnInit {
         ])
       })
   }
+// get old data
+  private oldData;
 
   m: any;
   scenariste: Array<any>;

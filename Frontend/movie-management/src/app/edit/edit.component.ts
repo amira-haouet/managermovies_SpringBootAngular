@@ -9,8 +9,15 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 })
 export class EditComponent implements OnInit {
 
+
+  // currentFilm = this.movie;
   editForm: FormGroup;
-  constructor(private _apiService: ApiService, private formBuilder: FormBuilder, private router: Router, private Aroute: ActivatedRoute) {
+  constructor(
+    private _apiService: ApiService,
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private Aroute: ActivatedRoute) {
+
     this.editForm = formBuilder.group(
       {
         titre: new FormControl(null, [

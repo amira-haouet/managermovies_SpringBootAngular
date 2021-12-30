@@ -3,18 +3,17 @@
 <div style="margin-top:80px" class="container">
 <form [formGroup]="editForm" (submit)="edit()" >
     <div class="form-group">
-      <label for="exampleInputEmail1">Nom</label>
-      <input  type="text" [(ngModel)]="m.nomMedecin" class="form-control" formControlName="nom" >
+      <label for="exampleInputEmail1">titre</label>
+      <input  type="text" [(ngModel)]="m.titre" class="form-control" formControlName="titre" >
       <small *ngIf='editForm.get("nom").touched && editForm.get("nom").hasError("required")'>Nom est obligatoire</small>
-      <small *ngIf='editForm.get("nom").touched && editForm.get("nom").hasError("pattern")'>Nom ne doit pas contenir des caractére speciaux </small>
     </div>
     <div class="form-group">
-      <label for="exampleInputEmail1">Prénom</label>
-      <input type="text" class="form-control" [(ngModel)]="m.prenomMedecin" formControlName="prenom" >
-      <small *ngIf='editForm.get("prenom").touched && editForm.get("prenom").hasError("required")'>Prénom est obligatoire</small>
+      <label for="exampleInputEmail1">prix Ticket</label>
+      <input type="text" class="form-control" [(ngModel)]="m.prixTicket" formControlName="prixTicket" >
+      <small *ngIf='editForm.get("prenom").touched && editForm.get("prenom").hasError("required")'>prixTicket est obligatoire</small>
     </div>
     <div class="form-group row">
-      <label for="example-date-input" class="col-2 col-form-label">Date</label>
+      <label for="example-date-input" class="col-2 col-form-label">Date Sortie</label>
       <div class="col-10">
         <input class="form-control" type="date" [(ngModel)]="m.dataNaiss" value="2011-08-19" id="example-date-input" formControlName="date">
         <small *ngIf='editForm.get("date").touched && editForm.get("date").hasError("required")'>Date est obligatoire</small>

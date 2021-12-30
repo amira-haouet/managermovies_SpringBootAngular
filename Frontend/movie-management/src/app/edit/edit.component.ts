@@ -72,17 +72,17 @@ export class EditComponent implements OnInit {
 
     var data = this.editForm.value;
 
-    var spec = {
-      idSpec: data.spec
+    var sc = {
+      idSc: data.sc
     }
     console.log(data)
     var m = {
       idMovie: this.id,
-      titre: data.nom,
-      prixTicket: data.prenom,
-      dateSortie: data.date,
+      titre: data.titre,
+      prixTicket: data.prixTicket,
+      dateSortie: data.dateSortie,
       genre: data.genre,
-      scenariste: spec
+      scenariste: sc
     }
     this._apiService.updateMedecin(m).subscribe(
       () => {

@@ -5,12 +5,12 @@ import { AddComponent } from './add/add.component';
 import { EditSpecComponent } from './edit-spec/edit-spec.component';
 import { EditComponent } from './edit/edit.component';
 import { HomeComponent } from './home/home.component';
-import { MedecinComponent } from './medecin/medecin.component';
+import { MovieComponent } from './movie/movie.component';
 import { SpecialiteComponent } from './specialite/specialite.component';
 
 const routes: Routes = [
   {path:'' , component:HomeComponent},
-  {path:'medecin' , component:MedecinComponent},
+  {path:'movie' , component:MovieComponent},
   {path:'medecin/add' , component:AddComponent},
   {path:'medecin/edit' , component:EditComponent},
   {path:'specialite' , component:SpecialiteComponent},

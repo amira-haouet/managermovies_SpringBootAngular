@@ -3,10 +3,10 @@ import { ApiService} from '../api.service';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms'
 @Component({
   selector: 'app-medecin',
-  templateUrl: './medecin.component.html',
-  styleUrls: ['./medecin.component.css']
+  templateUrl: './movie.component.html',
+  styleUrls: ['./movie.component.css']
 })
-export class MedecinComponent implements OnInit {
+export class MovieComponent implements OnInit {
   seachForm: FormGroup;
   constructor(private _apiService : ApiService, private formBuilder: FormBuilder) {
     this.seachForm = formBuilder.group(

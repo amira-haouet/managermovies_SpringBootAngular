@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http'
 import { ApiService } from './api.service';
-import { MedecinComponent } from './medecin/medecin.component';
+import { MedecinComponent } from './movie/movie.component';
 import { AddComponent } from './add/add.component';
 import {FormsModule} from '@angular/forms'
 import {ReactiveFormsModule} from '@angular/forms';

@@ -11,5 +11,5 @@ import com.example.demo.entities.Movie;
 public interface MovieRepository extends JpaRepository<Movie, Long> {
 
 	
-	List<Movie> findBySpecialiteNomSc(String nomSc);
+	List<Movie> findByScenaristeNomSc(String nomSc);
 }

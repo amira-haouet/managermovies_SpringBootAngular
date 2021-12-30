@@ -57,7 +57,7 @@ public class MovieServiceImp implements MovieService {
 
 	@Override
 	public List<Movie> findMedecinBySpecialite(String s) {
-		return movieRepository.findBySpecialiteNomSc(s);
+		return movieRepository.findByScenaristeNomSc(s);
 		
 	}
 

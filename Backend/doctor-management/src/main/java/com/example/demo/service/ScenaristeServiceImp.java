@@ -9,46 +9,48 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.entities.Movie;
 import com.example.demo.entities.Scenariste;
-import com.example.demo.repos.SpecialiteRepository;
+import com.example.demo.repos.ScenaristeRepository;
+
+
 @Service
 public class ScenaristeServiceImp implements ScenaristeService {
 
 	@Autowired
-	SpecialiteRepository specialiteRepository;
+	ScenaristeRepository scenaristeRepository;
 	@Override
 	public Scenariste saveSpecialite(Scenariste s) {
-		return specialiteRepository.save(s);
+		return scenaristeRepository.save(s);
 	}
 
 	@Override
 	public Scenariste updateSpecialite(Scenariste s) {
-		return specialiteRepository.save(s);
+		return scenaristeRepository.save(s);
 	}
 
 	@Override
 	public void deleteSpecialite(Scenariste s) {
-		specialiteRepository.delete(s);
+		scenaristeRepository.delete(s);
 	}
 
 	@Override
 	public void deleteSpecialiteById(Long id) {
-		specialiteRepository.deleteById(id);
+		scenaristeRepository.deleteById(id);
 		
 	}
 
 	@Override
 	public Scenariste getSpecialite(Long id) {
-		return specialiteRepository.findById(id).get();
+		return scenaristeRepository.findById(id).get();
 	}
 
 	@Override
 	public List<Scenariste> getAllSpecialite() {
-		return specialiteRepository.findAll();
+		return scenaristeRepository.findAll();
 	}
 	
 	@Override
 	public Page<Scenariste> getAllSpecialitePage(int page, int size) {
-		return  specialiteRepository.findAll(PageRequest.of(page, size));
+		return  scenaristeRepository.findAll(PageRequest.of(page, size));
 	}
 
 }

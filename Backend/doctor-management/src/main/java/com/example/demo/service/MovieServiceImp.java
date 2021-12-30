@@ -9,54 +9,55 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.entities.Movie;
 import com.example.demo.entities.Scenariste;
-import com.example.demo.repos.MedecinRepository;
+
+import com.example.demo.repos.MovieRepository;
 
 @Service
 public class MovieServiceImp implements MovieService {
 
 	@Autowired
-	MedecinRepository medecinRepository;
+	MovieRepository movieRepository;
 	
 	@Override
 	public Movie saveMedecin(Movie m) {
-		return medecinRepository.save(m);
+		return movieRepository.save(m);
 	}
 
 	@Override
 	public Movie updateMedecin(Movie m) {
-		return medecinRepository.save(m);
+		return movieRepository.save(m);
 	}
 
 	@Override
 	public void deleteMedecin(Movie m) {
-		 medecinRepository.delete(m);
+		movieRepository.delete(m);
 
 	}
 
 	@Override
 	public void deleteMedecinById(Long id) {
-		medecinRepository.deleteById(id);
+		movieRepository.deleteById(id);
 
 	}
 
 	@Override
 	public Movie getMedecin(Long id) {
-		return medecinRepository.findById(id).get();
+		return movieRepository.findById(id).get();
 	}
 
 	@Override
 	public List<Movie> getAllMedecin() {
-		return medecinRepository.findAll();
+		return movieRepository.findAll();
 	}
 
 	@Override
 	public Page<Movie> getAllmedecinPage(int page, int size) {
-		return  medecinRepository.findAll(PageRequest.of(page, size));
+		return  movieRepository.findAll(PageRequest.of(page, size));
 	}
 
 	@Override
 	public List<Movie> findMedecinBySpecialite(String s) {
-		return medecinRepository.findBySpecialiteNomSpec(s);
+		return movieRepository.findBySpecialiteNomSc(s);
 		
 	}
 

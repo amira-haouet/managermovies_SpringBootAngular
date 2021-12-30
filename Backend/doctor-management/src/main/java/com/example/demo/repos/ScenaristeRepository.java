@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.demo.entities.Scenariste;
 
-public interface SpecialiteRepository extends JpaRepository<Scenariste, Long> {
+public interface ScenaristeRepository extends JpaRepository<Scenariste, Long> {
 
 	List<Scenariste> findByNomSpec(String nom);
 }

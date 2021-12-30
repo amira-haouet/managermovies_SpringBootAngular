@@ -16,7 +16,7 @@ export class AddSpecComponent implements OnInit {
         nom: new FormControl(null, [
           Validators.required,
           Validators.minLength(2)]),
-        desc: new FormControl(null, [
+        prenom: new FormControl(null, [
           Validators.required,
           Validators.minLength(10)]),
 
@@ -31,14 +31,14 @@ export class AddSpecComponent implements OnInit {
     var data = this.addForm.value;
 
     var s = {
-      nomSpec: data.nom,
-      description: data.desc,
+      nomSc: data.nom,
+      prenom: data.prenom,
 
     }
     this._apiService.addSpecialite(s).subscribe(
       () => {
 
-        this.router.navigate(['specialite']);
+        this.router.navigate(['scenariste']);
       }
     )
 

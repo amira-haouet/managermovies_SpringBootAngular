@@ -30,27 +30,27 @@ export class ApiService {
   }
 
   getSpecialite():Observable<any>{
-    return this.httpClient.get("http://localhost:3000/project/specialite/api")
+    return this.httpClient.get("http://localhost:3000/project/scenariste/api")
 
   }
   getSpecialiteParPage(page:number):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/project/specialite/api/page?p="+page)
+    return this.httpClient.get("http://localhost:3000/project/scenariste/api/page?p="+page)
 
   }
   getSpecialiteById(id:number):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/project/specialite/api/"+id);
+    return this.httpClient.get("http://localhost:3000/project/scenariste/api/"+id);
 
   }
   deleteSpecialite(id:number):Observable<any>
   {
-    return this.httpClient.delete("http://localhost:3000/project/specialite/api/"+id)
+    return this.httpClient.delete("http://localhost:3000/project/scenariste/api/"+id)
   }
   updateSpecialite(s):Observable<any>{
-    return  this.httpClient.put("http://localhost:3000/project/specialite/api",s)
+    return  this.httpClient.put("http://localhost:3000/project/scenariste/api",s)
   }
 
   addSpecialite(s):Observable<any>{
-    return  this.httpClient.post("http://localhost:3000/project/specialite/api",s)
+    return  this.httpClient.post("http://localhost:3000/project/scenariste/api",s)
   }
 
   

@@ -15,7 +15,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-
 @Entity
 public class Movie {
 
@@ -95,8 +94,21 @@ public class Movie {
 		this.scenariste = scenariste;
 	}
 
+	public Movie(Long idMovie, String titre, Integer prixTicket, Date dateSortie, String genre) {
+		super();
+		this.idMovie = idMovie;
+		this.titre = titre;
+		this.prixTicket = prixTicket;
+		this.dateSortie = dateSortie;
+		this.genre = genre;
+	}
 
-
-
+	public Movie(String titre, Integer prixTicket, Date dateSortie, String genre) {
+		super();
+		this.titre = titre;
+		this.prixTicket = prixTicket;
+		this.dateSortie = dateSortie;
+		this.genre = genre;
+	}
 
 }

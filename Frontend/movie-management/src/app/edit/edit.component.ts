@@ -21,7 +21,7 @@ export class EditComponent implements OnInit {
         prixTicket: new FormControl(null, [
           Validators.required,
           Validators.minLength(2),
-        //  Validators.pattern('^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.-]+$')
+          //  Validators.pattern('^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.-]+$')
         ]),
         dateSortie: new FormControl(null, [
           Validators.required,
@@ -36,7 +36,7 @@ export class EditComponent implements OnInit {
   }
 
   m: any;
-  specialite: Array<any>;
+  scenariste: Array<any>;
   id: number;
   ngOnInit(): void {
 
@@ -55,7 +55,7 @@ export class EditComponent implements OnInit {
 
     this._apiService.getSpecialite().subscribe(
       data => {
-        this.specialite = data;
+        this.scenariste = data;
       }
     )
   }
@@ -73,7 +73,7 @@ export class EditComponent implements OnInit {
 
     let conf = confirm("si vous voulez modifier cliquer sur ok");
     if (conf)
-    var data = this.editForm.value;
+      var data = this.editForm.value;
 
     var sc = {
       idSc: data.sc

@@ -55,8 +55,7 @@
 
     <label class="mt-3" for="">nom Scenariste : </label>
     <select class="form-control" formControlName="sc">
-      <option *ngFor='let sc of scenariste' value="{{sc.idSc}}">
-        {{sc.nomSc}}</option>
+      <option *ngFor='let sc of scenariste' value="{{sc.idSc}}"> {{sc.nomSc}}</option>
     </select>
     <button [disabled]='!addForm.valid' type="submit" class="btn btn-primary mt-3">Ajouter</button>
 

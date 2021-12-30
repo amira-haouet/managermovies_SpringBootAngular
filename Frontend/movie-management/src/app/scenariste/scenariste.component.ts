@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 @Component({
-  selector: 'app-specialite',
-  templateUrl: './specialite.component.html',
-  styleUrls: ['./specialite.component.css']
+  selector: 'app-scenariste',
+  templateUrl: './scenariste.component.html',
+  styleUrls: ['./scenariste.component.css']
 })
-export class SpecialiteComponent implements OnInit {
+export class ScenaristeComponent implements OnInit {
 
   constructor(private _apiService: ApiService) { }
 

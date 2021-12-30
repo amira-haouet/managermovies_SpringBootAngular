@@ -9,10 +9,10 @@ import { HttpClientModule } from '@angular/common/http'
 import { ApiService } from './api.service';
 import { MovieComponent } from './movie/movie.component';
 import { AddComponent } from './add/add.component';
-import {FormsModule} from '@angular/forms'
-import {ReactiveFormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
-import { SpecialiteComponent } from './specialite/specialite.component';
+import { ScenaristeComponent } from './scenariste/scenariste.component';
 import { EditSpecComponent } from './edit-spec/edit-spec.component';
 import { AddSpecComponent } from './add-spec/add-spec.component';
 
@@ -25,7 +25,7 @@ import { AddSpecComponent } from './add-spec/add-spec.component';
     MovieComponent,
     AddComponent,
     EditComponent,
-    SpecialiteComponent,
+    ScenaristeComponent,
     EditSpecComponent,
     AddSpecComponent,
 
@@ -36,10 +36,10 @@ import { AddSpecComponent } from './add-spec/add-spec.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-   
-   
+
+
   ],
- 
+
   providers: [ApiService],
   bootstrap: [AppComponent]
 })

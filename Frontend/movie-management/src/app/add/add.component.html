@@ -27,13 +27,32 @@
 
     <label for="">Genre :</label><br>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" id="inlineCheckbox1" name="genre" value="D" formControlName="genre">
+      <input class="form-check-input" type="radio" id="inlineCheckbox1" name="genre" value="Drama"
+        formControlName="genre">
       <label class="form-check-label" for="inlineCheckbox1">Drama</label>
-    </div>
+    </div> &nbsp;
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genre" value="H" formControlName="genre">
+      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genre" value="Horror"
+        formControlName="genre">
       <label class="form-check-label" for="inlineCheckbox2">Horror</label>
+    </div>
+    &nbsp;
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genre" value="Comedy"
+        formControlName="genre">
+      <label class="form-check-label" for="inlineCheckbox2">Comedy</label>
+    </div>&nbsp;
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genre" value="Comedy"
+        formControlName="genre">
+      <label class="form-check-label" for="inlineCheckbox2">Comedy</label>
+    </div>&nbsp;
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genre" value="Mystery"
+        formControlName="genre">
+      <label class="form-check-label" for="inlineCheckbox2">Mystery</label>
     </div><br>
+
     <label class="mt-3" for="">nom Scenariste : </label>
     <select class="form-control" formControlName="sc">
       <option *ngFor='let sc of scenariste' value="{{sc.idSc}}">

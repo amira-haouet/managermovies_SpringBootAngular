@@ -64,7 +64,7 @@ export class AddComponent implements OnInit {
       titre: data.titre,
       prixTicket: data.prixTicket,
       dateSortie: data.dateSortie,
-      sexe: data.sexe,
+      genre: data.genre,
       scenariste: sc
     }
     this._apiService.addMovie(m).subscribe(

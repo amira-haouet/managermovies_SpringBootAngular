@@ -15,52 +15,67 @@ public class Scenariste {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private Long idSpec;
-	private String nomSpec;
-	private String description ;
+	private Long idSc;
+	private String nomSc;
+	private String prenomSc ;
 	
-	@OneToMany (mappedBy= "specialite")
+	@OneToMany (mappedBy= "scenariste")
 	@JsonIgnore
-	private List<Movie> medecins;
+	private List<Movie> movies;
 	
 	
 	public Scenariste() {
 		super();
 	
 	}
-	public Scenariste( String nomSpec, String description) {
+
+
+	public Long getIdSc() {
+		return idSc;
+	}
+
+
+	public void setIdSc(Long idSc) {
+		this.idSc = idSc;
+	}
+
+
+	public String getNomSc() {
+		return nomSc;
+	}
+
+
+	public void setNomSc(String nomSc) {
+		this.nomSc = nomSc;
+	}
+
+
+	public String getPrenomSc() {
+		return prenomSc;
+	}
+
+
+	public void setPrenomSc(String prenomSc) {
+		this.prenomSc = prenomSc;
+	}
+
+
+	public List<Movie> getMovies() {
+		return movies;
+	}
+
+
+	public void setMovies(List<Movie> movies) {
+		this.movies = movies;
+	}
+
+
+	public Scenariste(Long idSc, String nomSc, String prenomSc, List<Movie> movies) {
 		super();
-		this.nomSpec = nomSpec;
-		this.description = description;
-	}
-	public Long getIdSpec() {
-		return idSpec;
-	}
-	public void setIdSpec(Long idSpec) {
-		this.idSpec = idSpec;
-	}
-	public String getNomSpec() {
-		return nomSpec;
-	}
-	public void setNomSpec(String nomSpec) {
-		this.nomSpec = nomSpec;
-	}
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	
-	public List<Movie> getMedecins() {
-		return medecins;
-	}
-	public void setMedecins(List<Movie> medecins) {
-		this.medecins = medecins;
-	}
-	@Override
-	public String toString() {
-		return "Specialite [idSpec=" + idSpec + ", nomSpec=" + nomSpec + ", description=" + description + "]";
+		this.idSc = idSc;
+		this.nomSc = nomSc;
+		this.prenomSc = prenomSc;
+		this.movies = movies;
 	}
 	
 	

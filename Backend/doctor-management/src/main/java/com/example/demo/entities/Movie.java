@@ -30,7 +30,7 @@ public class Movie {
 	private String genre;
 
 	@ManyToOne
-	private Scenariste specialite;
+	private Scenariste scenariste;
 
 	public Movie() {
 		super();

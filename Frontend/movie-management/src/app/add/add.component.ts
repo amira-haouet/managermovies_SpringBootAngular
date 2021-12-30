@@ -67,7 +67,7 @@ export class AddComponent implements OnInit {
       sexe: data.sexe,
       scenariste: sc
     }
-    this._apiService.addMedecin(m).subscribe(
+    this._apiService.addMovie(m).subscribe(
       () => {
 
         this.router.navigate(['movie']);

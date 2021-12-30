@@ -6,15 +6,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
   constructor(private httpClient: HttpClient) { }
-  getMedecin(page: number): Observable<any> {
+  getMovie(page: number): Observable<any> {
     return this.httpClient.get("http://localhost:8000/project/movie/api/page?p=" + page)
 
   }
-  getMedecinById(id: number): Observable<any> {
+  getMovieById(id: number): Observable<any> {
     return this.httpClient.get("http://localhost:8000/project/movie/api/" + id);
 
   }
-  addMedecin(m): Observable<any> {
+  addMovie(m): Observable<any> {
     return this.httpClient.post("http://localhost:8000/project/movie/api", m)
   }
 

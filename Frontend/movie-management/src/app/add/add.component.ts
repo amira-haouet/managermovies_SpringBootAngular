@@ -23,8 +23,9 @@ export class AddComponent implements OnInit {
         prixTicket: new FormControl(null, [
           Validators.required,
           Validators.minLength(3),
+          // Validators.pattern('^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.-]+$')
         ]),
-        date: new FormControl(null, [
+        dateSortie: new FormControl(null, [
           Validators.required,
         ]),
         genre: new FormControl(null, [
@@ -62,7 +63,7 @@ export class AddComponent implements OnInit {
     var m = {
       titre: data.titre,
       prixTicket: data.prixTicket,
-      dateNaiss: data.date,
+      dateSortie: data.dateSortie,
       sexe: data.sexe,
       scenariste: sc
     }

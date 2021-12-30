@@ -51,7 +51,7 @@ public class MovieController {
 
 	@GetMapping("/page")
 	public Page<Movie> showPage(@RequestParam(name = "p", defaultValue = "0") int page) {
-		Page<Movie> p = movieService.getAllmedecinPage(page, 5);
+		Page<Movie> p = movieService.getAllmedecinPage(page, 3);
 		return p;
 	}
 

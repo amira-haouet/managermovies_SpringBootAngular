@@ -56,7 +56,7 @@ public class ScenaristeController {
 	@GetMapping("/page")
 	public Page<Scenariste> showPage(@RequestParam(name = "p", defaultValue="0") int page)
 	{
-		Page<Scenariste> p =  scenaristeService.getAllSpecialitePage(page, 5);
+		Page<Scenariste> p =  scenaristeService.getAllSpecialitePage(page, 3);
 		return p;
 	}
 }

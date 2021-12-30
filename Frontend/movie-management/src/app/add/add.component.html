@@ -17,9 +17,9 @@
     <div class="form-group row">
       <label for="example-date-input" class="col-2 col-form-label">Date Sortie</label>
       <div class="col-10">
-        <input class="form-control" type="date" value="2021-12-30" id="example-date-input" formControlName="date"
+        <input class="form-control" type="date" value="2021-12-30" id="example-date-input" formControlName="dateSortie"
           ng-required="required">
-        <small *ngIf='addForm.get("date").touched && addForm.get("date").hasError("required")'>Date est
+        <small *ngIf='addForm.get("dateSortie").touched && addForm.get("dateSortie").hasError("required")'>Date est
           obligatoire</small>
       </div>
     </div>

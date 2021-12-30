@@ -15,23 +15,23 @@ export class AddComponent implements OnInit {
   constructor(private _apiService : ApiService , private formBuilder : FormBuilder ,private router: Router ) {
     this.addForm = formBuilder.group(
       {
-        nom: new FormControl(null,[
+        titre: new FormControl(null,[
           Validators.required,
           Validators.minLength(2),
           Validators.pattern('^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.-]+$')
         ]),
-        prenom : new FormControl(null,[
+        prixTicket : new FormControl(null,[
           Validators.required,
-          Validators.minLength(2),
-          Validators.pattern('^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.-]+$')
+          Validators.minLength(3),
+         // Validators.pattern('^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.-]+$')
         ]),
         date : new FormControl(null,[
           Validators.required,
         ]),
-        sexe : new FormControl(null,[
+        genre : new FormControl(null,[
           Validators.required,
         ]),
-        spec: new FormControl(null,[
+        sc: new FormControl(null,[
           Validators.required,
         ])
       } 
@@ -39,7 +39,7 @@ export class AddComponent implements OnInit {
     
 
    }
-   specialite:Array<any>;
+   scenariste:Array<any>;
   ngOnInit(): void {
     this.listSpecialite();
   }
@@ -49,7 +49,7 @@ export class AddComponent implements OnInit {
     this._apiService.getSpecialite().subscribe(
       data=>{
           console.log(data)
-          this.specialite=data;
+          this.scenariste=data;
         
       }
     )
@@ -58,16 +58,16 @@ export class AddComponent implements OnInit {
    {
     
      var data = this.addForm.value;
-     var spec = {
-       idSpec:data.spec
+     var sc = {
+       idSc:data.sc
      }
      console.log(data.date)
      var m ={
-      nomMedecin : data.nom , 
-      prenomMedecin : data.prenom ,
+      titre : data.titre , 
+      prixTicket : data.prixTicket ,
       dateNaiss: data.date,
       sexe : data.sexe , 
-      specialite :spec
+      scenariste :sc
      }
      this._apiService.addMedecin(m).subscribe(
       ()=>{

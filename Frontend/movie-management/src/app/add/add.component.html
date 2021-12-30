@@ -3,38 +3,37 @@
 <form [formGroup]="addForm" (submit)="add()" >
     <div class="form-group">
       <h1>Ajouter</h1>
-      <label for="exampleInputEmail1">Nom</label>
-      <input type="text"  class="form-control" formControlName="nom" ng-required="required">
-      <small *ngIf='addForm.get("nom").touched && addForm.get("nom").hasError("required")'>Nom est obligatoire</small>
-      <small *ngIf='addForm.get("nom").touched && addForm.get("nom").hasError("pattern")'>Nom ne doit pas contenir des caractére speciaux </small>
+      <label for="exampleInputEmail1">titre</label>
+      <input type="text"  class="form-control" formControlName="titre" ng-required="required">
+      <small *ngIf='addForm.get("titre").touched && addForm.get("titre").hasError("required")'>titre est obligatoire</small>
+      <small *ngIf='addForm.get("titre").touched && addForm.get("titre").hasError("pattern")'>titre ne doit pas contenir des caractére speciaux </small>
     </div>
     <div class="form-group">
-      <label for="exampleInputEmail1">Prénom</label>
-      <input type="text" class="form-control" formControlName="prenom" ng-required="required">
-      <small *ngIf='addForm.get("prenom").touched && addForm.get("prenom").hasError("required")'>Prénom est obligatoire</small>
+      <label for="exampleInputEmail1">Prétitre</label>
+      <input type="number" class="form-control" formControlName="prixTicket" ng-required="required">
     </div>
     <div class="form-group row">
       <label for="example-date-input" class="col-2 col-form-label">Date</label>
       <div class="col-10">
-        <input class="form-control" type="date" value="2011-08-19" id="example-date-input" formControlName="date" ng-required="required">
+        <input class="form-control" type="date" value="2021-12-30" id="example-date-input" formControlName="date" ng-required="required">
         <small *ngIf='addForm.get("date").touched && addForm.get("date").hasError("required")'>Date est obligatoire</small>
       </div>
     </div>
     
     
-    <label for="">Sexe :</label><br>
+    <label for="">Genre :</label><br>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" id="inlineCheckbox1" name="sexe" value="H" formControlName="sexe">
-      <label class="form-check-label" for="inlineCheckbox1">Homme</label>
+      <input class="form-check-input" type="radio" id="inlineCheckbox1" name="genre" value="D" formControlName="genre">
+      <label class="form-check-label" for="inlineCheckbox1">Drama</label>
     </div>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="sexe" value="F" formControlName="sexe">
-      <label class="form-check-label" for="inlineCheckbox2">Femme</label>
+      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genre" value="H" formControlName="genre">
+      <label class="form-check-label" for="inlineCheckbox2">Horror</label>
     </div><br>
-    <label class="mt-3" for="">Spécialité : </label>
-    <select class="form-control" formControlName="spec" >
-      <option *ngFor='let spec of specialite' value="{{spec.idSpec}}">
-        {{spec.nomSpec}}</option>
+    <label class="mt-3" for="">Scenariste : </label>
+    <select class="form-control" formControlName="sc" >
+      <option *ngFor='let sc of scenariste' value="{{sc.idSc}}">
+        {{sc.nomSc}}</option>
     </select>
     <button [disabled]='!addForm.valid' type="submit" class="btn btn-primary mt-3" >Ajouter</button>
    

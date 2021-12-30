@@ -24,39 +24,39 @@ public class ScenaristeController {
 
 	
 	@Autowired
-	ScenaristeService specialiteService ;
+	ScenaristeService scenaristeService ;
 	
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public List<Scenariste> getAllSpecialite()
 	{
-		return specialiteService.getAllSpecialite();
+		return scenaristeService.getAllSpecialite();
 	}
 	@RequestMapping(value="/{id}" , method=RequestMethod.GET)
 	public Scenariste getSpecialiteById(@PathVariable("id")Long id)
 	{
-		return specialiteService.getSpecialite(id);
+		return scenaristeService.getSpecialite(id);
 	}
 	@RequestMapping(value="/{id}", method=RequestMethod.DELETE)
 	public void deleteSpecialiteById(@PathVariable("id") Long id)
 	{
-		specialiteService.deleteSpecialiteById(id);
+		scenaristeService.deleteSpecialiteById(id);
 	}
 	@RequestMapping(method=RequestMethod.PUT)
 	public Scenariste updateSpecialite(@RequestBody Scenariste s)
 	{
-		return specialiteService.updateSpecialite(s);
+		return scenaristeService.updateSpecialite(s);
 	}
 	@RequestMapping(method=RequestMethod.POST)
 	public Scenariste saveSpecialite(@RequestBody Scenariste s)
 	{
-		return specialiteService.saveSpecialite(s);
+		return scenaristeService.saveSpecialite(s);
 	}
 	
 	@GetMapping("/page")
 	public Page<Scenariste> showPage(@RequestParam(name = "p", defaultValue="0") int page)
 	{
-		Page<Scenariste> p =  specialiteService.getAllSpecialitePage(page, 5);
+		Page<Scenariste> p =  scenaristeService.getAllSpecialitePage(page, 5);
 		return p;
 	}
 }

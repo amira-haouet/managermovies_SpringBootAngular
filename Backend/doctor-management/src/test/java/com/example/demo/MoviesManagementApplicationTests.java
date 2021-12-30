@@ -25,11 +25,11 @@ class MoviesManagementApplicationTests {
 	void contextLoads() {
 	}
 
-	// @Test
-	/*
-	 * void testAddMedecin() { Medecin m = new Medecin("nom2", "prenom2", new
-	 * Date()); medecinRepository.save(m); }
-	 */
+	 @Test
+	
+	  void testAddMedecin() { Movie m = new Movie("nom2", "prenom2", new
+	  Date()); medecinRepository.save(m); }
+	
 /*
 	@Test
 	void testFindMedecin() {

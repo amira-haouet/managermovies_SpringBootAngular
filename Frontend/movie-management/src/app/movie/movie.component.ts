@@ -11,7 +11,7 @@ export class MovieComponent implements OnInit {
   constructor(private _apiService : ApiService, private formBuilder: FormBuilder) {
     this.seachForm = formBuilder.group(
       {
-        spec: new FormControl()
+        sc: new FormControl()
       })
    }
 
@@ -19,7 +19,7 @@ export class MovieComponent implements OnInit {
     this.listMedecin()
   }
 
-  medecins:Array<any>;
+  movies:Array<any>;
   pages:Array<number>;
   page:number = 0;
   setPage(i,event:any)
@@ -35,7 +35,7 @@ export class MovieComponent implements OnInit {
     this._apiService.getMedecin(this.page).subscribe(
       data=>{
           console.log(data);
-          this.medecins=data['content'];
+          this.movies=data['content'];
           this.pages = new Array(data['totalPages']);
       }
     )
@@ -46,7 +46,7 @@ export class MovieComponent implements OnInit {
     this._apiService.getSpecialite().subscribe(
       data=>{
           console.log(data);
-          this.medecins=data;
+          this.movies=data;
       }
     )
    }
@@ -56,7 +56,7 @@ export class MovieComponent implements OnInit {
     this._apiService.deleteMedecin(id).subscribe(
       data=>{
           console.log(data);
-          this.medecins=data;
+          this.movies=data;
           this.listMedecin()
       }
     )
@@ -65,15 +65,15 @@ export class MovieComponent implements OnInit {
    search()
    {
      
-     var medecins = this.medecins
+     var scenaristes = this.movies
      var dataMed = this.seachForm.value
-     console.log(dataMed.spec)
-     this._apiService.getMedecinBySpecialite(dataMed.spec).subscribe(
+     console.log(dataMed.sc)
+     this._apiService.getMedecinBySpecialite(dataMed.sc).subscribe(
        data=>{
          console.log(data)
-         if(dataMed.spec !=null)
+         if(dataMed.sc !=null)
          {
-          this.medecins=data
+          this.movies=data
          }
          else
          {

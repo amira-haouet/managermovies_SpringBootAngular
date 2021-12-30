@@ -18,7 +18,7 @@ export class AddSpecComponent implements OnInit {
           Validators.minLength(2)]),
         prenom: new FormControl(null, [
           Validators.required,
-          Validators.minLength(10)]),
+          Validators.minLength(2)]),
 
       })
   }

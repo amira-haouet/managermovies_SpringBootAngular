@@ -18,7 +18,7 @@ import com.example.demo.entities.Scenariste;
 import com.example.demo.service.ScenaristeService;
 
 @RestController
-@RequestMapping("/specialite/api")
+@RequestMapping("/scenariste/api")
 @CrossOrigin
 public class ScenaristeController {
 

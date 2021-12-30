@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
   constructor(private httpClient: HttpClient) { }
   getMedecin(page: number): Observable<any> {
-    return this.httpClient.get("http://localhost:3000/project/movie/api/page?p=" + page)
+    return this.httpClient.get("http://localhost:8000/project/movie/api/page?p=" + page)
 
   }
   getMedecinById(id: number): Observable<any> {
@@ -25,7 +25,7 @@ export class ApiService {
     return this.httpClient.put("http://localhost:8000/project/movie/api", m)
   }
   getMedecinBySpecialite(s): Observable<any> {
-    return this.httpClient.get("http://localhost:3000/project/movie/api/findSpec/" + s)
+    return this.httpClient.get("http://localhost:8000/project/movie/api/findSpec/" + s)
   }
 
   getSpecialite(): Observable<any> {

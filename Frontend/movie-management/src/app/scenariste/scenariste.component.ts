@@ -14,7 +14,7 @@ export class ScenaristeComponent implements OnInit {
     this.listSpecialite()
   }
 
-  specialite: Array<any>;
+  scenariste: Array<any>;
   pages: Array<number>;
   page: number = 0;
   setPage(i, event: any) {
@@ -27,7 +27,7 @@ export class ScenaristeComponent implements OnInit {
     this._apiService.getSpecialiteParPage(this.page).subscribe(
       data => {
         console.log(data);
-        this.specialite = data['content'];
+        this.scenariste = data['content'];
         this.pages = new Array(data['totalPages']);
       }
     )
@@ -37,7 +37,7 @@ export class ScenaristeComponent implements OnInit {
     this._apiService.deleteSpecialite(id).subscribe(
       data => {
         console.log(data);
-        this.specialite = data;
+        this.scenariste = data;
         this.listSpecialite()
       }
     )

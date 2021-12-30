@@ -11,11 +11,11 @@ import { ScenaristeComponent } from './scenariste/scenariste.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'movie', component: MovieComponent },
-  { path: 'medecin/add', component: AddComponent },
-  { path: 'medecin/edit', component: EditComponent },
+  { path: 'movie/add', component: AddComponent },
+  { path: 'movie/edit', component: EditComponent },
   { path: 'scenariste', component: ScenaristeComponent },
-  { path: 'specialite/edit', component: EditSpecComponent },
-  { path: 'specialite/add', component: AddSpecComponent },
+  { path: 'scenariste/edit', component: EditSpecComponent },
+  { path: 'scenariste/add', component: AddSpecComponent },
 
 ];
 

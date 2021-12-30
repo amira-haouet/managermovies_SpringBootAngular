@@ -8,38 +8,40 @@
             <h1 class="card-title">Medecins</h1>
           </div>
         </div>
-        <div class="p-2"><button type="button" class="btn btn-warning" routerLink="/medecin/add">Ajouter</button></div>
+        <div class="p-2"><button type="button" class="btn btn-warning" routerLink="/movie/add">Ajouter</button></div>
         <div class="p-2">
-        <form [formGroup]="seachForm" (submit)="search()" class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" formControlName="spec" type="search" placeholder="Recherche par spécialite"
-            aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
-        </form>
-      </div>
-        <div *ngIf="medecins.length > 0 ; else pasVide  ">
+          <form [formGroup]="seachForm" (submit)="search()" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" formControlName="sc" type="search"
+              placeholder="Recherche par SCENARISTE" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
+          </form>
+        </div>
+        <div *ngIf="movies.length > 0 ; else pasVide  ">
           <table class="table table-stripped">
             <thead>
-              <th>#</th>
-              <th>Nom</th>
-              <th>Prénom</th>
-              <th>Spécialité</th>
+              <th></th>
+              <th>titre</th>
+              <th>ticket</th>
+              <th>Scenariste</th>
               <th>Date de naissance</th>
-              <th>Sexe</th>
+              <th>Genre</th>
               <th>Modifier</th>
               <th>Supprimer</th>
             </thead>
             <tbody>
-              <tr *ngFor="let m of medecins">
-                <td>{{m.idMedecin}}</td>
-                <td>{{m.nomMedecin}}</td>
-                <td>{{m.prenomMedecin}}</td>
-                <td *ngIf="m.specialite!= null;else noSpec">{{m.specialite.nomSpec}}</td>
-                <ng-template #noSpec><td>N/A</td> </ng-template>
-                <td>{{m.dateNaiss}}</td>
-                <td>{{m.sexe}}</td>
+              <tr *ngFor="let m of movies">
+                <td>{{m.idMovie}}</td>
+                <td>{{m.titre}}</td>
+                <td>{{m.prixTicket}}</td>
+                <td *ngIf="m.scenariste!= null;else noSpec">{{m.scenariste.nomSc}}</td>
+                <ng-template #noSpec>
+                  <td>N/A</td>
+                </ng-template>
+                <td>{{m.dateSortie}}</td>
+                <td>{{m.genre}}</td>
                 <td><button type="button" class="btn btn-info" [routerLink]="['edit']"
-                    [queryParams]="{ id:m.idMedecin}">Modifier</button></td>
-                <td><button type="button" (click)="delete(m.idMedecin)" class="btn btn-danger">Supprimer</button></td>
+                    [queryParams]="{ id:m.idMovie}">Modifier</button></td>
+                <td><button type="button" (click)="delete(m.idMovie)" class="btn btn-danger">Supprimer</button></td>
               </tr>
             </tbody>
           </table>
@@ -67,7 +69,7 @@
         </div>
         <ng-template #pasVide>
           <div class="alert alert-warning" role="alert">
-            Pas de medecins 
+            Pas de medecins
           </div>
         </ng-template>
       </div>

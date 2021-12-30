@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-public class Specialite {
+public class Scenariste {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -21,14 +21,14 @@ public class Specialite {
 	
 	@OneToMany (mappedBy= "specialite")
 	@JsonIgnore
-	private List<Medecin> medecins;
+	private List<Movie> medecins;
 	
 	
-	public Specialite() {
+	public Scenariste() {
 		super();
 	
 	}
-	public Specialite( String nomSpec, String description) {
+	public Scenariste( String nomSpec, String description) {
 		super();
 		this.nomSpec = nomSpec;
 		this.description = description;
@@ -52,10 +52,10 @@ public class Specialite {
 		this.description = description;
 	}
 	
-	public List<Medecin> getMedecins() {
+	public List<Movie> getMedecins() {
 		return medecins;
 	}
-	public void setMedecins(List<Medecin> medecins) {
+	public void setMedecins(List<Movie> medecins) {
 		this.medecins = medecins;
 	}
 	@Override

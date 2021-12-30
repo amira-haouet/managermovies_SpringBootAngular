@@ -8,13 +8,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.example.demo.entities.Medecin;
-import com.example.demo.entities.Specialite;
+import com.example.demo.entities.Movie;
+import com.example.demo.entities.Scenariste;
 import com.example.demo.repos.MedecinRepository;
 import com.example.demo.repos.SpecialiteRepository;
 
 @SpringBootTest
-class DoctorManagementApplicationTests {
+class MoviesManagementApplicationTests {
 
 	@Autowired
 	private MedecinRepository medecinRepository;
@@ -33,36 +33,36 @@ class DoctorManagementApplicationTests {
 
 	@Test
 	void testFindMedecin() {
-		Medecin m = medecinRepository.findById(1L).get();
+		Movie m = medecinRepository.findById(1L).get();
 		System.out.println(m);
 
 	}
 
 	@Test
 	void testFindAllMedecin() {
-		ArrayList<Medecin> m = new ArrayList<>(medecinRepository.findAll());
-		for (Medecin medecin : m) {
+		ArrayList<Movie> m = new ArrayList<>(medecinRepository.findAll());
+		for (Movie medecin : m) {
 			System.out.println(medecin);
 		}
 	}
 
 	@Test
 	void updateMedecin() {
-		Medecin m = medecinRepository.findById(1L).get();
+		Movie m = medecinRepository.findById(1L).get();
 		m.setNomMedecin("Jacque");
 		medecinRepository.save(m);
 	}
 
 	@Test
 	void deleteMedecin() {
-		Medecin m = medecinRepository.findById(1L).get();
+		Movie m = medecinRepository.findById(1L).get();
 		medecinRepository.delete(m);
 	}
 
 	@Test
 	public void findByCategorieNomSpec() {
-		List<Medecin> med = medecinRepository.findBySpecialiteNomSpec("ds");
-		for (Medecin m : med) {
+		List<Movie> med = medecinRepository.findBySpecialiteNomSpec("ds");
+		for (Movie m : med) {
 			System.out.println(m);
 		}
 	}

@@ -5,11 +5,11 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
-import com.example.demo.entities.Medecin;
+import com.example.demo.entities.Movie;
 
 
-public interface MedecinRepository extends JpaRepository<Medecin, Long> {
+public interface MedecinRepository extends JpaRepository<Movie, Long> {
 
 	
-	List<Medecin> findBySpecialiteNomSpec(String nomSpec);
+	List<Movie> findBySpecialiteNomSpec(String nomSpec);
 }

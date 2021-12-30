@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.demo.entities.Specialite;
+import com.example.demo.entities.Scenariste;
 
-public interface SpecialiteRepository extends JpaRepository<Specialite, Long> {
+public interface SpecialiteRepository extends JpaRepository<Scenariste, Long> {
 
-	List<Specialite> findByNomSpec(String nom);
+	List<Scenariste> findByNomSpec(String nom);
 }

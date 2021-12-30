@@ -7,26 +7,26 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entities.Medecin;
-import com.example.demo.entities.Specialite;
+import com.example.demo.entities.Movie;
+import com.example.demo.entities.Scenariste;
 import com.example.demo.repos.SpecialiteRepository;
 @Service
-public class SpecialiteServiceImp implements SpecialiteService {
+public class ScenaristeServiceImp implements ScenaristeService {
 
 	@Autowired
 	SpecialiteRepository specialiteRepository;
 	@Override
-	public Specialite saveSpecialite(Specialite s) {
+	public Scenariste saveSpecialite(Scenariste s) {
 		return specialiteRepository.save(s);
 	}
 
 	@Override
-	public Specialite updateSpecialite(Specialite s) {
+	public Scenariste updateSpecialite(Scenariste s) {
 		return specialiteRepository.save(s);
 	}
 
 	@Override
-	public void deleteSpecialite(Specialite s) {
+	public void deleteSpecialite(Scenariste s) {
 		specialiteRepository.delete(s);
 	}
 
@@ -37,17 +37,17 @@ public class SpecialiteServiceImp implements SpecialiteService {
 	}
 
 	@Override
-	public Specialite getSpecialite(Long id) {
+	public Scenariste getSpecialite(Long id) {
 		return specialiteRepository.findById(id).get();
 	}
 
 	@Override
-	public List<Specialite> getAllSpecialite() {
+	public List<Scenariste> getAllSpecialite() {
 		return specialiteRepository.findAll();
 	}
 	
 	@Override
-	public Page<Specialite> getAllSpecialitePage(int page, int size) {
+	public Page<Scenariste> getAllSpecialitePage(int page, int size) {
 		return  specialiteRepository.findAll(PageRequest.of(page, size));
 	}
 

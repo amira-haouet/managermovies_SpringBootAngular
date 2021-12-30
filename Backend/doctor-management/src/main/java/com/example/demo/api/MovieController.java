@@ -13,50 +13,60 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entities.Medecin;
-import com.example.demo.entities.Specialite;
-import com.example.demo.service.SpecialiteService;
+import com.example.demo.entities.Movie;
+import com.example.demo.service.MovieService;
+
+
 
 @RestController
-@RequestMapping("/specialite/api")
+@RequestMapping("/movie/api")
 @CrossOrigin
-public class SpecialiteController {
-
+public class MovieController {
 	
 	@Autowired
-	SpecialiteService specialiteService ;
+	MovieService movieService ;
 	
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public List<Specialite> getAllSpecialite()
+	public List<Movie> getAllMedecin()
 	{
-		return specialiteService.getAllSpecialite();
+		return movieService.getAllMedecin();
 	}
 	@RequestMapping(value="/{id}" , method=RequestMethod.GET)
-	public Specialite getSpecialiteById(@PathVariable("id")Long id)
+	public Movie getMedecinById(@PathVariable("id")Long id)
 	{
-		return specialiteService.getSpecialite(id);
+		return medecinService.getMedecin(id);
 	}
 	@RequestMapping(value="/{id}", method=RequestMethod.DELETE)
-	public void deleteSpecialiteById(@PathVariable("id") Long id)
+	public void deleteMedecinById(@PathVariable("id") Long id)
 	{
-		specialiteService.deleteSpecialiteById(id);
+		medecinService.deleteMedecinById(id);
 	}
 	@RequestMapping(method=RequestMethod.PUT)
-	public Specialite updateSpecialite(@RequestBody Specialite s)
+	public Movie updateMedecin(@RequestBody Movie m)
 	{
-		return specialiteService.updateSpecialite(s);
+		return medecinService.updateMedecin(m);
 	}
 	@RequestMapping(method=RequestMethod.POST)
-	public Specialite saveSpecialite(@RequestBody Specialite s)
+	public Movie saveMedecin(@RequestBody Movie m)
 	{
-		return specialiteService.saveSpecialite(s);
+		return medecinService.saveMedecin(m);
 	}
 	
 	@GetMapping("/page")
-	public Page<Specialite> showPage(@RequestParam(name = "p", defaultValue="0") int page)
+	public Page<Movie> showPage(@RequestParam(name = "p", defaultValue="0") int page)
 	{
-		Page<Specialite> p =  specialiteService.getAllSpecialitePage(page, 5);
+		Page<Movie> p =  medecinService.getAllmedecinPage(page, 5);
 		return p;
 	}
+	
+	@RequestMapping(value="/findSpec/{s}" ,method=RequestMethod.GET)
+	public List<Movie> getBySpecialite(@PathVariable("s") String s)
+	{
+		System.out.println(s);
+		return medecinService.findMedecinBySpecialite(s);
+	}
+	
+	
+
 }

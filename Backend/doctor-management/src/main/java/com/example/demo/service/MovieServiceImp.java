@@ -7,28 +7,28 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entities.Medecin;
-import com.example.demo.entities.Specialite;
+import com.example.demo.entities.Movie;
+import com.example.demo.entities.Scenariste;
 import com.example.demo.repos.MedecinRepository;
 
 @Service
-public class MedecinServiceImp implements MedecinService {
+public class MovieServiceImp implements MovieService {
 
 	@Autowired
 	MedecinRepository medecinRepository;
 	
 	@Override
-	public Medecin saveMedecin(Medecin m) {
+	public Movie saveMedecin(Movie m) {
 		return medecinRepository.save(m);
 	}
 
 	@Override
-	public Medecin updateMedecin(Medecin m) {
+	public Movie updateMedecin(Movie m) {
 		return medecinRepository.save(m);
 	}
 
 	@Override
-	public void deleteMedecin(Medecin m) {
+	public void deleteMedecin(Movie m) {
 		 medecinRepository.delete(m);
 
 	}
@@ -40,22 +40,22 @@ public class MedecinServiceImp implements MedecinService {
 	}
 
 	@Override
-	public Medecin getMedecin(Long id) {
+	public Movie getMedecin(Long id) {
 		return medecinRepository.findById(id).get();
 	}
 
 	@Override
-	public List<Medecin> getAllMedecin() {
+	public List<Movie> getAllMedecin() {
 		return medecinRepository.findAll();
 	}
 
 	@Override
-	public Page<Medecin> getAllmedecinPage(int page, int size) {
+	public Page<Movie> getAllmedecinPage(int page, int size) {
 		return  medecinRepository.findAll(PageRequest.of(page, size));
 	}
 
 	@Override
-	public List<Medecin> findMedecinBySpecialite(String s) {
+	public List<Movie> findMedecinBySpecialite(String s) {
 		return medecinRepository.findBySpecialiteNomSpec(s);
 		
 	}

@@ -23,7 +23,6 @@ export class AddComponent implements OnInit {
         prixTicket: new FormControl(null, [
           Validators.required,
           Validators.minLength(3),
-          // Validators.pattern('^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.-]+$')
         ]),
         date: new FormControl(null, [
           Validators.required,

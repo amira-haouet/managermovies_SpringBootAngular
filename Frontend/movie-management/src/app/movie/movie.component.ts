@@ -48,7 +48,9 @@ export class MovieComponent implements OnInit {
     )
   }
   delete(id: number) {
-    console.log(id)
+    let conf = confirm("Etes-vous sûr ?");
+    if (conf)
+      console.log(id)
     this._apiService.deleteMedecin(id).subscribe(
       data => {
         console.log(data);

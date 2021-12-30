@@ -35,28 +35,28 @@ public class MovieController {
 	@RequestMapping(value="/{id}" , method=RequestMethod.GET)
 	public Movie getMedecinById(@PathVariable("id")Long id)
 	{
-		return medecinService.getMedecin(id);
+		return movieService.getMedecin(id);
 	}
 	@RequestMapping(value="/{id}", method=RequestMethod.DELETE)
 	public void deleteMedecinById(@PathVariable("id") Long id)
 	{
-		medecinService.deleteMedecinById(id);
+		movieService.deleteMedecinById(id);
 	}
 	@RequestMapping(method=RequestMethod.PUT)
 	public Movie updateMedecin(@RequestBody Movie m)
 	{
-		return medecinService.updateMedecin(m);
+		return movieService.updateMedecin(m);
 	}
 	@RequestMapping(method=RequestMethod.POST)
 	public Movie saveMedecin(@RequestBody Movie m)
 	{
-		return medecinService.saveMedecin(m);
+		return movieService.saveMedecin(m);
 	}
 	
 	@GetMapping("/page")
 	public Page<Movie> showPage(@RequestParam(name = "p", defaultValue="0") int page)
 	{
-		Page<Movie> p =  medecinService.getAllmedecinPage(page, 5);
+		Page<Movie> p =  movieService.getAllmedecinPage(page, 5);
 		return p;
 	}
 	
@@ -64,7 +64,7 @@ public class MovieController {
 	public List<Movie> getBySpecialite(@PathVariable("s") String s)
 	{
 		System.out.println(s);
-		return medecinService.findMedecinBySpecialite(s);
+		return movieService.findMedecinBySpecialite(s);
 	}
 	
 	

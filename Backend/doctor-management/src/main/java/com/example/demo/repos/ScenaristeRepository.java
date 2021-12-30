@@ -8,5 +8,5 @@ import com.example.demo.entities.Scenariste;
 
 public interface ScenaristeRepository extends JpaRepository<Scenariste, Long> {
 
-	List<Scenariste> findByNomSpec(String nom);
+	List<Scenariste> findByNomSc(String nom);
 }

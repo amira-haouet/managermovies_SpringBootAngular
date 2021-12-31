@@ -12,7 +12,7 @@ export class EditComponent implements OnInit {
 
   // currentFilm = this.movie;
   editForm: FormGroup;
-  
+
   constructor(
     private _apiService: ApiService,
     private formBuilder: FormBuilder,
@@ -42,13 +42,13 @@ export class EditComponent implements OnInit {
         ])
       })
   }
-// get old data
+  // get old data
   private oldData;
 
   m: any;
   scenariste: Array<any>;
   id: number;
-  
+
   ngOnInit(): void {
 
     this.Aroute.queryParams.subscribe(params => {

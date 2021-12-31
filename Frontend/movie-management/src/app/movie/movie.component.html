@@ -30,7 +30,7 @@
           <table class="table table-stripped">
             <thead>
               <th></th>
-              <th>Titre</th>
+              <th (click)="sort('titre')">Titre <i class="fa fa-sort"></i></th>
               <th>Prix Ticket</th>
               <th>Scenariste</th>
               <th>Date de Sortie</th>
@@ -47,7 +47,7 @@
 
 
               </tr>
-              <tr *ngFor="let m of movies">
+              <tr *ngFor="let m of movies ">
                 <td>{{m.idMovie}}</td>
                 <td>{{m.titre}}</td>
                 <td>{{m.prixTicket}}</td>

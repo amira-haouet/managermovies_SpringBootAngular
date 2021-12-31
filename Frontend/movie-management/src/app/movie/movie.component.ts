@@ -96,7 +96,7 @@ export class MovieComponent implements OnInit {
   }
 
 
-  key: string = "id";
+  key: string = 'titre';
   reverse: boolean = false;
   sort(key) {
     this.key = key;

@@ -80,5 +80,19 @@ export class MovieComponent implements OnInit {
       }
     )
   }
+  titre: any;
+  searchtest() {
+    if (this.titre == "") {
+      this.ngOnInit();
+
+    }
+    else {
+      this.movies=this.movies.filter(
+        
+      res =>{
+        return res.titre.toLowerCase().match(this.titre.toLowerCase());
+      })
+    }
+  }
 
 }

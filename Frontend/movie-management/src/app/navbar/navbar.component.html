@@ -34,8 +34,8 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                         [amirahaouet]</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">login</a>
-                        <a class="dropdown-item" href="#">logout</a>
+                        <a class="dropdown-item" routerLink = "login" *ngIf="!authService.isloggedIn">login</a>
+                        <a class="dropdown-item" *ngIf="authService.isloggedIn" (click) = "onLogout()">logout</a>
                         <a class="dropdown-item" href="#">Profile</a>
                     </div>
                 </li>

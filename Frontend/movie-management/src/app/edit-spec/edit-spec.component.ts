@@ -10,7 +10,8 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 })
 export class EditSpecComponent implements OnInit {
   editForm: FormGroup;
-
+  s: any;
+  id: number;
 
   constructor(
     private _apiService: ApiService,
@@ -20,18 +21,17 @@ export class EditSpecComponent implements OnInit {
 
     this.editForm = formBuilder.group(
       {
-        nomSc: new FormControl(null, [
+        nom: new FormControl(null, [
           Validators.required,
           Validators.minLength(2)]),
 
-        prenomSc: new FormControl(null, [
+        prenom: new FormControl(null, [
           Validators.required,
           Validators.minLength(2)]),
       })
   }
 
-  s: any;
-  id: number;
+
   scenariste: Array<any>;
 
   ngOnInit(): void {
@@ -41,10 +41,10 @@ export class EditSpecComponent implements OnInit {
 
     });
     this.getSpecialiteById(this.id)
-   // this.listSpecialite();
+    // this.listSpecialite();
 
   }
-  listSpecialite() {
+  /*listSpecialite() {
 
     this._apiService.getSpecialite().subscribe(
       data => {
@@ -52,9 +52,10 @@ export class EditSpecComponent implements OnInit {
       }
     )
   }
-
+*/
   getSpecialiteById(id) {
     this._apiService.getSpecialiteById(id).subscribe(
+
       data => {
         this.s = data;
 
@@ -67,15 +68,15 @@ export class EditSpecComponent implements OnInit {
     if (conf)
       var data = this.editForm.value;
 
-    console.log(data)
+    // console.log(data)
 
-    var s = {
+    var sc = {
       idSc: this.id,
-      nomSc: data.nomSc,
-      prenomSc: data.prenomSc
+      nomSc: data.nom,
+      prenomSc: data.prenom
     }
 
-    this._apiService.updateSpecialite(s).subscribe(
+    this._apiService.updateSpecialite(sc).subscribe(
       () => {
         this.router.navigate(['scenariste']);
       }, (error) => { alert("Problème lors de la modification !"); }

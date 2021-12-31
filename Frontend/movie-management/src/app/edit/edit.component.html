@@ -38,30 +38,30 @@
     </div><br>
   -->
 
-    <label for="">Genre :</label><br>
+    <label for=""  >Genre :</label><br>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" id="inlineCheckbox1" name="genre" value="Drama"
+      <input class="form-check-input" type="radio" id="inlineCheckbox1" name="genre" value="Drama"  [(ngModel)]="m.genre"
         formControlName="genre">
       <label class="form-check-label" for="inlineCheckbox1">Drama</label>
     </div> &nbsp;
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genre" value="Horror"
+      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genre" value="Horror"  [(ngModel)]="m.genre"
         formControlName="genre">
       <label class="form-check-label" for="inlineCheckbox2">Horror</label>
     </div>
     &nbsp;
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genre" value="Comedy"
-        formControlName="genre">
+      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genre" value="Comedy"  [(ngModel)]="m.genre"
+        formControlName="genre"> 
       <label class="form-check-label" for="inlineCheckbox2">Comedy</label>
     </div>&nbsp;
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genre" value="Fantasy "
+      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genre" value="Fantasy "  [(ngModel)]="m.genre"
         formControlName="genre">
       <label class="form-check-label" for="inlineCheckbox2">Fantasy </label>
     </div>&nbsp;
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genre" value="Mystery"
+      <input class="form-check-input" type="radio" id="inlineCheckbox2" name="genre" value="Mystery"  [(ngModel)]="m.genre"
         formControlName="genre">
       <label class="form-check-label" for="inlineCheckbox2">Mystery</label>
     </div><br>
@@ -70,8 +70,8 @@
 
 
     <label class="mt-3" for="">Scenariste : </label>
-    <select class="form-control" formControlName="sc">
-      <option *ngFor='let sc of scenariste' value="{{sc.idSc}}">{{sc.nomSc}}</option>
+    <select class="form-control" formControlName="sc"  [(ngModel)]="m.scenariste" >
+      <option *ngFor='let sc of scenariste' value="{{sc.idSc}}" >{{sc.nomSc}}</option>
     </select>
     <button [disabled]='!editForm.valid' type="submit" class="btn btn-primary mt-3">Modifier</button>
 

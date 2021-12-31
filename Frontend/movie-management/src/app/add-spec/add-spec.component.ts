@@ -32,7 +32,7 @@ export class AddSpecComponent implements OnInit {
 
     var s = {
       nomSc: data.nom,
-      prenom: data.prenom,
+      prenomSc: data.prenom,
 
     }
     this._apiService.addSpecialite(s).subscribe(

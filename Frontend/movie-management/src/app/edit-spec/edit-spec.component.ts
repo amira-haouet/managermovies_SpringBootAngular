@@ -32,7 +32,7 @@ export class EditSpecComponent implements OnInit {
   }
 
 
-  scenariste: Array<any>;
+  //scenariste: Array<any>;
 
   ngOnInit(): void {
 
@@ -70,13 +70,13 @@ export class EditSpecComponent implements OnInit {
 
     // console.log(data)
 
-    var sc = {
+    var s = {
       idSc: this.id,
       nomSc: data.nom,
       prenomSc: data.prenom
     }
 
-    this._apiService.updateSpecialite(sc).subscribe(
+    this._apiService.updateSpecialite(s).subscribe(
       () => {
         this.router.navigate(['scenariste']);
       }, (error) => { alert("Problème lors de la modification !"); }

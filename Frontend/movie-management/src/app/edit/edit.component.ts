@@ -48,6 +48,7 @@ export class EditComponent implements OnInit {
   m: any;
   scenariste: Array<any>;
   id: number;
+  
   ngOnInit(): void {
 
     this.Aroute.queryParams.subscribe(params => {

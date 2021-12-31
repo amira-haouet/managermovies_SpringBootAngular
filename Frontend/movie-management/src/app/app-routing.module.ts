@@ -9,7 +9,7 @@ import { MovieComponent } from './movie/movie.component';
 import { ScenaristeComponent } from './scenariste/scenariste.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'movie', component: MovieComponent },
   { path: 'movie/add', component: AddComponent },
   { path: 'movie/edit', component: EditComponent },

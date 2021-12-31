@@ -58,7 +58,7 @@
                 <td>{{m.dateSortie}}</td>
                 <td>{{m.genre}}</td>
                 <td><button type="button" class="btn btn-info" [routerLink]="['edit']"
-                    [queryParams]="{ id:m.idMovie}">Modifier</button></td>
+                    [queryParams]="{ id:m.idMovie}" *ngIf="authService.isAdmin()">Modifier</button></td>
                 <td><button *ngIf="authService.isAdmin()" type="button" (click)="delete(m.idMovie)" class="btn btn-danger">Supprimer</button></td>
 
                 <td><button  *ngIf="authService.isAdmin()" class="btn btn-warning">Plus de details</button></td>

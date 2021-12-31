@@ -6,18 +6,7 @@ import { AuthService } from './services/auth.service';
 @Injectable({
   providedIn: 'root'
 })
-
-/*
-
-export class FilmGuard implements CanActivate {
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
-  }
-  
-}*/
-export class ProduitGuard implements CanActivate {
+export class MovieGuard implements CanActivate {
   constructor(private authService: AuthService,
     private router: Router) { }
   canActivate(

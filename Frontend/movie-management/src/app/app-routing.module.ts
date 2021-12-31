@@ -4,8 +4,10 @@ import { AddSpecComponent } from './add-spec/add-spec.component';
 import { AddComponent } from './add/add.component';
 import { EditSpecComponent } from './edit-spec/edit-spec.component';
 import { EditComponent } from './edit/edit.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { MovieGuard } from './movie.guard';
 import { MovieComponent } from './movie/movie.component';
 import { RechercheParScenaristeComponent } from './recherche-par-scenariste/recherche-par-scenariste.component';
 import { ScenaristeComponent } from './scenariste/scenariste.component';
@@ -19,7 +21,10 @@ const routes: Routes = [
   { path: 'scenariste/edit', component: EditSpecComponent },
   { path: 'scenariste/add', component: AddSpecComponent },
   { path: 'recherche-par-scenariste', component: RechercheParScenaristeComponent },
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'app-forbidden', component: ForbiddenComponent},
+  {path : "add-film", component : AddComponent, canActivate:[MovieGuard]},
+
 
 ];
 

@@ -3,6 +3,8 @@
   <form [formGroup]="addForm" (submit)="add()">
     <div class="form-group">
       <h1>Ajouter</h1>
+
+      
       <label for="exampleInputEmail1">titre</label>
       <input type="text" class="form-control" formControlName="titre" ng-required="required">
       <small *ngIf='addForm.get("titre").touched && addForm.get("titre").hasError("required")'>Titre est

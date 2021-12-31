@@ -71,9 +71,9 @@
 
     <label class="mt-3" for="">Scenariste : </label>
     <select class="form-control" formControlName="sc"  [(ngModel)]="m.scenariste" >
-      <option *ngFor='let sc of scenariste' value="{{sc.idSc}}" >{{sc.nomSc}}</option>
+      <option *ngFor='let sc of scenariste' value="{{sc.idSc}}"  >{{sc.nomSc}}</option>
     </select>
-    <button [disabled]='!editForm.valid' type="submit" class="btn btn-primary mt-3">Modifier</button>
+    <button [disabled]='!editForm.valid' type="submit" class="btn btn-warning mt-3">Modifier</button>
 
 
   </form>

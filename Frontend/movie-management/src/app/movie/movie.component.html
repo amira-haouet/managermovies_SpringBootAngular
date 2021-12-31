@@ -19,10 +19,9 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
 
           </form>
-          <nav class="navbar">
-            <input class="form-control" type="text" name="titre" [(ngModel)]="titre" (ngModelChange)="searchtest()">
+          <div class="p-2">
 
-          </nav>
+          </div>
 
         </div>
         <!--     <div *ngIf="movies.length > 0 ; else pasVide  ">-->
@@ -41,6 +40,9 @@
               <th>Plus de details</th>
             </thead>
             <tbody>
+              <tr colspan="8"> <input placeholder="Search MOVIE" class="form-control mr-sm-2" type="text" name="titre"
+                  [(ngModel)]="titre" (ngModelChange)="searchtest()">
+              </tr>
               <tr *ngFor="let m of movies">
                 <td>{{m.idMovie}}</td>
                 <td>{{m.titre}}</td>

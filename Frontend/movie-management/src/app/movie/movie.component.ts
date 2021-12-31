@@ -87,11 +87,11 @@ export class MovieComponent implements OnInit {
 
     }
     else {
-      this.movies=this.movies.filter(
-        
-      res =>{
-        return res.titre.toLowerCase().match(this.titre.toLowerCase());
-      })
+      this.movies = this.movies.filter(
+
+        res => {
+          return res.titre.toLowerCase().match(this.titre.toLowerCase());
+        })
     }
   }
 

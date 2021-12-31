@@ -15,6 +15,7 @@ import { EditComponent } from './edit/edit.component';
 import { ScenaristeComponent } from './scenariste/scenariste.component';
 import { EditSpecComponent } from './edit-spec/edit-spec.component';
 import { AddSpecComponent } from './add-spec/add-spec.component';
+import { RechercheParScenaristeComponent } from './recherche-par-scenariste/recherche-par-scenariste.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AddSpecComponent } from './add-spec/add-spec.component';
     ScenaristeComponent,
     EditSpecComponent,
     AddSpecComponent,
+    RechercheParScenaristeComponent,
 
   ],
   imports: [

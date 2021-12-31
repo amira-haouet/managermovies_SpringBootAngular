@@ -5,6 +5,7 @@ import { AddComponent } from './add/add.component';
 import { EditSpecComponent } from './edit-spec/edit-spec.component';
 import { EditComponent } from './edit/edit.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { MovieComponent } from './movie/movie.component';
 import { RechercheParScenaristeComponent } from './recherche-par-scenariste/recherche-par-scenariste.component';
 import { ScenaristeComponent } from './scenariste/scenariste.component';
@@ -17,7 +18,9 @@ const routes: Routes = [
   { path: 'scenariste', component: ScenaristeComponent },
   { path: 'scenariste/edit', component: EditSpecComponent },
   { path: 'scenariste/add', component: AddSpecComponent },
-  { path: 'recherche-par-scenariste', component: RechercheParScenaristeComponent }
+  { path: 'recherche-par-scenariste', component: RechercheParScenaristeComponent },
+  {path: 'login', component: LoginComponent}
+
 ];
 
 @NgModule({

@@ -9,9 +9,9 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
   styleUrls: ['./edit-spec.component.css']
 })
 export class EditSpecComponent implements OnInit {
-  s: any;
   editForm: FormGroup;
-  id: number;
+
+
   constructor(
     private _apiService: ApiService,
     private formBuilder: FormBuilder,
@@ -23,11 +23,16 @@ export class EditSpecComponent implements OnInit {
         nomSc: new FormControl(null, [
           Validators.required,
           Validators.minLength(2)]),
+
         prenomSc: new FormControl(null, [
           Validators.required,
           Validators.minLength(2)]),
       })
   }
+
+  s: any;
+  id: number;
+  scenariste: Array<any>;
 
   ngOnInit(): void {
 
@@ -36,7 +41,16 @@ export class EditSpecComponent implements OnInit {
 
     });
     this.getSpecialiteById(this.id)
+   // this.listSpecialite();
 
+  }
+  listSpecialite() {
+
+    this._apiService.getSpecialite().subscribe(
+      data => {
+        this.scenariste = data;
+      }
+    )
   }
 
   getSpecialiteById(id) {
@@ -55,13 +69,13 @@ export class EditSpecComponent implements OnInit {
 
     console.log(data)
 
-    var sc = {
+    var s = {
       idSc: this.id,
       nomSc: data.nomSc,
       prenomSc: data.prenomSc
     }
 
-    this._apiService.updateSpecialite(sc).subscribe(
+    this._apiService.updateSpecialite(s).subscribe(
       () => {
         this.router.navigate(['scenariste']);
       }, (error) => { alert("Problème lors de la modification !"); }

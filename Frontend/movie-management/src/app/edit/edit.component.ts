@@ -12,6 +12,7 @@ export class EditComponent implements OnInit {
 
   // currentFilm = this.movie;
   editForm: FormGroup;
+  
   constructor(
     private _apiService: ApiService,
     private formBuilder: FormBuilder,

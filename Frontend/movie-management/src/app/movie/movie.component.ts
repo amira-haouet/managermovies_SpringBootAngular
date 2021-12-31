@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
+import { ApiService } from '../services/api.service';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms'
 @Component({
   selector: 'app-medecin',

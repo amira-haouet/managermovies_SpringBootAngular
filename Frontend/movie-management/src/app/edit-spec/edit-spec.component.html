@@ -1,26 +1,26 @@
 <navbar></navbar>
-
-
 <div style="margin-top:80px" class="container">
-  <form [formGroup]="editForm" (submit)="edit()" >
-      <div class="form-group">
-        <label for="exampleInputEmail1">Nom</label>
-        <input  type="text" [(ngModel)]="s.nomSc" class="form-control" formControlName="nom" >
-        <small *ngIf='editForm.get("nom").touched && editForm.get("nom").hasError("required")'>nom est obligatoire</small>
-  
-      </div>
-    
-      <div class="form-group green-border-focus">
-        <label for="exampleFormControlTextarea5">prenom</label>
-        <input  type="text" class="form-control" id="exampleFormControlTextarea5" rows="3"  [(ngModel)]="s.prenomSc" formControlName="prenom" >
-   
-        <small *ngIf='editForm.get("prenom").touched && editForm.get("prenom").hasError("minlength")'>Taille minimale est 2 !</small>
-      </div>
-      <button [disabled]="!editForm.valid" type="submit" class="btn btn-primary mt-3" >Modifier</button>
-    </form>
-  </div>
+  <form [formGroup]="editForm" (submit)="edit()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nom</label>
+      <input type="text" [(ngModel)]="s.nomSc" class="form-control" formControlName="nom">
+      <small *ngIf='editForm.get("nom").touched && editForm.get("nom").hasError("required")'>nom est obligatoire</small>
 
-    <!--
+    </div>
+
+    <div class="form-group green-border-focus">
+      <label for="exampleFormControlTextarea5">prenom</label>
+      <input type="text" class="form-control" id="exampleFormControlTextarea5" rows="3" [(ngModel)]="s.prenomSc"
+        formControlName="prenom">
+
+      <small *ngIf='editForm.get("prenom").touched && editForm.get("prenom").hasError("minlength")'>Taille minimale est
+        2 !</small>
+    </div>
+    <button [disabled]="!editForm.valid" type="submit" class="btn btn-primary mt-3">Modifier</button>
+  </form>
+</div>
+
+<!--
   
     <div class="form-group">
       <label for="exampleInputEmail1">Specialite</label>
@@ -38,5 +38,3 @@
         !</small>
     </div>
 -->
-
-

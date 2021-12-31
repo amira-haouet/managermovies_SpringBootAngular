@@ -14,6 +14,10 @@ export class ApiService {
     return this.httpClient.get("http://localhost:8000/project/movie/api/" + id);
 
   }
+  getSpecialiteById(id: number): Observable<any> {
+    return this.httpClient.get("http://localhost:8000/project/scenariste/api/" + id);
+
+  }
   addMovie(m): Observable<any> {
     return this.httpClient.post("http://localhost:8000/project/movie/api", m)
   }
@@ -36,10 +40,7 @@ export class ApiService {
     return this.httpClient.get("http://localhost:8000/project/scenariste/api/page?p=" + page)
 
   }
-  getSpecialiteById(id: number): Observable<any> {
-    return this.httpClient.get("http://localhost:8000/project/scenariste/api/" + id);
 
-  }
   deleteSpecialite(id: number): Observable<any> {
     return this.httpClient.delete("http://localhost:8000/project/scenariste/api/" + id)
   }

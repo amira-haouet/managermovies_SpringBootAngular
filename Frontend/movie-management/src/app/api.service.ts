@@ -52,5 +52,15 @@ export class ApiService {
     return this.httpClient.post("http://localhost:8000/project/scenariste/api", s)
   }
 
-
+  /* produitsRecherche: [];
+   rechercherParCategorie(idCat: number): Observable<any> {
+     this.produitsRecherche = [];
+     this.produits.forEach((cur, index) => {
+       if (idCat == cur.categorie.idCat) {
+         console.log("cur " + cur);
+         this.produitsRecherche.push(cur);
+       }
+     });
+     return this.produitsRecherche;
+   }*/
 }

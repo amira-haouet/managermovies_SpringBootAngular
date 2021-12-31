@@ -28,7 +28,7 @@ class MoviesManagementApplicationTests {
 	@Test
 
 	void testAddMedecin() {
-		Movie m = new Movie("dora", 1200, new Date(), "family");
+		Movie m = new Movie("Dark", 1200, new Date(), "Mystery");
 		medecinRepository.save(m);
 	}
 

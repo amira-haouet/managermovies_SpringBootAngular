@@ -20,8 +20,8 @@ public class Scenariste {
 	private String nomSc;
 	private String prenomSc ;
 	
-	@OneToMany /*(mappedBy= "scenariste")*/
-	(cascade = CascadeType.ALL, mappedBy = "scenariste", orphanRemoval = true)
+	@OneToMany (mappedBy= "scenariste")
+	//(cascade = CascadeType.ALL, mappedBy = "scenariste", orphanRemoval = true)
 
 	@JsonIgnore
 	private List<Movie> movies;

@@ -8,12 +8,12 @@
             <h1 class="card-title">Movies</h1>
           </div>
         </div>
-        <div class="p-2"><button type="button" class="btn btn-success" routerLink="/movie/add">Ajouter</button></div>
+        <!--     <div class="p-2"><button type="button" class="btn btn-success" routerLink="/movie/add">Ajouter</button></div>-->
 
 
         <!--search form-->
         <div class="p-2">
-          <form [formGroup]="seachForm" (submit)="searchtest()" class="form-inline my-2 my-lg-0">
+          <form [formGroup]="seachForm" (submit)="search()" class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" formControlName="sc" type="search"
               placeholder="Recherche par SCENARISTE" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
@@ -40,8 +40,12 @@
               <th>Plus de details</th>
             </thead>
             <tbody>
-              <tr colspan="8"> <input placeholder="Search MOVIE" class="form-control mr-sm-2" type="text" name="titre"
-                  [(ngModel)]="titre" (ngModelChange)="searchtest()">
+              <tr>
+                <td colspan="8"> <input placeholder="Search MOVIE" class="form-control mr-sm-2" type="text" name="titre"
+                    [(ngModel)]="titre" (ngModelChange)="searchtest()"></td>
+
+
+
               </tr>
               <tr *ngFor="let m of movies">
                 <td>{{m.idMovie}}</td>

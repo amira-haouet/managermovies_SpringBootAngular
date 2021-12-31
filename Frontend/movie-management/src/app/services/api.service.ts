@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from './auth.service';
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, public authService: AuthService) { }
   getMovie(page: number): Observable<any> {
     return this.httpClient.get("http://localhost:8000/project/movie/api/page?p=" + page)
 

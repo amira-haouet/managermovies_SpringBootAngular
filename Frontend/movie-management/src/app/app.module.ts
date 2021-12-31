@@ -18,6 +18,7 @@ import { AddSpecComponent } from './add-spec/add-spec.component';
 import { RechercheParScenaristeComponent } from './recherche-par-scenariste/recherche-par-scenariste.component';
 import { TestComponent } from './test/test.component';
 import { LoginComponent } from './login/login.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { LoginComponent } from './login/login.component';
     RechercheParScenaristeComponent,
     TestComponent,
     LoginComponent,
+    ForbiddenComponent,
 
   ],
   imports: [

@@ -2,6 +2,7 @@ package com.example.demo.entities;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,7 +20,9 @@ public class Scenariste {
 	private String nomSc;
 	private String prenomSc ;
 	
-	@OneToMany (mappedBy= "scenariste")
+	@OneToMany /*(mappedBy= "scenariste")*/
+	(cascade = CascadeType.ALL, mappedBy = "scenariste", orphanRemoval = true)
+
 	@JsonIgnore
 	private List<Movie> movies;
 	

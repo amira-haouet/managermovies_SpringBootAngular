@@ -28,8 +28,8 @@ public class UsersDsi33Application {
 /*	@PostConstruct
 	void init_users() {
 		// ajouter les rôles
-		//userService.addRole(new Role(null, "ADMIN"));
-		//userService.addRole(new Role(null, "USER"));
+		userService.addRole(new Role(null, "ADMIN"));
+		userService.addRole(new Role(null, "USER"));
 		// ajouter les users
 		userService.saveUser(new User(null, "aaa", "123", true, null));
 		userService.saveUser(new User(null, "amaaira", "123", true, null));

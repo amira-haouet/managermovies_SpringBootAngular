@@ -1,5 +1,9 @@
+import { Role } from "./role";
+
 export class User {
     username: string;
     password: string;
-    roles: string[];
+   // roles: string[];
+    roles:Role[];
+
 }

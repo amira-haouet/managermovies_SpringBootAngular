@@ -1,11 +1,16 @@
 import { User } from './../model/User';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Role } from '../model/role';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  public loggedUser: string;
+  public isloggedIn: Boolean = false;
+  //public roles: string[];
+  public roles:Role[];
 
   users: User[] =
 
@@ -16,9 +21,7 @@ export class AuthService {
 
     ];
 
-  public loggedUser: string;
-  public isloggedIn: Boolean = false;
-  public roles: string[];
+
 
 
   constructor(private router: Router) { }

@@ -1,7 +1,9 @@
-import { User } from './../model/User';
+import { User } from '../model/user.model';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Role } from '../model/role';
+import { Role } from '../model/role.model';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -12,23 +14,26 @@ export class AuthService {
   //public roles: string[];
   public roles: Role[];
   apiURL: string = 'http://localhost:1234/users/login';
-  /*
-    users: User[] =
-  
-      [
-  
-        { "username": "admin", "password": "123", "roles": ['ADMIN'] },
-        { "username": "amira", "password": "123", "roles": ['USER'] }
-  
-      ];
-  */
+
+  /*users: User[] =
+
+    [
+
+      { "username": "admin", "password": "123", "roles": ['ADMIN'] },
+      { "username": "amira", "password": "123", "roles": ['USER'] }
+
+    ];
+*/
 
 
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient) { }
 
 
-
+  getUserFromDB(username: string): Observable<User> {
+    const url = `${this.apiURL}/${username}`;
+    return this.http.get<User>(url);
+  }
   logout() {
     this.isloggedIn = false;
     this.loggedUser = undefined;

@@ -2,6 +2,7 @@ package com.amira.users.restControllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,8 +17,14 @@ public class UserRESTController {
 	@Autowired
 	UserRepository userRep;
 
-	@RequestMapping(path = "all", method = RequestMethod.GET)
-	public List<User> getAllUsers() {
-		return userRep.findAll();
+	/*
+	 * @RequestMapping(path = "all", method = RequestMethod.GET) public List<User>
+	 * getAllUsers() { return userRep.findAll(); }
+	 */
+
+	@RequestMapping(value = "/login/{username}", method = RequestMethod.GET)
+	public User getUserByUsernamePassword(@PathVariable("username") String username) {
+		return userRep.findByUsername(username);
 	}
+
 }

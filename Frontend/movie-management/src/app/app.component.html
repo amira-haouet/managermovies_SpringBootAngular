@@ -13,7 +13,7 @@
                         data-toggle="dropdown">
                         Movie</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" *ngIf="authService.isAdmin()"  href="movie/add">ajouter</a>
+                        <a class="dropdown-item" *ngIf="authService.isAdmin()"  href="movie/add"  >ajouter</a>
                         <a *ngIf="authService.isAdmin()" class="dropdown-item"                            routerLink="/recherche-par-scenariste">Recherche Par                            Scenariste</a>
 
                     </div>

@@ -94,6 +94,8 @@ export class AuthService {
     this.isloggedIn = true;
     this.getUserRoles(login);
   }
+
+  /*
   getUserRoles(username: string) {
     this.users.forEach((curUser) => {
       if (curUser.username == username) {
@@ -102,7 +104,13 @@ export class AuthService {
     });
   }
 
+*/
 
+  getUserRoles(username: string) {
+    this.getUserFromDB(username).subscribe((user: User) => {
+      this.roles = user.roles;
+    });
+  }
 
 
 }

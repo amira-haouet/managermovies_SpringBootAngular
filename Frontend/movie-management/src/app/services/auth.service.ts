@@ -10,17 +10,18 @@ export class AuthService {
   public loggedUser: string;
   public isloggedIn: Boolean = false;
   //public roles: string[];
-  public roles:Role[];
-
-  users: User[] =
-
-    [
-
-      { "username": "admin", "password": "123", "roles": ['ADMIN'] },
-      { "username": "amira", "password": "123", "roles": ['USER'] }
-
-    ];
-
+  public roles: Role[];
+  apiURL: string = 'http://localhost:1234/users/login';
+  /*
+    users: User[] =
+  
+      [
+  
+        { "username": "admin", "password": "123", "roles": ['ADMIN'] },
+        { "username": "amira", "password": "123", "roles": ['USER'] }
+  
+      ];
+  */
 
 
 

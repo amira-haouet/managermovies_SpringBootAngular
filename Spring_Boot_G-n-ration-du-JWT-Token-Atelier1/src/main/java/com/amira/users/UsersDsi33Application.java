@@ -6,21 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.amira.users.entities.Role;
 import com.amira.users.entities.User;
-import com.amira.users.service.UserService;
+import com.amira.users.repos.UserRepository;
 
 @SpringBootApplication
 public class UsersDsi33Application {
-	@Autowired
-	UserService userService;
-	@Bean
+
+	/*@Bean
 	BCryptPasswordEncoder getBCE() {
 		return new BCryptPasswordEncoder();
-	}
-	
+	}*/
+	@Autowired
+	UserRepository userRerp;
 	public static void main(String[] args) {
 		SpringApplication.run(UsersDsi33Application.class, args);
 	}

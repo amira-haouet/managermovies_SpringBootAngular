@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms'
+import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-medecin',
   templateUrl: './movie.component.html',
@@ -102,5 +103,5 @@ export class MovieComponent implements OnInit {
     this.key = key;
     this.reverse = !this.reverse;
   }
-
+//authService: AuthService;
 }

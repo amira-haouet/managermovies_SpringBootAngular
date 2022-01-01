@@ -17,10 +17,10 @@ public class UserRESTController {
 	@Autowired
 	UserRepository userRep;
 
-	
-	  @RequestMapping(path = "all", method = RequestMethod.GET) public List<User>
-	 getAllUsers() { return userRep.findAll(); }
-	 
+	@RequestMapping(path = "all", method = RequestMethod.GET)
+	public List<User> getAllUsers() {
+		return userRep.findAll();
+	}
 
 	@RequestMapping(value = "/login/{username}", method = RequestMethod.GET)
 	public User getUserByUsernamePassword(@PathVariable("username") String username) {

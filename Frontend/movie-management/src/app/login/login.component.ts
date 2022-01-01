@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService,
     private router: Router) { }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
   /*
     onLoggedin() {
@@ -50,6 +49,6 @@ export class LoginComponent implements OnInit {
     }, (err) => console.log(err));
   }
 
- 
+
 
 }

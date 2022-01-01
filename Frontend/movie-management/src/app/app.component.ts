@@ -13,6 +13,18 @@ export class AppComponent {
 
   constructor(public authService: AuthService) { }
 
+  /*ngOnInit() {
+    let isloggedin: string;
+    let loggedUser: string;
+    isloggedin = localStorage.getItem('isloggedIn');
+    loggedUser = localStorage.getItem('loggedUser');
+    if (isloggedin != "true" || !loggedUser)
+      this.router.navigate(['/login']);
+    else
+      this.authService.setLoggedUserFromLocalStorage(loggedUser);
+  }*/
+
+
   ngOnInit() {
     let isloggedin: string;
     let loggedUser: string;
@@ -23,5 +35,4 @@ export class AppComponent {
     else
       this.authService.setLoggedUserFromLocalStorage(loggedUser);
   }
-
 }

@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
 import { ScenaristeComponent } from './scenariste/scenariste.component';
-import { EditSpecComponent } from './edit-spec/edit-spec.component';
+import { EditScComponent } from './edit-sc/edit-sc.component';
 import { AddSpecComponent } from './add-spec/add-spec.component';
 import { RechercheParScenaristeComponent } from './recherche-par-scenariste/recherche-par-scenariste.component';
 import { TestComponent } from './test/test.component';
@@ -30,7 +30,7 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
     AddComponent,
     EditComponent,
     ScenaristeComponent,
-    EditSpecComponent,
+    EditScComponent,
     AddSpecComponent,
     RechercheParScenaristeComponent,
     TestComponent,

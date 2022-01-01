@@ -5,10 +5,10 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-spec',
-  templateUrl: './edit-spec.component.html',
-  styleUrls: ['./edit-spec.component.css']
+  templateUrl: './edit-sc.component.html',
+  styleUrls: ['./edit-sc.component.css']
 })
-export class EditSpecComponent implements OnInit {
+export class EditScComponent implements OnInit {
   editForm: FormGroup;
   s: any;
   id: number;

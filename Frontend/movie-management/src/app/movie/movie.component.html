@@ -59,7 +59,7 @@
                 <td>{{m.genre}}</td>
 
                 <!--*ngIf="authService.isAdmin()"-->
-                <td><button type="button" class="btn btn-info" [routerLink]="['edit']"
+                <td><button type="button" class="btn btn-info" [routerLink]="['edit']" 
                     [queryParams]="{ id:m.idMovie}">Modifier</button></td>
                 <td><button type="button" (click)="delete(m.idMovie)" class="btn btn-danger">Supprimer</button></td>
 

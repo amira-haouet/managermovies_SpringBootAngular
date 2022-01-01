@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddSpecComponent } from './add-spec/add-spec.component';
 import { AddComponent } from './add/add.component';
-import { EditSpecComponent } from './edit-spec/edit-spec.component';
+import { EditScComponent } from './edit-sc/edit-sc.component'
 import { EditComponent } from './edit/edit.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { HomeComponent } from './home/home.component';
@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'movie/add', component: AddComponent },
   { path: 'movie/edit', component: EditComponent },
   { path: 'scenariste', component: ScenaristeComponent },
-  { path: 'scenariste/edit', component: EditSpecComponent },
+  { path: 'scenariste/edit', component: EditScComponent },
   { path: 'scenariste/add', component: AddSpecComponent },
   { path: 'recherche-par-scenariste', component: RechercheParScenaristeComponent },
   {path: 'login', component: LoginComponent},

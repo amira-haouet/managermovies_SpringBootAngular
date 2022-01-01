@@ -35,6 +35,6 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/']);
     else
       this.erreur = 1;
-    alert('Login ou mot de passe incorrecte!');
+    //  alert('Login ou mot de passe incorrecte!');
   }
 }

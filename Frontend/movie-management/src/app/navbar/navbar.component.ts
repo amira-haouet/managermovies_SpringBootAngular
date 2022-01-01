@@ -8,9 +8,12 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  router: Router;
+  //router: Router;
   constructor(public authService: AuthService) { }
-
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+/*
   ngOnInit() {
     let isloggedin: string;
     let loggedUser: string;
@@ -21,5 +24,5 @@ export class NavbarComponent implements OnInit {
     else
       this.authService.setLoggedUserFromLocalStorage(loggedUser);
   }
-
+*/
 }

@@ -13,7 +13,8 @@ export class AuthService {
   public isloggedIn: Boolean = false;
   //public roles: string[];
   public roles: Role[];
-  apiURL: string = 'http://localhost:1234/users/login';
+  //apiURL: string = 'http://localhost:1234/users/login';
+  apiURL: string = 'http://localhost:1234/users';
 
   /*users: User[] =
 
@@ -25,8 +26,15 @@ export class AuthService {
     ];
 */
 
+  login(user: User) {
+    return this.http.post<User>(this.apiURL + '/login', user, { observe: 'response' });
+  }
 
-
+  saveToken(jwt: string) {
+    localStorage.setItem('jwt', jwt);
+    this.token = jwt;
+    this.isloggedIn = true;
+  }
   constructor(private router: Router, private http: HttpClient) { }
 
 

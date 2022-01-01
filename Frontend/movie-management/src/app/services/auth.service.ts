@@ -42,29 +42,52 @@ export class AuthService {
     localStorage.setItem('isloggedIn', String(this.isloggedIn));
     this.router.navigate(['/login']);
   }
+  /*
+    SignIn(user: User): Boolean {
+      let validUser: Boolean = false;
+      this.users.forEach((curUser) => {
+        if (user.username === curUser.username && user.password == curUser.password) {
+          validUser = true;
+          this.loggedUser = curUser.username;
+          this.isloggedIn = true;
+          this.roles = curUser.roles;
+          localStorage.setItem('loggedUser', this.loggedUser);
+          localStorage.setItem('isloggedIn', String(this.isloggedIn));
+        }
+      });
+  
+      return validUser;
+    }
+  */
 
-  SignIn(user: User): Boolean {
-    let validUser: Boolean = false;
-    this.users.forEach((curUser) => {
-      if (user.username === curUser.username && user.password == curUser.password) {
-        validUser = true;
-        this.loggedUser = curUser.username;
-        this.isloggedIn = true;
-        this.roles = curUser.roles;
-        localStorage.setItem('loggedUser', this.loggedUser);
-        localStorage.setItem('isloggedIn', String(this.isloggedIn));
-      }
-    });
-
-    return validUser;
+  signIn(user: User) {
+    this.loggedUser = user.username;
+    this.isloggedIn = true;
+    this.roles = user.roles;
+    localStorage.setItem('loggedUser', this.loggedUser);
+    localStorage.setItem('isloggedIn', String(this.isloggedIn));
   }
+  /*
+    isAdmin(): Boolean {
+      if (!this.roles) //this.roles== undefiened
+        return false;
+      return (this.roles.indexOf('ADMIN') > -1);
+  
+    }*/
+
 
   isAdmin(): Boolean {
+    let admin: Boolean = false;
     if (!this.roles) //this.roles== undefiened
       return false;
-    return (this.roles.indexOf('ADMIN') > -1);
-
+    this.roles.forEach((curRole) => {
+      if (curRole.role == 'ADMIN') {
+        admin = true;
+      }
+    });
+    return admin;
   }
+
 
   setLoggedUserFromLocalStorage(login: string) {
     this.loggedUser = login;

@@ -27,14 +27,29 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
+  /*
+    onLoggedin() {
+      console.log(this.user);
+      let isValidUser: Boolean = this.authService.SignIn(this.user);
+      if (isValidUser)
+        this.router.navigate(['/']);
+      else
+        this.erreur = 1;
+      //  alert('Login ou mot de passe incorrecte!');
+    }
+  */
 
   onLoggedin() {
-    console.log(this.user);
-    let isValidUser: Boolean = this.authService.SignIn(this.user);
-    if (isValidUser)
-      this.router.navigate(['/']);
-    else
-      this.erreur = 1;
-    //  alert('Login ou mot de passe incorrecte!');
+    this.authService.getUserFromDB(this.user.username).subscribe((usr: User) => {
+      if (usr.password == this.user.password) {
+        this.authService.signIn(usr);
+        this.router.navigate(['/']);
+      }
+      else
+        this.erreur = 1;
+    }, (err) => console.log(err));
   }
+
+ 
+
 }

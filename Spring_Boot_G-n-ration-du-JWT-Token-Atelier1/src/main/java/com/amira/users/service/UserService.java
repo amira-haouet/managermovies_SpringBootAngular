@@ -6,7 +6,7 @@ import com.amira.users.entities.Role;
 import com.amira.users.entities.User;
 
 public interface UserService {
-	User saveUser(User user);
+/*	User saveUser(User user);
 
 	User findUserByUsername(String username);
 
@@ -14,5 +14,5 @@ public interface UserService {
 
 	User addRoleToUser(String username, String rolename);
 
-	List<User> findAllUsers();
+	List<User> findAllUsers();*/
 }

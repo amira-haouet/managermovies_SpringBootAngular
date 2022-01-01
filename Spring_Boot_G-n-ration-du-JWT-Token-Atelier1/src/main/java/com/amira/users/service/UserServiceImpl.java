@@ -15,7 +15,7 @@ import com.amira.users.repos.UserRepository;
 @Transactional
 @Service
 public class UserServiceImpl implements UserService {
-	@Autowired
+	/*@Autowired
 	UserRepository userRep;
 	@Autowired
 	RoleRepository roleRep;
@@ -50,5 +50,5 @@ public class UserServiceImpl implements UserService {
 	public List<User> findAllUsers() {
 		// TODO Auto-generated method stub
 		return userRep.findAll();
-	}
+	}*/
 }

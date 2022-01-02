@@ -15,7 +15,7 @@ export class AuthService {
   public roles: Role[];
   //apiURL: string = 'http://localhost:1234/users/login';
   apiURL: string = 'http://localhost:1234/users';
-
+  token: string;
   /*users: User[] =
 
     [

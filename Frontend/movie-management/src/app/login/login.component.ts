@@ -12,7 +12,7 @@ import { AuthService } from '../services/auth.service';
 export class LoginComponent implements OnInit {
   user = new User();
   erreur = 0;
-
+  err: number = 0;
 
   constructor(private authService: AuthService,
     private router: Router) { }
@@ -24,13 +24,13 @@ export class LoginComponent implements OnInit {
 
 
   onLoggedin() {
-    console.log(this.user);
-    let isValidUser: Boolean = this.authService.SignIn(this.user);
-    if (isValidUser)
+    this.authService.login(this.user).subscribe((data) => {
+      let jwToken = data.headers.get('Authorization');
+      this.authService.saveToken(jwToken);
       this.router.navigate(['/']);
-    else
-      this.erreur = 1;
-    // alert('Login ou mot de passe incorrecte!');
+    }, (err) => {
+      this.err = 1;
+    });
   }
 
   /* onLoggedin() {

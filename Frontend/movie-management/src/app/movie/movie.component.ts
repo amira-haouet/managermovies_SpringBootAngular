@@ -9,7 +9,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class MovieComponent implements OnInit {
   seachForm: FormGroup;
-  constructor(private _apiService: ApiService, private formBuilder: FormBuilder, private apiservice: ApiService,
+  constructor(private _apiService: ApiService, private formBuilder: FormBuilder,
     public authService: AuthService) {
     this.seachForm = formBuilder.group(
       {

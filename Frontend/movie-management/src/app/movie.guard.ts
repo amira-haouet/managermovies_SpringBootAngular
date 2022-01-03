@@ -11,9 +11,11 @@ export class MovieGuard implements CanActivate {
     private router: Router) { }
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): boolean {
+    state: RouterStateSnapshot):
+    boolean {
     if (this.authService.isAdmin())
       return true;
+
     else {
       this.router.navigate(['app-forbidden']);
       return false;

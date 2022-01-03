@@ -180,3 +180,63 @@ Binding(CTRL+SHIFT+C,
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:46:06.191
 !MESSAGE executing callback sts4.classpath.KMXvRYYd SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:56:11.539
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:56:11.543
+!MESSAGE classpath=108 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:56:11.547
+!MESSAGE buffering callback sts4.classpath.KMXvRYYd movies-management false 108
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:56:11.547
+!MESSAGE executing callback sts4.classpath.KMXvRYYd 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:56:11.570
+!MESSAGE executing callback sts4.classpath.KMXvRYYd SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:59:32.137
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:59:32.141
+!MESSAGE classpath=114 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:59:32.144
+!MESSAGE buffering callback sts4.classpath.KMXvRYYd movies-management false 114
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:59:32.144
+!MESSAGE executing callback sts4.classpath.KMXvRYYd 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:59:32.163
+!MESSAGE executing callback sts4.classpath.KMXvRYYd SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:59:35.404
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:59:35.409
+!MESSAGE classpath=114 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:59:35.412
+!MESSAGE buffering callback sts4.classpath.KMXvRYYd movies-management false 114
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:59:35.413
+!MESSAGE executing callback sts4.classpath.KMXvRYYd 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 19:59:35.431
+!MESSAGE executing callback sts4.classpath.KMXvRYYd SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 20:00:10.261
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 20:00:10.265
+!MESSAGE classpath=115 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 20:00:10.269
+!MESSAGE buffering callback sts4.classpath.KMXvRYYd movies-management false 115
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 20:00:10.269
+!MESSAGE executing callback sts4.classpath.KMXvRYYd 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 20:00:10.297
+!MESSAGE executing callback sts4.classpath.KMXvRYYd SUCCESS [done]

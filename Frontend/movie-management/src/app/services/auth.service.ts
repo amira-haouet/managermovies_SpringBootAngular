@@ -68,7 +68,7 @@ export class AuthService {
     }
   */
 
-  signIn(user: User) {
+ /* signIn(user: User) {
     this.loggedUser = user.username;
     this.isloggedIn = true;
     this.roles = user.roles;
@@ -116,7 +116,7 @@ export class AuthService {
 
   getUserRoles(username: string) {
     this.getUserFromDB(username).subscribe((user: User) => {
-      this.roles = user.roles;
+ //     this.roles = user.roles;
     });
   }
 

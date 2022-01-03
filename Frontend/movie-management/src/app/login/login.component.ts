@@ -14,18 +14,17 @@ export class LoginComponent implements OnInit {
   erreur = 0;
 
 
-  /* constructor() { }
+  constructor(private authService: AuthService,
+    private router: Router) { }
  
    ngOnInit(): void {
    }
    onLoggedin() {
      console.log(this.user);
-   }*/
+   }
 
-  constructor(private authService: AuthService,
-    private router: Router) { }
-  ngOnInit(): void {
-  }
+
+  
   /*
     onLoggedin() {
       console.log(this.user);
@@ -38,7 +37,7 @@ export class LoginComponent implements OnInit {
     }
   */
 
-  onLoggedin() {
+ /* onLoggedin() {
     this.authService.getUserFromDB(this.user.username).subscribe((usr: User) => {
       if (usr.password == this.user.password) {
         this.authService.signIn(usr);
@@ -47,7 +46,7 @@ export class LoginComponent implements OnInit {
       else
         this.erreur = 1;
     }, (err) => console.log(err));
-  }
+  }*/
 
 
 

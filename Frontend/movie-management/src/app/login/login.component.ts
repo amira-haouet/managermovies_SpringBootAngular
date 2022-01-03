@@ -16,37 +16,33 @@ export class LoginComponent implements OnInit {
 
   constructor(private authService: AuthService,
     private router: Router) { }
- 
-   ngOnInit(): void {
-   }
-   onLoggedin() {
-     console.log(this.user);
-   }
+
+  ngOnInit(): void {
+  }
 
 
-  
-  /*
-    onLoggedin() {
-      console.log(this.user);
-      let isValidUser: Boolean = this.authService.SignIn(this.user);
-      if (isValidUser)
-        this.router.navigate(['/']);
-      else
-        this.erreur = 1;
-      //  alert('Login ou mot de passe incorrecte!');
-    }
-  */
 
- /* onLoggedin() {
-    this.authService.getUserFromDB(this.user.username).subscribe((usr: User) => {
-      if (usr.password == this.user.password) {
-        this.authService.signIn(usr);
-        this.router.navigate(['/']);
-      }
-      else
-        this.erreur = 1;
-    }, (err) => console.log(err));
-  }*/
+
+  onLoggedin() {
+    console.log(this.user);
+    let isValidUser: Boolean = this.authService.SignIn(this.user);
+    if (isValidUser)
+      this.router.navigate(['/']);
+    else
+      this.erreur = 1;
+    // alert('Login ou mot de passe incorrecte!');
+  }
+
+  /* onLoggedin() {
+     this.authService.getUserFromDB(this.user.username).subscribe((usr: User) => {
+       if (usr.password == this.user.password) {
+         this.authService.signIn(usr);
+         this.router.navigate(['/']);
+       }
+       else
+         this.erreur = 1;
+     }, (err) => console.log(err));
+   }*/
 
 
 

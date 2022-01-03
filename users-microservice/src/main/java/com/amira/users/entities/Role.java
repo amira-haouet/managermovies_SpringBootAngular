@@ -1,5 +1,4 @@
 package com.amira.users.entities;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,9 +14,11 @@ public class Role {
 @GeneratedValue (strategy=GenerationType.IDENTITY)
 private Long role_id;
 private String role;
-/*public Role(Object object, String string) {
-	// TODO Auto-generated constructor stub
-}*/
+public Role(Long role_id, String role) {
+	super();
+	this.role_id = role_id;
+	this.role = role;
+}
 public Long getRole_id() {
 	return role_id;
 }
@@ -30,6 +31,7 @@ public String getRole() {
 public void setRole(String role) {
 	this.role = role;
 }
+
 
 
 }

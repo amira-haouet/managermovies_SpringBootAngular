@@ -10,13 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 import com.amira.users.entities.User;
 import com.amira.users.repos.UserRepository;
 import com.amira.users.service.UserService;
+
 @RestController
 @CrossOrigin(origins = "*")
 public class UserRESTController {
-@Autowired
-UserService userService;
-@RequestMapping(path = "all",method = RequestMethod.GET)
-public List<User> getAllUsers() {
-return userService.findAllUsers();
-}
+	@Autowired
+	UserService userService;
+
+	@RequestMapping(path = "all", method = RequestMethod.GET)
+	public List<User> getAllUsers() {
+		return userService.findAllUsers();
+	}
 }

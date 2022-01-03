@@ -99,3 +99,84 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.ui 2 2 2022-01-03 18:35:41.447
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:42.589
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:42.590
+!MESSAGE classpath=6 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:42.591
+!MESSAGE buffering callback sts4.classpath.KMXvRYYd movies-management false 6
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:42.591
+!MESSAGE executing callback sts4.classpath.KMXvRYYd 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:42.603
+!MESSAGE executing callback sts4.classpath.KMXvRYYd SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:42.645
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:42.646
+!MESSAGE classpath=6 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:42.647
+!MESSAGE buffering callback sts4.classpath.KMXvRYYd movies-management false 6
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:42.647
+!MESSAGE executing callback sts4.classpath.KMXvRYYd 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:42.658
+!MESSAGE executing callback sts4.classpath.KMXvRYYd SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:43.447
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:43.453
+!MESSAGE classpath=102 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:43.456
+!MESSAGE buffering callback sts4.classpath.KMXvRYYd movies-management false 102
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:43.457
+!MESSAGE executing callback sts4.classpath.KMXvRYYd 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:37:43.476
+!MESSAGE executing callback sts4.classpath.KMXvRYYd SUCCESS [done]
+
+!ENTRY org.eclipse.jface 2 0 2022-01-03 18:44:57.305
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-01-03 18:44:57.305
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@79d9a842,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@cb11f9d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:46:06.155
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:46:06.169
+!MESSAGE classpath=110 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:46:06.173
+!MESSAGE buffering callback sts4.classpath.KMXvRYYd users-microservice false 110
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:46:06.174
+!MESSAGE executing callback sts4.classpath.KMXvRYYd 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-03 18:46:06.191
+!MESSAGE executing callback sts4.classpath.KMXvRYYd SUCCESS [done]

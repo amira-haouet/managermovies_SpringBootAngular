@@ -9,6 +9,26 @@
             "mainClass": "com.spring.films.FilmsScenaristeApplication",
             "projectName": "Films_Scenariste",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MoviesManagementApplication<doctor-management>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.demo.MoviesManagementApplication",
+            "projectName": "doctor-management",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DoctorManagementApplication<doctor-management>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.demo.DoctorManagementApplication",
+            "projectName": "doctor-management",
+            "args": ""
         }
     ]
 }

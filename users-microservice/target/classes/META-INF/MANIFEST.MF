@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Build-Jdk-Spec: 15
+Build-Jdk-Spec: 17
 Implementation-Title: users-microservice
 Implementation-Version: 2.3.1.RELEASE
 Created-By: Maven Integration for Eclipse

@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'movie-management';
   router: Router;
 
-  constructor(public authService: AuthService) { }
+  constructor (public authService: AuthService) {}
 
   /*ngOnInit() {
     let isloggedin: string;
@@ -24,7 +24,7 @@ export class AppComponent {
       this.authService.setLoggedUserFromLocalStorage(loggedUser);
   }*/
 
-
+/*
   ngOnInit() {
     let isloggedin: string;
     let loggedUser: string;
@@ -34,5 +34,5 @@ export class AppComponent {
       this.router.navigate(['/login']);
     else
       this.authService.setLoggedUserFromLocalStorage(loggedUser);
-  }
+  }*/
 }

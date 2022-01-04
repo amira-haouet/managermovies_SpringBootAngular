@@ -5721,3 +5721,36 @@ java.lang.Exception: File not found: C:\Users\MSI\Desktop\managermovies_springAn
 !MESSAGE Save operation warnings.
 !SUBENTRY 1 org.eclipse.core.resources 2 234 2022-01-04 12:46:58.146
 !MESSAGE The project description file (.project) for 'movies-management' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-04 14:10:01.185
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-04 14:10:01.188
+!MESSAGE classpath=1 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-04 14:10:01.189
+!MESSAGE buffering callback sts4.classpath.WLDZQfae movies-management false 1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-04 14:10:01.190
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-04 14:10:01.191
+!MESSAGE classpath=1 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-04 14:10:01.192
+!MESSAGE buffering callback sts4.classpath.WLDZQfae movies-management false 1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-04 14:10:01.193
+!MESSAGE executing callback sts4.classpath.WLDZQfae 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-04 14:10:01.194
+!MESSAGE executing callback sts4.classpath.WLDZQfae FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2022-01-04 14:10:01.195
+!MESSAGE 
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.WLDZQfae'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

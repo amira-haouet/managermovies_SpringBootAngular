@@ -42,7 +42,7 @@ export class MovieComponent implements OnInit {
   }
   listSpecialite() {
 
-    this._apiService.getSpecialite().subscribe(
+    this._apiService.getSc().subscribe(
       data => {
         console.log(data);
         this.movies = data;
@@ -53,7 +53,7 @@ export class MovieComponent implements OnInit {
     let conf = confirm("Etes-vous sûr ?");
     if (conf)
       console.log(id)
-    this._apiService.deleteMedecin(id).subscribe(
+    this._apiService.deleteMovie(id).subscribe(
       data => {
         console.log(data);
         this.movies = data;
@@ -67,7 +67,7 @@ export class MovieComponent implements OnInit {
     var scenaristes = this.movies
     var dataMed = this.seachForm.value
     console.log(dataMed.sc)
-    this._apiService.getMedecinBySpecialite(dataMed.sc).subscribe(
+    this._apiService.getMovieByScneariste(dataMed.sc).subscribe(
       data => {
         console.log(data)
         if (dataMed.sc != null) {

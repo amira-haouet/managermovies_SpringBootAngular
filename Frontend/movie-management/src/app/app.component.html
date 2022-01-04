@@ -21,7 +21,7 @@
                         </div>
                     </li>
                     <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" [routerLink]="['/movie']">Movie</a></li>-->
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger"
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" *ngIf="authService.isAdmin()"
                             [routerLink]="['/scenariste']">Scenariste</a>
 
                     </li>

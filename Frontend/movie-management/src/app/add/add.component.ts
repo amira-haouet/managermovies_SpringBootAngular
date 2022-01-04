@@ -45,7 +45,7 @@ export class AddComponent implements OnInit {
   }
   listSpecialite() {
 
-    this._apiService.getSpecialite().subscribe(
+    this._apiService.getSc().subscribe(
       data => {
         console.log(data)
         this.scenariste = data;

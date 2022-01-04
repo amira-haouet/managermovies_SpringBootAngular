@@ -64,7 +64,7 @@ export class EditComponent implements OnInit {
 
   listSpecialite() {
 
-    this._apiService.getSpecialite().subscribe(
+    this._apiService.getSc().subscribe(
       data => {
         this.scenariste = data;
       }
@@ -98,7 +98,7 @@ export class EditComponent implements OnInit {
       genre: data.genre,
       scenariste: sc
     }
-    this._apiService.updateMedecin(m).subscribe(
+    this._apiService.updateMovie(m).subscribe(
       () => {
 
         this.router.navigate(['movie']);

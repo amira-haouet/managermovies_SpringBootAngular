@@ -26,17 +26,17 @@ export class ApiService {
     return this.httpClient.post("http://localhost:8000/project/movie/api", m)
   }
 
-  deleteMedecin(id: number): Observable<any> {
+  deleteMovie(id: number): Observable<any> {
     return this.httpClient.delete("http://localhost:8000/project/movie/api/" + id)
   }
-  updateMedecin(m): Observable<any> {
+  updateMovie(m): Observable<any> {
     return this.httpClient.put("http://localhost:8000/project/movie/api", m)
   }
-  getMedecinBySpecialite(s): Observable<any> {
+  getMovieByScneariste(s): Observable<any> {
     return this.httpClient.get("http://localhost:8000/project/movie/api/findSpec/" + s)
   }
 
-  getSpecialite(): Observable<any> {
+  getSc(): Observable<any> {
     return this.httpClient.get("http://localhost:8000/project/scenariste/api")
 
   }

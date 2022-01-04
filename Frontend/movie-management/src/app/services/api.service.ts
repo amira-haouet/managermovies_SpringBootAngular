@@ -7,21 +7,60 @@ import { AuthService } from './auth.service';
 })
 export class ApiService {
   constructor(private httpClient: HttpClient, public authService: AuthService) { }
-  
+
   apiURL: string = 'http://localhost:8080/api';
-  
-  
-  getMoviejwt(): Observable<any>{
+
+
+  getMoviejwt(): Observable<any> {
     let jwt = this.authService.getToken();
-    jwt = "Bearer "+jwt;
-    let httpHeaders = new HttpHeaders({"Authorization":jwt})
-    return this.httpClient.get(this.apiURL+"/all",{headers:httpHeaders}
+    jwt = "Bearer " + jwt;
+    let httpHeaders = new HttpHeaders({ "Authorization": jwt })
+    return this.httpClient.get(this.apiURL + "/all", { headers: httpHeaders }
     );
-    }
-    
+  }
+
+  addMoviewithjtw(m): Observable<any> {
+    let jwt = this.authService.getToken();
+    jwt = "Bearer " + jwt;
+    let httpHeaders = new HttpHeaders({ "Authorization": jwt })
+    return this.httpClient.post(this.apiURL, { headers: httpHeaders });
+  }
+  supprimerProduit(id: number) {
+    const url = `${this.apiURL}/${id}`;
+    let jwt = this.authService.getToken();
+    jwt = "Bearer " + jwt;
+    let httpHeaders = new HttpHeaders({ "Authorization": jwt })
+    return this.httpClient.delete(url, { headers: httpHeaders });
+  }
+  consulterProduit(id: number): Observable<any> {
+    const url = `${this.apiURL}/${id}`;
+    let jwt = this.authService.getToken();
+    jwt = "Bearer " + jwt;
+    let httpHeaders = new HttpHeaders({ "Authorization": jwt })
+    return this.httpClient.get(url, { headers: httpHeaders });
+  }
+  updateProduit(m): Observable<any> {
+    let jwt = this.authService.getToken();
+    jwt = "Bearer " + jwt;
+    let httpHeaders = new HttpHeaders({ "Authorization": jwt })
+    return this.httpClient.put(this.apiURL, { headers: httpHeaders });
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
   getMovie(page: number): Observable<any> {
 
-   
+
 
     return this.httpClient.get("http://localhost:8000/project/movie/api/page?p=" + page)
 

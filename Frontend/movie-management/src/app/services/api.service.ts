@@ -1,12 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthService } from './auth.service';
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
   constructor(private httpClient: HttpClient, public authService: AuthService) { }
+  
+  apiURL: string = 'http://localhost:8080/api';
+  
+  
+  getMoviejwt(): Observable<any>{
+    let jwt = this.authService.getToken();
+    jwt = "Bearer "+jwt;
+    let httpHeaders = new HttpHeaders({"Authorization":jwt})
+    return this.httpClient.get(this.apiURL+"/all",{headers:httpHeaders}
+    );
+    }
+    
   getMovie(page: number): Observable<any> {
 
    

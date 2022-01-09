@@ -3,20 +3,15 @@
 
 Objectif
 
-1.&nbsp;Création d’un premier projetAngular 
-<br>
-2.&nbsp;Installation de Bootstrap
-<br>
-3.&nbsp;Création d’un menu Navbar
-<br>
-4.&nbsp;Création du Web Component Produits
-<br>
-5.&nbsp;Création du Web Component add-produit
-<br>
-6.&nbsp;Ajout d’un composant web par défaut
-<br>
-7.&nbsp;Utiliser le «Data Binding » pour afficher la liste des produits
 
+1. Creation of a first Angular project
+2. Installing Bootstrap
+3. Creation of a Navbar menu
+4. Creation of the Web Component Movie
+5. Creation of the Web Component add-movie
+6. Adding a default web component
+7. Use the "Data Binding" to display the list of movies
+8. 
 ## 🎓 &nbsp;Follow this steps
 
 
@@ -68,3 +63,9 @@ Objectif
  
 
 </div>
+
+### REF
+
+https://angular.io/tutorial/toh-pt4
+
+https://www.youtube.com/watch?v=i_CIygNtrCw&list=PLS--am5zK1AZf8YTQCPPRb54JLAc8W_92&ab_channel=NadhemBELHADJ

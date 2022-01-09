@@ -64,8 +64,14 @@ Objectif
 
 </div>
 
-### REF
+<br>
+<br>
 
-https://angular.io/tutorial/toh-pt4
+### <img src="https://img.icons8.com/external-tal-revivo-green-tal-revivo/36/000000/external-reference-book-for-a-mechanical-engineering-and-mechanics-school-green-tal-revivo.png"/> REFERENCE
 
-https://www.youtube.com/watch?v=i_CIygNtrCw&list=PLS--am5zK1AZf8YTQCPPRb54JLAc8W_92&ab_channel=NadhemBELHADJ
+<div>
+ 
+[<img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/35/000000/external-angular-a-typescript-based-open-source-web-application-framework-logo-shadow-tal-revivo.png"/>](https://angular.io/tutorial/toh-pt4) &nbsp;&nbsp;&nbsp;&nbsp;
+[<img src="https://img.icons8.com/color/40/000000/youtube-play.png"/>](https://www.youtube.com/watch?v=i_CIygNtrCw&list=PLS--am5zK1AZf8YTQCPPRb54JLAc8W_92&ab_channel=NadhemBELHADJ)
+ 
+ </div>

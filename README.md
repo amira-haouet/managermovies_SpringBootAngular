@@ -11,7 +11,7 @@ Objectif
 5. Creation of the Web Component add-movie
 6. Adding a default web component
 7. Use the "Data Binding" to display the list of movies
-8. 
+ 
 ## 🎓 &nbsp;Follow this steps
 
 
@@ -20,7 +20,7 @@ Objectif
  
     How to get angulal & create app:
   <!---install angular-->
-      npm uninstall -g @angular/cli
+      npm install -g @angular/cli
       npm cache clean
       ng new MesFilms
     
